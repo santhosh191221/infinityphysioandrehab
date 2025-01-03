@@ -1,0 +1,241 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.about-us {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.about-us .highlight {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px; /* Reduced padding */
+    background: #00072D;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9em; /* Reduced font size */
+}
+
+/* Navigation bar styling */
+.nav-bar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #00072D;
+}
+
+.nav-bar li {
+    margin: 0 15px;
+}
+
+.nav-bar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #00072D;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .about-us {
+        padding: 20px 0;
+    }
+
+    .about-us p {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+/* Slideshow container */
+.slideshow {
+    position: relative;
+    max-width: 40%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation: fadeEffect 4s infinite;
+}
+
+@keyframes fadeEffect {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 1; }
+    75% { opacity: 0; }
+    100% { opacity: 0; }
+}
+/* #appointment-section {
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+#appointment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#appointment-form label {
+    font-weight: bold;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+#appointment-form input,
+#appointment-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#appointment-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#appointment-form button:hover {
+    background-color: #003f7f;
+}
+
+#form-status {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+} */
+
+#appointment-section {
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#appointment-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#appointment-form input,
+#appointment-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#appointment-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#appointment-form button:hover {
+    background-color: #003f7f;
+}
+
+#form-status {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}
+
+/* ...existing code... */
+.logo {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 15px; /* Adjust the margin as needed */
+}
+/* ...existing code... */
+
