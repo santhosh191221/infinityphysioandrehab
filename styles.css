@@ -89,6 +89,7 @@ footer {
     text-decoration: none;
 }
 /* Mobile responsiveness */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     .container {
         width: 100%;
@@ -106,8 +107,13 @@ footer {
     footer {
         padding: 10px;
     }
+    
+    .container {
+        width: 90%; /* Allow more space for padding on small screens */
+        padding: 15px;
+    }
 }
-/* Slideshow container */
+Slideshow container */
 .slideshow {
     position: relative;
     max-width: 40%;
