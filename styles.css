@@ -92,7 +92,7 @@ footer {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .container {
-        width: 100%;
+        width: 80%;
         padding: 10px;
     }
 
