@@ -89,10 +89,9 @@ footer {
     text-decoration: none;
 }
 /* Mobile responsiveness */
-/* Mobile responsiveness */
 @media (max-width: 768px) {
     .container {
-        width: 80%;
+        width: 100%;
         padding: 10px;
     }
 
@@ -107,13 +106,8 @@ footer {
     footer {
         padding: 10px;
     }
-    
-    .container {
-        width: 90%; /* Allow more space for padding on small screens */
-        padding: 15px;
-    }
 }
-Slideshow container */
+/* Slideshow container */
 .slideshow {
     position: relative;
     max-width: 40%;
@@ -245,3 +239,24 @@ Slideshow container */
 }
 /* ...existing code... */
 
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.service-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.service-item h3 {
+    margin-top: 0;
+}
+.service-item a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.service-item a:hover {
+    text-decoration: underline;
+}

@@ -102,32 +102,96 @@ function loadContent(section) {
         "appointment": `
             <section id="appointment-section">
                 <h2>Book an Appointment</h2>
-
                 <form id="appointment-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="message">Write Your Messages (about condition and inquiries):</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Book an Appointment</button>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="message">Write Your Messages (about condition and inquiries):</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Book an Appointment</button>
                 </form>
-
-
                 <p id="form-status"></p>
             </section>
         `,
-        "our-works": `<h2>Our Works</h2><p>Explore our success stories and the impact we’ve made on our patients’ lives.</p>`,
-        "reviews": `<h2>Reviews</h2><p>See what our satisfied patients have to say about their experience with us.</p>`
+        "our-works": `
+            <h2>Our Expert Services Include</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Geriatric Physiotherapy & Fall Prevention</h3>
+                    <p>Our geriatric care program is designed to help older adults maintain their independence and mobility. We focus on fall prevention, balance training, and exercises to improve strength and flexibility.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Chronic Pain Management</h3>
+                    <p>We use a multidisciplinary approach to manage chronic pain, including physical therapy, medication management, and lifestyle modification. Our goal is to help patients manage their pain and improve their quality of life.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Post-Surgical Rehabilitation</h3>
+                    <p>Our post-surgical rehabilitation program is designed to help patients recover from surgery as quickly and safely as possible. We create personalized rehabilitation plans that address the patient's specific needs and goals.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Sports Injury Recovery</h3>
+                    <p>We offer comprehensive treatment and rehabilitation for athletic injuries, including acute and chronic conditions. Our goal is to help athletes return to their sport quickly and safely.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Neurological Rehabilitation</h3>
+                    <p>Our neurological rehabilitation program is designed to help patients with neurological conditions such as stroke, spinal cord injury, and Parkinson's disease. We focus on improving functional abilities and promoting independence.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Pediatric Physiotherapy</h3>
+                    <p>We provide developmental and rehabilitative services for children with conditions such as cerebral palsy, developmental delay, and congenital anomalies. Our goal is to help children reach their full potential.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Women's Health Physiotherapy</h3>
+                    <p>Our women's health program addresses a range of concerns, including prenatal and postnatal care, pelvic floor dysfunction, and osteoporosis management. We provide personalized care and education to help women manage their health.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Fitness & Wellness Programs</h3>
+                    <p>We offer proactive programs to promote healthy lifestyles, injury prevention, and optimal physical function. Our goal is to help individuals achieve their health and wellness goals.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Ergonomic Solutions & Postural Correction</h3>
+                    <p>We provide workplace assessments and interventions to prevent injury, improve productivity, and enhance overall well-being. Our goal is to help individuals work safely and efficiently.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="service-item">
+                    <h3>Headache & Migraine Management</h3>
+                    <p>We use a multimodal approach to manage headaches and migraines, including manual therapy, exercise, and lifestyle modification. Our goal is to help patients reduce their symptoms and improve their quality of life.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        `,
+        "reviews": `<h2>Reviews</h2><p>See what our satisfied patients have to say about their experience with us.</p>`,
+        "why-choose-us": `
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Expertise in Geriatric Care:</strong> Our team includes physiotherapists with specialized training in geriatric care, ensuring that each treatment plan is customized to meet the unique needs of seniors.</li>
+                <li><strong>Holistic Approach:</strong> We prioritize not only physical rehabilitation but also mental and emotional well-being, incorporating education, guidance, and support for both patients and their families.</li>
+                <li><strong>Tailored Treatment Plans:</strong> Each program is designed to address the specific health concerns, physical limitations, and goals of the individual, ensuring a personalized and effective approach to care.</li>
+                <li><strong>Home-Based and Online Options:</strong> We understand the challenges of mobility, so we offer convenient home visits and virtual consultations to ensure that care is accessible and effective.</li>
+                <li><strong>Proven Results:</strong> With a track record of helping seniors regain and maintain independence, our services are grounded in evidence-based practices and have shown significant improvement in patient outcomes.</li>
+                <li><strong>Continuous Support:</strong> We provide ongoing assessments and progress tracking to ensure that our patients continue to make progress and adjust to their evolving needs as they age.</li>
+                <li><strong>Multidisciplinary Collaboration:</strong> Our team works closely with other healthcare providers, including doctors, occupational therapists, and nurses, to ensure a coordinated approach to care.</li>
+                <li><strong>Education and Empowerment:</strong> We believe in educating our patients and their families on how to maintain mobility, prevent injuries, and adopt healthy lifestyle changes for long-term well-being.</li>
+            </ul>
+            <p>By focusing on each patient’s individual needs and goals, our geriatric physiotherapy program ensures that older adults can lead healthier, more active, and independent lives. Let us help you or your loved ones navigate the aging process with confidence, mobility, and comfort.</p>
+        `
     };
     document.getElementById("content").innerHTML = content[section];
     if (section === "appointment") {
         document.getElementById("appointment-form").addEventListener("submit", handleFormSubmit);
     }
 }
-
 // Handle appointment form submission
 // function handleFormSubmit(event) {
 //     event.preventDefault();
