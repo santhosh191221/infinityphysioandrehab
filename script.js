@@ -98,7 +98,10 @@ document.querySelectorAll(".nav-bar a").forEach(link => {
 function loadContent(section) {
     const content = {
         "about-us": `<h2>About Us</h2><p>Our team of expert physiotherapists is dedicated to helping you achieve optimal health and wellness.</p>`,
-        "vision": `<h2>Vision</h2><p>Our vision is to create a healthier, more active community by providing exceptional physiotherapy services.</p>`,
+        "vision": `<h2>Vision</h2><p>           Our vision at Infinity Physio and Rehab is to be a trusted leader in physiotherapy and rehabilitation, empowering individuals to achieve pain-free movement and optimal health. Through personalized care, innovation, and unwavering support, we aim to redefine recovery and set new standards in physiotherapy care.<br>
+        We are committed to empowering our patients to achieve maximum mobility, independence, and overall health through compassionate, professional, and evidence-based practices. By fostering a culture of excellence, innovation, and continuous improvement, we aim to set new standards in physiotherapy care.<br>
+        Guided by our core values of unwavering support, expert guidance, and patient satisfaction, we strive to expand our reach, build a strong reputation, and establish Infinity Physio and Rehab as a premier brand in the field of rehabilitation
+</p>`,
         "appointment": `
             <section id="appointment-section">
                 <h2>Book an Appointment</h2>
@@ -362,3 +365,10 @@ function handleFormSubmit(event) {
         document.getElementById("form-status").style.color = "red";
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        document.getElementById("introVideo").style.display = "none";
+    }, 5000);
+});

@@ -260,3 +260,15 @@ footer {
 .service-item a:hover {
     text-decoration: underline;
 }
+
+
+#introVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+    background-color: black;
+}
