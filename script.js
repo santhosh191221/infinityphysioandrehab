@@ -177,17 +177,17 @@ function loadContent(section) {
         "reviews": `<h2>Reviews</h2><p>See what our satisfied patients have to say about their experience with us.</p>`,
         "why-choose-us": `
             <h2>Why Choose Us?</h2>
-            <ul>
-                <li><strong>Expertise in Geriatric Care:</strong> Our team includes physiotherapists with specialized training in geriatric care, ensuring that each treatment plan is customized to meet the unique needs of seniors.</li>
-                <li><strong>Holistic Approach:</strong> We prioritize not only physical rehabilitation but also mental and emotional well-being, incorporating education, guidance, and support for both patients and their families.</li>
-                <li><strong>Tailored Treatment Plans:</strong> Each program is designed to address the specific health concerns, physical limitations, and goals of the individual, ensuring a personalized and effective approach to care.</li>
-                <li><strong>Home-Based and Online Options:</strong> We understand the challenges of mobility, so we offer convenient home visits and virtual consultations to ensure that care is accessible and effective.</li>
-                <li><strong>Proven Results:</strong> With a track record of helping seniors regain and maintain independence, our services are grounded in evidence-based practices and have shown significant improvement in patient outcomes.</li>
-                <li><strong>Continuous Support:</strong> We provide ongoing assessments and progress tracking to ensure that our patients continue to make progress and adjust to their evolving needs as they age.</li>
-                <li><strong>Multidisciplinary Collaboration:</strong> Our team works closely with other healthcare providers, including doctors, occupational therapists, and nurses, to ensure a coordinated approach to care.</li>
-                <li><strong>Education and Empowerment:</strong> We believe in educating our patients and their families on how to maintain mobility, prevent injuries, and adopt healthy lifestyle changes for long-term well-being.</li>
-            </ul>
-            <p>By focusing on each patient’s individual needs and goals, our geriatric physiotherapy program ensures that older adults can lead healthier, more active, and independent lives. Let us help you or your loved ones navigate the aging process with confidence, mobility, and comfort.</p>
+            <div class="grid-container">
+        <div class="service-item"><h3>Expertise in Geriatric Care</h3> <p>Our team includes physiotherapists with specialized training in geriatric care, ensuring that each treatment plan is customized to meet the unique needs of seniors.</div>
+        <div class="service-item"><h3>Holistic Approach</h3> We prioritize not only physical rehabilitation but also mental and emotional well-being, incorporating education, guidance, and support for both patients and their families.</div>
+        <div class="service-item"><h3>Tailored Treatment Plans</h3> Each program is designed to address the specific health concerns, physical limitations, and goals of the individual, ensuring a personalized and effective approach to care.</div>
+        <div class="service-item"><h3>Home-Based and Online Options</h3> We understand the challenges of mobility, so we offer convenient home visits and virtual consultations to ensure that care is accessible and effective.</div>
+        <div class="service-item"><h3>Proven Results</h3> With a track record of helping seniors regain and maintain independence, our services are grounded in evidence-based practices and have shown significant improvement in patient outcomes.</div>
+        <div class="service-item"><h3>Continuous Support</h3> We provide ongoing assessments and progress tracking to ensure that our patients continue to make progress and adjust to their evolving needs as they age.</div>
+        <div class="service-item"><h3>Multidisciplinary Collaboration</h3> Our team works closely with other healthcare providers, including doctors, occupational therapists, and nurses, to ensure a coordinated approach to care.</div>
+        <div class="service-item"><h3>Education and Empowerment</h3> We believe in educating our patients and their families on how to maintain mobility, prevent injuries, and adopt healthy lifestyle changes for long-term well-being.</div>
+        </div>
+        <p>By focusing on each patient’s individual needs and goals, our geriatric physiotherapy program ensures that older adults can lead healthier, more active, and independent lives. Let us help you or your loved ones navigate the aging process with confidence, mobility, and comfort.</p>
         `
     };
     document.getElementById("content").innerHTML = content[section];
