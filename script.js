@@ -960,73 +960,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// const serviceDetails = {
-//     "geriatric": {
-//         title: "Geriatric Physiotherapy & Fall Prevention",
-//         content: `
-//             <h2>Geriatric Physiotherapy & Fall Prevention</h2>
-//             <div class="geriatric-icons">
-//                 <span class="geriatric-icon">👵</span>
-//                 <span class="geriatric-icon">🦴</span>
-//                 <span class="geriatric-icon">🚶‍♂️</span>
-//                 <span class="geriatric-icon">⚖️</span>
-//                 <span class="geriatric-icon">💪</span>
-//             </div>
-            
-//             <h3>Introduction</h3>
-//             <p>Our geriatric care program is designed to help older adults maintain their independence and mobility. We focus on fall prevention, balance training, and exercises to improve strength and flexibility. As we age, our bodies undergo various changes that can affect our physical abilities and increase the risk of falls. Our physiotherapists are trained to address these challenges and provide personalized care that enhances quality of life for seniors.</p>
-            
-//             <h3>What It Highlights</h3>
-//             <p>Geriatric physiotherapy is a specialized branch of physiotherapy that focuses on the unique needs of older adults. Our program is designed to:</p>
-//             <ul>
-//                 <li><strong>Improve Balance and Coordination:</strong> Through targeted exercises, we help seniors enhance their balance and coordination, reducing the risk of falls.</li>
-//                 <li><strong>Enhance Strength and Flexibility:</strong> We provide strength training and flexibility exercises to improve overall physical function and mobility.</li>
-//                 <li><strong>Address Age-Related Conditions:</strong> Our physiotherapists are experienced in managing conditions such as arthritis, osteoporosis, and chronic pain that commonly affect older adults.</li>
-//                 <li><strong>Promote Independence:</strong> Our goal is to help seniors maintain their independence by improving their ability to perform daily activities safely and confidently.</li>
-//             </ul>
-            
-//             <h3>Core Benefits of Physiotherapy</h3>
-//             <ul>
-//                 <li><strong>Improved Balance:</strong> Balance training exercises help reduce the risk of falls by enhancing stability and coordination.</li>
-//                 <li><strong>Increased Strength:</strong> Strengthening exercises target key muscle groups to improve overall physical function and support daily activities.</li>
-//                 <li><strong>Enhanced Flexibility:</strong> Stretching and mobility exercises help maintain joint flexibility and reduce stiffness.</li>
-//                 <li><strong>Pain Management:</strong> Physiotherapy techniques such as manual therapy and modalities like heat/cold therapy help manage chronic pain conditions.</li>
-//                 <li><strong>Improved Posture:</strong> Exercises to enhance posture can alleviate back and neck pain and improve overall body mechanics.</li>
-//                 <li><strong>Cardiovascular Health:</strong> Low-impact aerobic exercises can improve cardiovascular fitness and overall endurance.</li>
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
-  const ctaBtn = document.querySelector('.cta-btn');
-
-  if (ctaBtn) {
-    ctaBtn.addEventListener('click', function (e) {
-      e.preventDefault(); // Prevent default anchor link behavior
-
-      const phoneNumber = '919600619608'; // WhatsApp number without + or spaces
-      const message = encodeURIComponent(
-        "Hello Infinity Physio and Rehab,\nI would like to book an appointment. Please contact me with available slots."
-      );
-
-      // Detect if the user is on mobile
-      const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-
-      // Use proper WhatsApp link depending on device type
-      const whatsappURL = isMobile
-        ? `https://wa.me/${phoneNumber}?text=${message}` // Mobile devices
-        : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`; // Desktop
-
-      console.log("Opening WhatsApp:", whatsappURL); // Debugging
-      window.open(whatsappURL, '_blank');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navBar = document.querySelector('.nav-bar');
+  if (navToggle && navBar) {
+    navToggle.addEventListener('click', function () {
+      navBar.classList.toggle('open');
     });
-  } else {
-    console.error("CTA button not found!");
+    // Optional: close menu when a link is clicked
+    navBar.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navBar.classList.remove('open');
+      });
+    });
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navBar = document.querySelector('.nav-bar');
 
-const someElement = document.querySelector('.some-class');
-if (someElement) {
-    someElement.style.display = "block";
-}
+  if (navToggle && navBar) {
+    navToggle.addEventListener('click', () => {
+      navBar.classList.toggle('open');
+    });
+  }
+});
