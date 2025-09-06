@@ -147,17 +147,17 @@ function loadContent(section) {
                 <div class="service-item">
                     <h3>Neurological Rehabilitation</h3>
                     <p>Our neurological rehabilitation program is designed to help patients with neurological conditions such as stroke, spinal cord injury, and Parkinson's disease. We focus on improving functional abilities and promoting independence.</p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="learn-more" data-service="neurological">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Pediatric Physiotherapy</h3>
                     <p>We provide developmental and rehabilitative services for children with conditions such as cerebral palsy, developmental delay, and congenital anomalies. Our goal is to help children reach their full potential.</p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="learn-more" data-service="pediatric">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Women's Health Physiotherapy</h3>
                     <p>Our women's health program addresses a range of concerns, including prenatal and postnatal care, pelvic floor dysfunction, and osteoporosis management. We provide personalized care and education to help women manage their health.</p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="learn-more" data-service="womens-health">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Fitness & Wellness Programs</h3>
@@ -529,6 +529,174 @@ const serviceDetails = {
         `
     },
     // ... (keep other services) ...
+    "neurological": {
+        title: "Neurological Rehabilitation",
+        content: `
+            <h2>Neurological Rehabilitation</h2>
+            <div class="neuro-icons">
+                <span class="neuro-icon">🧠</span>
+                <span class="neuro-icon">🚶‍♂️</span>
+                <span class="neuro-icon">🏋️‍♀️</span>
+                <span class="neuro-icon">🧘</span>
+                <span class="neuro-icon">🗣️</span>
+            </div>
+            
+            <h3>Introduction</h3>
+            <p>Neurological conditions, such as stroke, spinal cord injury, and Parkinson's disease, can significantly impact a person's ability to perform daily activities. Our neurological rehabilitation program is specifically designed to help patients regain functional independence, improve their motor abilities, and enhance overall quality of life. Through personalized, evidence-based treatment plans, we aim to address the unique challenges presented by neurological disorders and provide comprehensive care that promotes physical, cognitive, and emotional well-being.</p>
+            
+            <h3>What It Highlights</h3>
+            <p>Neurological rehabilitation is a multidisciplinary approach to managing and recovering from conditions that affect the nervous system. Our program is structured to:</p>
+            <ul>
+                <li><strong>Improve Functional Abilities:</strong> Our primary goal is to help patients regain as much independence as possible by improving motor skills, coordination, and mobility.</li>
+                <li><strong>Promote Neuroplasticity:</strong> We use techniques that stimulate the brain's ability to reorganize itself and form new neural connections, helping patients recover lost functions.</li>
+                <li><strong>Targeted Exercises and Activities:</strong> Tailored rehabilitation exercises are designed to improve muscle strength, flexibility, balance, and coordination, essential for daily tasks.</li>
+                <li><strong>Cognitive Rehabilitation:</strong> For conditions like stroke or brain injury, we also provide cognitive training to address challenges such as memory, attention, and problem-solving.</li>
+                <li><strong>Personalized Care Plans:</strong> Each patient's rehabilitation program is personalized based on their specific diagnosis, needs, and goals, ensuring the most effective care.</li>
+            </ul>
+            
+            <h3>Core Benefits of Physiotherapy</h3>
+            <ul>
+                <li><strong>Improved Mobility and Balance:</strong> Through targeted exercises, we aim to enhance the patient's ability to walk, maintain balance, and reduce the risk of falls.</li>
+                <li><strong>Muscle Strengthening and Coordination:</strong> Many neurological conditions result in weakened muscles or impaired coordination. Our physiotherapists work to strengthen muscles, improve motor skills, and refine movement patterns for better functional outcomes.</li>
+                <li><strong>Postural Correction:</strong> Neurological conditions often affect posture. We address these issues to help patients achieve better posture and prevent associated complications like joint pain and pressure sores.</li>
+                <li><strong>Functional Training:</strong> Physiotherapists provide exercises and simulations that replicate real-world activities, such as getting in and out of bed, walking on uneven surfaces, and using assistive devices, to improve overall function.</li>
+                <li><strong>Neuroplasticity Stimulation:</strong> Our rehabilitation techniques, such as task-specific training, are designed to stimulate the brain's ability to rewire itself. This promotes recovery of lost motor functions and cognitive abilities.</li>
+                <li><strong>Pain Management:</strong> Neurological conditions often result in pain due to muscle spasticity, nerve injury, or immobility. Our therapy modalities, including manual therapy, heat/cold therapy, and other modalities, help manage and reduce pain.</li>
+                <li><strong>Speech and Swallowing Therapy:</strong> In cases where neurological conditions affect speech or swallowing, we collaborate with speech therapists to provide integrated care to address these challenges.</li>
+            </ul>
+            
+            <h3>Impact of Physiotherapy</h3>
+            <ul>
+                <li><strong>Enhanced Independence:</strong> The rehabilitation process helps patients regain functional abilities, allowing them to perform daily tasks with more independence and reduce reliance on caregivers.</li>
+                <li><strong>Restored Mobility:</strong> Our tailored physiotherapy treatments improve movement, balance, and posture, enabling patients to walk more freely and engage in social and recreational activities.</li>
+                <li><strong>Improved Cognitive Function:</strong> For patients with neurological conditions affecting cognition, our therapy includes cognitive exercises and mental stimulation that improve memory, focus, and decision-making abilities.</li>
+                <li><strong>Pain Relief:</strong> Physiotherapy plays a crucial role in managing spasticity, muscle tightness, and pain, improving the patient's comfort levels and overall well-being.</li>
+                <li><strong>Prevention of Secondary Complications:</strong> By improving mobility, strength, and posture, physiotherapy reduces the risk of secondary complications, such as pressure ulcers, joint contractures, and cardiovascular issues.</li>
+                <li><strong>Mental and Emotional Support:</strong> Neurological rehabilitation often requires emotional resilience. Our team provides psychological support to patients and families, helping them cope with the challenges of neurological conditions.</li>
+            </ul>
+            
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li><strong>Expert Physiotherapists:</strong> Our team consists of highly skilled physiotherapists who specialize in neurological conditions and have the expertise to treat a wide range of neurological impairments.</li>
+                <li><strong>Personalized Treatment Plans:</strong> Each patient receives a tailored rehabilitation program, specifically designed to address their unique neurological condition and recovery goals.</li>
+                <li><strong>Evidence-Based Approaches:</strong> We use the latest research and evidence-based techniques to ensure that our rehabilitation strategies are effective and safe for neurological patients.</li>
+                <li><strong>Multidisciplinary Team:</strong> We work closely with neurologists, occupational therapists, speech therapists, and other healthcare providers to offer comprehensive, holistic care for neurological rehabilitation.</li>
+                <li><strong>Neuroplasticity Focus:</strong> Our rehabilitation programs are designed to optimize brain recovery by encouraging neuroplasticity, helping patients regain lost functions and adapt to their condition.</li>
+                <li><strong>State-of-the-Art Facilities:</strong> Our rehabilitation centers are equipped with advanced technology and therapy tools, including balance trainers, resistance equipment, and neurostimulators to accelerate recovery.</li>
+                <li><strong>Family Involvement:</strong> We involve family members in the rehabilitation process, providing them with guidance and support to help them assist with exercises and ensure the patient's well-being at home.</li>
+            </ul>
+        `
+    },
+    "pediatric": {
+        title: "Pediatric Physiotherapy",
+        content: `
+            <h2>Pediatric Physiotherapy</h2>
+            <div class="pediatric-icons">
+                <span class="pediatric-icon">👶</span>
+                <span class="pediatric-icon">🧩</span>
+                <span class="pediatric-icon">🚸</span>
+                <span class="pediatric-icon">🏃‍♂️</span>
+                <span class="pediatric-icon">👨‍👩‍👧‍👦</span>
+            </div>
+            
+            <h3>Introduction</h3>
+            <p>Pediatric physiotherapy is focused on providing specialized care for children with a wide range of developmental, neuromuscular, and congenital conditions. Conditions such as cerebral palsy, developmental delays, and congenital anomalies can significantly affect a child's ability to move, interact, and participate in daily activities. Our pediatric physiotherapy program aims to support children in achieving their full developmental potential, improving mobility, strength, coordination, and overall well-being. We believe in making therapy enjoyable, engaging, and effective through play-based and functional interventions.</p>
+            
+            <h3>What It Highlights</h3>
+            <p>Pediatric physiotherapy is tailored to meet the unique needs of each child, recognizing that their bodies and brains are still developing. Our program is designed to:</p>
+            <ul>
+                <li><strong>Promote Healthy Development:</strong> Help children achieve appropriate motor milestones and physical development.</li>
+                <li><strong>Improve Movement and Function:</strong> Focus on strengthening muscles, improving coordination, and enhancing balance to promote functional independence.</li>
+                <li><strong>Address Mobility Issues:</strong> Assist children in overcoming mobility challenges and achieving movement that supports overall growth and development.</li>
+                <li><strong>Support Families:</strong> We work closely with families to create individualized treatment plans that ensure continued progress outside of therapy sessions.</li>
+            </ul>
+            
+            <h3>Core Benefits of Physiotherapy</h3>
+            <ul>
+                <li><strong>Motor Skill Development:</strong> Pediatric physiotherapy helps children develop essential motor skills, such as crawling, walking, running, and jumping, through targeted exercises.</li>
+                <li><strong>Strength and Coordination:</strong> By focusing on improving muscle strength and coordination, physiotherapists help children engage in physical activities more effectively and participate in daily life.</li>
+                <li><strong>Postural Control:</strong> Therapy aims to improve posture, which is essential for balance, sitting, standing, and walking. Strong postural control reduces the risk of future musculoskeletal issues.</li>
+                <li><strong>Mobility Enhancement:</strong> Children who face mobility challenges due to conditions like cerebral palsy can benefit from physiotherapy that encourages proper movement and functional independence.</li>
+                <li><strong>Injury Prevention:</strong> Through exercises that improve strength and flexibility, physiotherapy helps prevent injuries related to overuse, misalignment, or underdeveloped muscles.</li>
+                <li><strong>Developmental Milestone Support:</strong> Physiotherapists help children achieve their developmental milestones on time, such as sitting, standing, walking, and fine motor skills.</li>
+            </ul>
+            
+            <h3>Impact of Physiotherapy</h3>
+            <ul>
+                <li><strong>Improved Mobility:</strong> Physiotherapy enhances the ability to move independently, whether through walking, running, or other activities, allowing children to engage fully in social and physical activities.</li>
+                <li><strong>Increased Confidence:</strong> As children develop their physical skills and independence, their self-esteem and confidence improve, enabling them to participate in school, play, and other activities without limitation.</li>
+                <li><strong>Prevention of Deformities:</strong> By promoting healthy movement patterns and posture, physiotherapy reduces the risk of musculoskeletal deformities that may arise due to conditions like cerebral palsy.</li>
+                <li><strong>Enhanced Functional Abilities:</strong> Physiotherapy works to improve not just strength and movement, but also the functional abilities that allow a child to interact with their environment—whether it's in the classroom, at home, or in social settings.</li>
+                <li><strong>Long-Term Benefits:</strong> Early intervention through pediatric physiotherapy can prevent long-term complications, improve quality of life, and provide lasting benefits in terms of physical function and independence.</li>
+            </ul>
+            
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li><strong>Specialized Pediatric Physiotherapists:</strong> Our team includes physiotherapists who are specifically trained to work with children, understanding their developmental needs and the best ways to support them.</li>
+                <li><strong>Play-Based Therapy:</strong> We incorporate fun, engaging, and interactive activities that motivate children to participate actively in their therapy, making the process enjoyable and effective.</li>
+                <li><strong>Individualized Treatment Plans:</strong> Each child's treatment plan is tailored to their specific condition, developmental stage, and goals, ensuring personalized care that addresses unique needs.</li>
+                <li><strong>Comprehensive Family Support:</strong> We work closely with families, providing education and guidance so they can continue to support their child's development at home, reinforcing the work done in therapy.</li>
+                <li><strong>Collaborative Approach:</strong> We collaborate with other healthcare professionals, including pediatricians, occupational therapists, and speech therapists, to ensure that all aspects of a child's development are supported.</li>
+                <li><strong>Early Intervention:</strong> We focus on early intervention to address physical developmental delays, which can significantly improve outcomes and help children achieve their full potential.</li>
+                <li><strong>Continuous Progress Tracking:</strong> Our therapists regularly assess a child's progress and adapt treatment plans as needed to ensure ongoing improvement and achievement of developmental milestones.</li>
+            </ul>
+        `
+    },
+    "womens-health": {
+        title: "Women's Health Physiotherapy",
+        content: `
+            <h2>Women's Health Physiotherapy</h2>
+            <div class="womens-health-icons">
+                <span class="womens-health-icon">🤰</span>
+                <span class="womens-health-icon">💪</span>
+                <span class="womens-health-icon">🧘‍♀️</span>
+                <span class="womens-health-icon">🦴</span>
+                <span class="womens-health-icon">❤️</span>
+            </div>
+            
+            <h3>Introduction</h3>
+            <p>Our Women's Health Physiotherapy program is dedicated to addressing the unique and diverse health concerns faced by women at different stages of life. Whether dealing with the physical challenges of pregnancy and childbirth, pelvic floor dysfunction, or managing conditions like osteoporosis, our program offers personalized, compassionate care. By providing education, exercises, and therapeutic interventions, we help women improve their health, manage pain, and enhance their overall quality of life.</p>
+            
+            <h3>What It Highlights</h3>
+            <p>Women's health physiotherapy focuses on providing solutions for a range of conditions specific to women's health. These may include:</p>
+            <ul>
+                <li><strong>Prenatal Care:</strong> Tailored exercises and treatments to support women during pregnancy, helping to manage symptoms and prevent future complications.</li>
+                <li><strong>Postnatal Care:</strong> Rehabilitative services to support recovery after childbirth, including strengthening exercises and pelvic floor rehabilitation.</li>
+                <li><strong>Pelvic Floor Dysfunction:</strong> Addressing issues related to urinary incontinence, prolapse, and pelvic pain with targeted exercises and therapies.</li>
+                <li><strong>Osteoporosis Management:</strong> Exercises and education aimed at improving bone density, posture, and balance to prevent falls and fractures.</li>
+            </ul>
+            
+            <h3>Core Benefits of Physiotherapy</h3>
+            <ul>
+                <li><strong>Pelvic Floor Rehabilitation:</strong> Strengthening and restoring the pelvic muscles to improve bladder and bowel control, and reduce pelvic organ prolapse.</li>
+                <li><strong>Pain Management:</strong> Providing relief from conditions like menstrual pain, pelvic pain, and postpartum discomfort through therapeutic techniques.</li>
+                <li><strong>Postnatal Recovery:</strong> Helping women regain abdominal strength, improve posture, and restore pelvic health after childbirth.</li>
+                <li><strong>Improved Strength and Stability:</strong> Enhancing core strength, balance, and posture, which is especially important during pregnancy and after childbirth.</li>
+                <li><strong>Increased Mobility and Flexibility:</strong> Exercises to improve flexibility, reduce tension, and increase overall physical function.</li>
+                <li><strong>Osteoporosis Prevention:</strong> Physiotherapy offers weight-bearing exercises to strengthen bones, improve balance, and reduce the risk of fractures due to osteoporosis.</li>
+            </ul>
+            
+            <h3>Impact of Physiotherapy</h3>
+            <ul>
+                <li><strong>Restores Pelvic Health:</strong> Physiotherapy helps restore normal pelvic function by improving muscle strength, reducing incontinence, and preventing prolapse.</li>
+                <li><strong>Promotes Postnatal Recovery:</strong> Focused exercises help women regain strength in the abdominal and pelvic regions, reducing discomfort and helping them return to daily activities faster.</li>
+                <li><strong>Improves Mental Well-being:</strong> By reducing physical pain and discomfort, physiotherapy also supports better emotional health, helping women feel more energized and less stressed.</li>
+                <li><strong>Boosts Confidence:</strong> As women regain strength, flexibility, and independence, they feel more confident in managing the challenges of pregnancy, childbirth, and aging.</li>
+                <li><strong>Reduces Long-Term Health Risks:</strong> By preventing or addressing conditions like pelvic floor dysfunction and osteoporosis, physiotherapy contributes to long-term health and wellness.</li>
+                <li><strong>Enhances Mobility:</strong> Strengthening core and pelvic muscles not only improves posture and function but also helps reduce pain and discomfort, leading to greater mobility.</li>
+            </ul>
+            
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li><strong>Specialized Care for Women:</strong> Our physiotherapists are experienced in treating women's health conditions, ensuring that all treatments are customized to each individual's unique needs.</li>
+                <li><strong>Comprehensive Approach:</strong> We take a holistic approach that combines physical therapy, education, and preventative care to address a woman's overall well-being.</li>
+                <li><strong>Personalized Treatment Plans:</strong> Treatment plans are tailored to meet the specific health goals of women at various life stages, including pregnancy, postpartum recovery, and menopause.</li>
+                <li><strong>Supportive Environment:</strong> Our clinic offers a comfortable, compassionate environment where women feel empowered to take control of their health and wellness.</li>
+                <li><strong>Collaboration with Other Healthcare Providers:</strong> We work closely with obstetricians, gynecologists, and other healthcare professionals to ensure comprehensive, multidisciplinary care.</li>
+                <li><strong>Educational Resources:</strong> We provide information and guidance on managing health concerns, preventing future issues, and maintaining a healthy lifestyle throughout different phases of life.</li>
+            </ul>
+        `
+    },
 };
 
 
@@ -717,3 +885,148 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("introVideo").style.display = "none";
     }, 5000);
 });
+
+
+
+// Smooth scroll for navigation links
+document.querySelectorAll('.nav-bar a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Simple form submission alert
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Your message has been sent successfully!');
+});
+
+// Load homepage content by default
+document.addEventListener("DOMContentLoaded", function () {
+    // Optionally, you can call loadContent('home') if you have a 'home' key
+    // Or leave the static HTML in <main id="content">
+});
+
+// Add this function to load the home page content
+function loadHomeContent() {
+    document.getElementById("content").innerHTML = `
+        <section>
+          <h2>Welcome to Infinity Physio and Rehab</h2>
+          <p>
+            At Infinity Physio and Rehab, we are dedicated to helping you achieve your best health and mobility. Our clinic offers a wide range of physiotherapy and rehabilitation services for all ages and conditions.
+          </p>
+          <!-- ...repeat your home page sections here, or copy from index.html... -->
+        </section>
+        <!-- You can add more home content here as needed -->
+    `;
+}
+
+// Logo click event to load home page content
+document.querySelector('.logo').addEventListener('click', function(e) {
+    e.preventDefault();
+    loadHomeContent();
+});
+
+
+document.querySelector('.logo').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.reload();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const ctaBtn = document.querySelector('.cta-btn');
+  
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const phoneNumber = '919600619608'; 
+      const message = encodeURIComponent(
+        "Hello Infinity Physio and Rehab,\nI would like to book an appointment. Please contact me with available slots."
+      );
+
+      const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+      const whatsappURL = isMobile
+        ? `https://wa.me/${phoneNumber}?text=${message}`
+        : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+
+      console.log("Redirecting to:", whatsappURL); // Debugging
+      window.open(whatsappURL, '_blank');
+    });
+  }
+});
+
+// const serviceDetails = {
+//     "geriatric": {
+//         title: "Geriatric Physiotherapy & Fall Prevention",
+//         content: `
+//             <h2>Geriatric Physiotherapy & Fall Prevention</h2>
+//             <div class="geriatric-icons">
+//                 <span class="geriatric-icon">👵</span>
+//                 <span class="geriatric-icon">🦴</span>
+//                 <span class="geriatric-icon">🚶‍♂️</span>
+//                 <span class="geriatric-icon">⚖️</span>
+//                 <span class="geriatric-icon">💪</span>
+//             </div>
+            
+//             <h3>Introduction</h3>
+//             <p>Our geriatric care program is designed to help older adults maintain their independence and mobility. We focus on fall prevention, balance training, and exercises to improve strength and flexibility. As we age, our bodies undergo various changes that can affect our physical abilities and increase the risk of falls. Our physiotherapists are trained to address these challenges and provide personalized care that enhances quality of life for seniors.</p>
+            
+//             <h3>What It Highlights</h3>
+//             <p>Geriatric physiotherapy is a specialized branch of physiotherapy that focuses on the unique needs of older adults. Our program is designed to:</p>
+//             <ul>
+//                 <li><strong>Improve Balance and Coordination:</strong> Through targeted exercises, we help seniors enhance their balance and coordination, reducing the risk of falls.</li>
+//                 <li><strong>Enhance Strength and Flexibility:</strong> We provide strength training and flexibility exercises to improve overall physical function and mobility.</li>
+//                 <li><strong>Address Age-Related Conditions:</strong> Our physiotherapists are experienced in managing conditions such as arthritis, osteoporosis, and chronic pain that commonly affect older adults.</li>
+//                 <li><strong>Promote Independence:</strong> Our goal is to help seniors maintain their independence by improving their ability to perform daily activities safely and confidently.</li>
+//             </ul>
+            
+//             <h3>Core Benefits of Physiotherapy</h3>
+//             <ul>
+//                 <li><strong>Improved Balance:</strong> Balance training exercises help reduce the risk of falls by enhancing stability and coordination.</li>
+//                 <li><strong>Increased Strength:</strong> Strengthening exercises target key muscle groups to improve overall physical function and support daily activities.</li>
+//                 <li><strong>Enhanced Flexibility:</strong> Stretching and mobility exercises help maintain joint flexibility and reduce stiffness.</li>
+//                 <li><strong>Pain Management:</strong> Physiotherapy techniques such as manual therapy and modalities like heat/cold therapy help manage chronic pain conditions.</li>
+//                 <li><strong>Improved Posture:</strong> Exercises to enhance posture can alleviate back and neck pain and improve overall body mechanics.</li>
+//                 <li><strong>Cardiovascular Health:</strong> Low-impact aerobic exercises can improve cardiovascular fitness and overall endurance.</li>
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const ctaBtn = document.querySelector('.cta-btn');
+
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor link behavior
+
+      const phoneNumber = '919600619608'; // WhatsApp number without + or spaces
+      const message = encodeURIComponent(
+        "Hello Infinity Physio and Rehab,\nI would like to book an appointment. Please contact me with available slots."
+      );
+
+      // Detect if the user is on mobile
+      const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+
+      // Use proper WhatsApp link depending on device type
+      const whatsappURL = isMobile
+        ? `https://wa.me/${phoneNumber}?text=${message}` // Mobile devices
+        : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`; // Desktop
+
+      console.log("Opening WhatsApp:", whatsappURL); // Debugging
+      window.open(whatsappURL, '_blank');
+    });
+  } else {
+    console.error("CTA button not found!");
+  }
+});
+
+
+const someElement = document.querySelector('.some-class');
+if (someElement) {
+    someElement.style.display = "block";
+}

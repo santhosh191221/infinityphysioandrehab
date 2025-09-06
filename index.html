@@ -1,70 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinity Physio and Rehab</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinity Physio and Rehab</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<div id="serviceModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="modalContent"></div>
-    </div>
-</div>
-
 <body>
-    <header>
-        <video id="introVideo" autoplay muted>
-            <source src="video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-        <!-- Slideshow -->
-        <div class="slideshow">
-            <div class="slide fade">
-                <img src="image1.jpg" alt="Slide 1">
-                <div class="welcome-text">Welcome to Infinity Physio and Rehab</div>
-            </div>
-            <div class="slide fade">
-                <img src="image2.jpg" alt="Slide 2">
-                <div class="welcome-text">Welcome to Infinity Physio and Rehab</div>
-            </div>
-            <div class="slide fade">
-                <img src="image3.jpg" alt="Slide 3">
-                <div class="welcome-text">Welcome to Infinity Physio and Rehab</div>
-            </div>
-            <div class="slide fade">
-                <img src="image4.jpg" alt="Slide 4">
-                <div class="welcome-text">Welcome to Infinity Physio and Rehab</div>
-            </div>
-        </div>
-        <!-- Navigation Bar -->
-        <nav>
-            <ul class="nav-bar">
-                <li class="logo-left">
-                <a href="#"><img src="logo.jpeg" alt="Logo" class="logo"></a>
-                </li>
-                <li><a href="#" data-section="vision">Vision</a></li>
-                <li><a href="#" data-section="appointment">Appointment</a></li>
-                <li><a href="#" data-section="our-works">Our Works</a></li>
-                <li><a href="#" data-section="reviews">Reviews</a></li>
-                <li><a href="#" data-section="contact-us">Contact Us</a></li>
-                <li><a href="#" data-section="why-choose-us">Why Choose Us?</a></li>
-                <li><a href="#" data-section="about-us">About Us</a></li>
-                
+  <!-- Modal for Services -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalContent"></div>
+    </div>
+  </div>
 
-            </ul>
-        </nav>
-    </header>
-    <main id="content">
-        <!-- Dynamic content will load here -->
-        <h2>Welcome to Infinity Physio and Rehab</h2>
-        <p>Click on the navigation bar to load content.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Infinity Physio and Rehab. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <!-- Slideshow Background -->
+    <div class="hero-slideshow">
+      <div class="slide fade">
+        <img src="image1.jpg" alt="Slide 1">
+      </div>
+      <div class="slide fade">
+        <img src="image2.jpg" alt="Slide 2">
+      </div>
+      <div class="slide fade">
+        <img src="image3.jpg" alt="Slide 3">
+      </div>
+      <div class="slide fade">
+        <img src="image4.jpg" alt="Slide 4">
+      </div>
+    </div>
+    <!-- Overlay Content -->
+    <div class="hero-overlay">
+      <h1>Infinity Physio and Rehab</h1>
+      <p>Your trusted partner in physiotherapy and rehabilitation</p>
+      <a href="#contact" class="cta-btn">Book Appointment</a>
+      <nav class="navbar">
+        <ul class="nav-bar">
+          <li class="logo-left">
+            <a href="#"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+          </li>
+          <li><a href="#vision" data-section="vision">Vision</a></li>
+          <li><a href="#appointment" data-section="appointment">Appointment</a></li>
+          <li><a href="#our-works" data-section="our-works">Our Works</a></li>
+          <li><a href="#reviews" data-section="reviews">Reviews</a></li>
+          <li><a href="#contact" data-section="contact">Contact Us</a></li>
+          <li><a href="#why-choose-us" data-section="why-choose-us">Why Choose Us?</a></li>
+          <li><a href="#about-us" data-section="about-us">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT (below hero section) -->
+  <main id="content">
+    <section>
+      <h2>Welcome to Infinity Physio and Rehab</h2>
+      <p>
+        At Infinity Physio and Rehab, we are dedicated to helping you achieve your best health and mobility. Our clinic offers a wide range of physiotherapy and rehabilitation services for all ages and conditions.
+      </p>
+      <div class="home-highlights">
+        <div>
+          <h3>Comprehensive Services</h3>
+          <ul>
+            <li>Sports Injury Rehabilitation</li>
+            <li>Neurological Rehabilitation</li>
+            <li>Pediatric Physiotherapy</li>
+            <li>Women's Health Physiotherapy</li>
+            <li>Orthopedic Physiotherapy</li>
+            <li>Post-Surgical Rehabilitation</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Why Choose Us?</h3>
+          <ul>
+            <li>Certified and experienced physiotherapists</li>
+            <li>Modern equipment and facilities</li>
+            <li>Patient-centered approach</li>
+            <li>Convenient appointment scheduling</li>
+            <li>Personalized care plans</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Our Mission</h3>
+          <p>
+            To empower our patients to achieve maximum mobility, independence, and overall health through compassionate, professional, and evidence-based practices.
+          </p>
+        </div>
+        <div>
+          <h3>Contact & Location</h3>
+          <p>
+            Visit us at our clinic or book an appointment online. We are located in the heart of the city, easily accessible by public transport.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="alt-section">
+      <div class="alt-content">
+        <div class="alt-text">
+          <h3>Clinic Facilities</h3>
+          <ul>
+            <li>State-of-the-art therapy rooms</li>
+            <li>Advanced exercise equipment</li>
+            <li>Private consultation cabins</li>
+            <li>Wheelchair accessible entrance</li>
+            <li>Comfortable waiting lounge</li>
+          </ul>
+        </div>
+        <div class="alt-image">
+          <img src="images_pages-to-jpg-0005.jpg" alt="Clinic Facilities">
+        </div>
+      </div>
+    </section>
+    <section class="alt-section">
+      <div class="alt-content reverse">
+        <div class="alt-text">
+          <h3>Patient Success Stories</h3>
+          <blockquote>
+            "Infinity Physio and Rehab helped me recover from my knee injury faster than I imagined. The team is caring and professional!"<br>
+            <cite>- Satisfied Patient</cite>
+          </blockquote>
+          <blockquote>
+            "My mother regained her mobility after a stroke thanks to their neurological rehab program."<br>
+            <cite>- Family Member</cite>
+          </blockquote>
+        </div>
+        <div class="alt-image">
+          <img src="images_pages-to-jpg-0002.jpg" alt="Patient Success Stories">
+        </div>
+      </div>
+    </section>
+    <section class="alt-section">
+      <div class="alt-content reverse">
+        <div class="alt-image">
+          <img src="images_pages-to-jpg-0001.jpg" alt="Meet Our Team">
+        </div>
+        <div class="alt-text">
+          <h3>Meet Our Team</h3>
+          <ul>
+            <li>Dr. Anjali Rao – Chief Physiotherapist, 15+ years experience</li>
+            <li>Dr. Vikram Singh – Sports Injury Specialist</li>
+            <li>Dr. Priya Menon – Pediatric Physiotherapist</li>
+            <li>Dr. Ramesh Kumar – Neurological Rehabilitation Expert</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="alt-section">
+      <div class="alt-content reverse">
+        <div class="alt-text">
+          <h3>Frequently Asked Questions</h3>
+          <dl>
+            <dt>Do I need a doctor’s referral?</dt>
+            <dd>No, you can book an appointment directly with us.</dd>
+            <dt>What should I bring for my first visit?</dt>
+            <dd>Please bring any relevant medical reports and wear comfortable clothing.</dd>
+            <dt>Do you offer home visits?</dt>
+            <dd>Yes, home physiotherapy sessions are available on request.</dd>
+          </dl>
+        </div>
+        <div class="alt-image">
+          <img src="images_pages-to-jpg-0003.jpg" alt="Frequently Asked Questions">
+        </div>
+      </div>
+    </section>
+    <section class="alt-section">
+      <div class="alt-content reverse">
+        <div class="alt-image">
+          <img src="images_pages-to-jpg-0004.jpg" alt="Latest News & Updates">
+        </div>
+        <div class="alt-text">
+          <h3>Latest News & Updates</h3>
+          <ul>
+            <li>New Hydrotherapy pool now open!</li>
+            <li>Free posture screening camp every Saturday</li>
+            <li>Follow us on Instagram for exercise tips and clinic updates</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>Featured Services</h3>
+      <div class="home-highlights">
+        <div class="service-item">
+          <h4>Geriatric Physiotherapy & Fall Prevention</h4>
+          <p>Helping older adults maintain independence and mobility.</p>
+          <a href="#" class="learn-more" data-service="geriatric">Learn more</a>
+        </div>
+        <div class="service-item">
+          <h4>Chronic Pain Management</h4>
+          <p>Multidisciplinary approach to manage chronic pain and improve quality of life.</p>
+          <a href="#" class="learn-more" data-service="chronic-pain">Learn more</a>
+        </div>
+        <div class="service-item">
+          <h4>Post-Surgical Rehabilitation</h4>
+          <p>Personalized plans to help patients recover quickly and safely after surgery.</p>
+          <a href="#" class="learn-more" data-service="post-surgical">Learn more</a>
+        </div>
+        <div class="service-item">
+          <h4>Sports Injury Recovery</h4>
+          <p>Comprehensive treatment and rehabilitation for athletic injuries.</p>
+          <a href="#" class="learn-more" data-service="sports-injury">Learn more</a>
+        </div>
+        <div class="service-item">
+          <h4>Neurological Rehabilitation</h4>
+          <p>Helping patients with stroke, spinal cord injury, and neurological conditions.</p>
+          <a href="#" class="learn-more" data-service="neurological">Learn more</a>
+        </div>
+        <div class="service-item">
+          <h4>Pediatric Physiotherapy</h4>
+          <p>Developmental and rehabilitative services for children.</p>
+          <a href="#" class="learn-more" data-service="pediatric">Learn more</a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>Why Choose Us?</h3>
+      <div class="home-highlights">
+        <div class ="service-item">
+          <h4>Expertise in Geriatric Care</h4>
+          <p>Our team includes physiotherapists with specialized training in geriatric care, ensuring that each treatment plan is customized to meet the unique needs of seniors.</p>
+        </div>
+        <div class ="service-item">
+          <h4>Holistic Approach</h4>
+          <p>We prioritize not only physical rehabilitation but also mental and emotional well-being, incorporating education, guidance, and support for both patients and their families.</p>
+        </div>
+        <div class ="service-item">
+          <h4>Tailored Treatment Plans</h4>
+          <p>Each program is designed to address the specific health concerns, physical limitations, and goals of the individual, ensuring a personalized and effective approach to care.</p>
+        </div>
+        <div class ="service-item">
+          <h4>Home-Based and Online Options</h4>
+          <p>We offer convenient home visits and virtual consultations to ensure that care is accessible and effective.</p>
+        </div>
+        <div class ="service-item">
+          <h4>Proven Results</h4>
+          <p>With a track record of helping seniors regain and maintain independence, our services are grounded in evidence-based practices and have shown significant improvement in patient outcomes.</p>
+        </div>
+        <div class ="service-item">
+          <h4>Continuous Support</h4>
+          <p>We provide ongoing assessments and progress tracking to ensure that our patients continue to make progress and adjust to their evolving needs as they age.</p>
+        </div>
+        <div class ="service-item">
+          <h4>Multidisciplinary Collaboration</h4>
+          <p>Our team works closely with other healthcare providers, including doctors, occupational therapists, and nurses, to ensure a coordinated approach to care.</p>
+        </div>
+        <div class ="service-item">
+          <h4>Education and Empowerment</h4>
+          <p>We believe in educating our patients and their families on how to maintain mobility, prevent injuries, and adopt healthy lifestyle changes for long-term well-being.</p>
+        </div>
+      </div>
+      <p>
+        By focusing on each patient’s individual needs and goals, our physiotherapy program ensures that older adults can lead healthier, more active, and independent lives. Let us help you or your loved ones navigate the aging process with confidence, mobility, and comfort.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2024 Infinity Physio and Rehab. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

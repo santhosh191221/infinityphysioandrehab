@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -423,3 +422,414 @@ footer {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
+
+/* Neurological Rehabilitation specific styles */
+.neuro-icons {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.8em;
+}
+
+.neuro-icon {
+    margin: 0 10px;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.service-item[data-service="neurological"] {
+    background: linear-gradient(to bottom right, #f0f5ff, #e6f0ff);
+    border-left: 4px solid #0056b3;
+}
+
+#modalContent h3:contains("Neuroplasticity") {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+/* Highlight important neurological terms */
+#modalContent li:contains("neuroplasticity"),
+#modalContent li:contains("cognitive") {
+    font-weight: 600;
+    color: #003366;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .neuro-icons {
+        font-size: 1.4em;
+    }
+    
+    .neuro-icon {
+        margin: 0 5px;
+    }
+}
+
+
+
+/* Pediatric Physiotherapy specific styles */
+.pediatric-icons {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.8em;
+}
+
+.pediatric-icon {
+    margin: 0 10px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.service-item[data-service="pediatric"] {
+    background: linear-gradient(to bottom right, #fff0f5, #ffe6ee);
+    border-left: 4px solid #ff69b4;
+}
+
+#modalContent h3:contains("Developmental") {
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+/* Highlight important pediatric terms */
+#modalContent li:contains("child"),
+#modalContent li:contains("developmental") {
+    font-weight: 600;
+    color: #d6336c;
+}
+
+/* Make lists more child-friendly */
+#modalContent ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#modalContent li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#modalContent li:before {
+    content: "👉";
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .pediatric-icons {
+        font-size: 1.4em;
+    }
+    
+    .pediatric-icon {
+        margin: 0 5px;
+    }
+}
+
+
+/* Women's Health specific styles */
+.womens-health-icons {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.8em;
+}
+
+.womens-health-icon {
+    margin: 0 10px;
+    display: inline-block;
+    animation: gentlePulse 3s infinite;
+}
+
+@keyframes gentlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.service-item[data-service="womens-health"] {
+    background: linear-gradient(to bottom right, #fff0f7, #ffe6f2);
+    border-left: 4px solid #e83e8c;
+}
+
+#modalContent h3:contains("Pelvic") {
+    color: #e83e8c;
+    font-weight: bold;
+}
+
+/* Highlight important women's health terms */
+#modalContent li:contains("pelvic"),
+#modalContent li:contains("postnatal") {
+    font-weight: 600;
+    color: #c2185b;
+}
+
+/* Style lists with feminine touch */
+#modalContent ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#modalContent li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#modalContent li:before {
+    content: "🌸";
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .womens-health-icons {
+        font-size: 1.4em;
+    }
+    
+    .womens-health-icon {
+        margin: 0 5px;
+    }
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full screen */
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slideshow {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-slideshow .slide {
+  position: absolute;
+  width: 100%; height: 100%;
+  display: none;
+}
+
+.hero-slideshow .slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background: #0056b3;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+  z-index: 3;
+}
+
+.cta-btn:hover {
+  background: #003f7f;
+}
+
+/* NAVBAR - must float above everything */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.6); /* transparent nav */
+}
+
+.nav-bar li {
+  margin: 0 15px;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  font-weight: bold;
+}
+
+.nav-bar a:hover {
+  background: #0056b3;
+  border-radius: 5px;
+}
+
+/* Ensure main content starts below hero section */
+main#content {
+  margin-top: 100vh; /* Pushes content below the full-screen hero section */
+  padding: 40px 20px;
+  background: #fff;
+  min-height: 400px;
+  z-index: 0;
+}
+
+/* Optional: Style for home highlights grid */
+.home-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.home-highlights div {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+}
+
+
+
+
+.maincontent {
+  margin-top: 100vh; 
+  padding: 0 20px 40px 20px; 
+  background: #fff;
+  min-height: 400px;
+  z-index: 0;
+}
+
+/* ...existing code... */
+.alt-section {
+  margin: 40px 0;
+}
+.alt-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.alt-content.reverse {
+  flex-direction: row-reverse;
+}
+.alt-text {
+  flex: 1 1 350px;
+  text-align: left;
+}
+.alt-image {
+  flex: 1 1 350px;
+  text-align: center;
+}
+.alt-image img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+@media (max-width: 900px) {
+  .alt-content, .alt-content.reverse {
+    flex-direction: column !important;
+    gap: 20px;
+    text-align: center;
+  }
+  .alt-text {
+    text-align: center;
+  }
+}
+
+/* ...existing code... */
+.alt-text ul,
+.alt-text li,
+.home-highlights ul,
+.home-highlights li,
+.service-list ul,
+.service-list li {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.alt-text ul,
+.home-highlights ul,
+.service-list ul {
+  margin-bottom: 0;
+}
+
+.alt-text li,
+.home-highlights li,
+.service-list li {
+  margin-bottom: 8px;
+  padding-left: 0;
+}
+
+/* Animation keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to home highlights and why choose us cards */
+.home-highlights > div,
+.service-item {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Stagger the animation for each card */
+.home-highlights > div:nth-child(1) { animation-delay: 0.1s; }
+.home-highlights > div:nth-child(2) { animation-delay: 0.2s; }
+.home-highlights > div:nth-child(3) { animation-delay: 0.3s; }
+.home-highlights > div:nth-child(4) { animation-delay: 0.4s; }
+.home-highlights > div:nth-child(5) { animation-delay: 0.5s; }
+.home-highlights > div:nth-child(6) { animation-delay: 0.6s; }
+.home-highlights > div:nth-child(7) { animation-delay: 0.7s; }
+.home-highlights > div:nth-child(8) { animation-delay: 0.8s; }
+
+.service-item:nth-child(1) { animation-delay: 0.1s; }
+.service-item:nth-child(2) { animation-delay: 0.2s; }
+.service-item:nth-child(3) { animation-delay: 0.3s; }
+.service-item:nth-child(4) { animation-delay: 0.4s; }
+.service-item:nth-child(5) { animation-delay: 0.5s; }
+.service-item:nth-child(6) { animation-delay: 0.6s; }
