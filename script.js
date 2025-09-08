@@ -1115,3 +1115,73 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Home link loads home content
+  const homeLink = document.querySelector('.nav-bar a[href="/"]');
+  if (homeLink) {
+    homeLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (typeof loadHomeContent === "function") {
+        loadHomeContent();
+      }
+    });
+  }
+});
+
+window.location.href = "/"; // Redirect to homepage on logo click
+document.querySelector('.logo').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = "/"; // Redirect to homepage
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const fullscreenMenu = document.querySelector(".fullscreen-menu");
+  const closeBtn = document.querySelector(".fullscreen-menu .close-btn");
+
+  if (toggle && fullscreenMenu && closeBtn) {
+    toggle.addEventListener("click", () => {
+      fullscreenMenu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      fullscreenMenu.classList.remove("active");
+    });
+
+    // Close menu when clicking a link
+    fullscreenMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        fullscreenMenu.classList.remove("active");
+      });
+    });
+  }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("appointment-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Build WhatsApp message
+      const whatsappMessage =
+        `Appointment Request:\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n` +
+        `Message: ${message}`;
+
+      // WhatsApp number (change to your clinic's number)
+      const whatsappNumber = "919600619608";
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+      window.open(url, "_blank");
+    });
+  }
+});

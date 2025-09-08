@@ -51,7 +51,7 @@
     <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
 
     <div class="nav-logo">
-      <a href="#"><img src="New_logo.jpeg" alt="Logo" class="logo"></a>
+      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
     </div>
 
     <div class="nav-social">
@@ -67,16 +67,57 @@
     </div>
 
     <ul class="nav-bar">
+      <li><a href="index.html">Home</a></li>
       <li><a href="#vision" data-section="vision">Vision</a></li>
       <li><a href="#appointment" data-section="appointment">Appointment</a></li>
       <li><a href="#our-works" data-section="our-works">Our Works</a></li>
       <li><a href="#reviews" data-section="reviews">Reviews</a></li>
-      <li><a href="#contact" data-section="contact">Contact Us</a></li>
       <li><a href="#why-choose-us" data-section="why-choose-us">Why Choose Us?</a></li>
-      <li><a href="#about-us" data-section="about-us">About Us</a></li>
     </ul>
   </nav> 
-  
+  <!-- <nav class="navbar">
+  <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+
+  <ul class="nav-bar">
+    <li class="logo-left">
+      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+    </li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#" data-section="vision">Vision</a></li>
+    <li><a href="#" data-section="appointment">Appointment</a></li>
+    <li><a href="#" data-section="our-works">Our Works</a></li>
+    <li><a href="#" data-section="reviews">Reviews</a></li>
+    <li><a href="#" data-section="contact-us">Contact Us</a></li>
+    <li><a href="#" data-section="why-choose-us">Why Choose Us?</a></li>
+    <li><a href="#" data-section="about-us">About Us</a></li>
+  </ul>
+</nav>
+
+<div class="fullscreen-menu">
+  <button class="close-btn" aria-label="Close menu">&times;</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#" data-section="vision">Vision</a></li>
+    <li><a href="#" data-section="appointment">Appointment</a></li>
+    <li><a href="#" data-section="our-works">Our Works</a></li>
+    <li><a href="#" data-section="reviews">Reviews</a></li>
+    <li><a href="#" data-section="contact-us">Contact Us</a></li>
+    <li><a href="#" data-section="why-choose-us">Why Choose Us?</a></li>
+    <li><a href="#" data-section="about-us">About Us</a></li>
+  </ul>
+  <div class="nav-social">
+    <a href="https://wa.me/919600619608" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </a>
+    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank">
+      <img src="pt.jpg" alt="Physiotherapy" />
+    </a>
+  </div>
+</div> -->
+
 
 </div>
 
@@ -435,5 +476,33 @@
     <p>&copy; 2024 Infinity Physio and Rehab. All rights reserved.</p>
   </footer>
   <script src="script.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("appointment-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Build WhatsApp message
+      const whatsappMessage =
+        `Appointment Request:\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n` +
+        `Message: ${message}`;
+
+      // WhatsApp number (change to your clinic's number)
+      const whatsappNumber = "919600619608";
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+      window.open(url, "_blank");
+    });
+  }
+});
+</script>
 </body>
 </html>

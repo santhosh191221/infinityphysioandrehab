@@ -1334,3 +1334,176 @@ body::after {
 }
 
 
+/* Bold navbar items and set dark blue background, white text, white hover background */
+.nav-bar li a {
+  font-weight: bold;
+  background: #002366; /* dark blue */
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-bar li a:hover,
+.nav-bar li a:focus {
+  background: #fff;
+  color: #002366;
+  text-decoration: none;
+}
+
+/* Optional: spacing between items */
+.nav-bar li {
+  margin: 0 6px;
+}
+
+/* Ensure the hero section fills the viewport */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the slideshow and image fill the hero section */
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-slideshow .slide img {
+  width: 100vw;
+  height: 120vh;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Make Book Appointment button match navbar style */
+/* .cta-btn.whatsapp-btn {
+  background: #002366;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.cta-btn.whatsapp-btn:hover,
+.cta-btn.whatsapp-btn:focus {
+  background: #fff;
+  color: #002366;
+  text-decoration: none;
+} */
+
+
+/* Hamburger hidden on desktop */
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+/* Fullscreen menu overlay (mobile only) */
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00072D;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.fullscreen-menu.active {
+  display: flex;
+}
+
+/* Close button */
+.fullscreen-menu .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu items */
+.fullscreen-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.fullscreen-menu ul li {
+  margin: 20px 0;
+}
+
+.fullscreen-menu ul li a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.fullscreen-menu ul li a:hover {
+  color: #18bfef;
+}
+
+/* Social icons */
+.fullscreen-menu .nav-social {
+  margin-top: 40px;
+}
+
+.fullscreen-menu .nav-social img {
+  height: 32px;
+  margin: 0 10px;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-bar {
+    display: none; /* hide normal nav bar in mobile */
+  }
+}
