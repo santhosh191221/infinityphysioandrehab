@@ -98,10 +98,22 @@ document.querySelectorAll(".nav-bar a").forEach(link => {
 function loadContent(section) {
     const content = {
         "about-us": `<h2>About Us</h2><p>Our team of expert physiotherapists is dedicated to helping you achieve optimal health and wellness.</p>`,
-        "vision": `<h2>Vision</h2><p>           Our vision at Infinity Physio and Rehab is to be a trusted leader in physiotherapy and rehabilitation, empowering individuals to achieve pain-free movement and optimal health. Through personalized care, innovation, and unwavering support, we aim to redefine recovery and set new standards in physiotherapy care.<br>
-        We are committed to empowering our patients to achieve maximum mobility, independence, and overall health through compassionate, professional, and evidence-based practices. By fostering a culture of excellence, innovation, and continuous improvement, we aim to set new standards in physiotherapy care.<br>
-        Guided by our core values of unwavering support, expert guidance, and patient satisfaction, we strive to expand our reach, build a strong reputation, and establish Infinity Physio and Rehab as a premier brand in the field of rehabilitation
-</p>`,
+        "vision": `<section class="alt-section vision-section">
+  <div class="alt-content reverse">
+    <div class="alt-image">
+      <img src="vision.jpg" alt="Our Vision">
+    </div>
+    <div class="alt-text">
+      <h3>Our Vision</h3>
+      <p>
+        Our vision at Infinity Physio and Rehab is to be a trusted leader in physiotherapy and rehabilitation, empowering individuals to achieve pain-free movement and optimal health.<br>
+        Through personalized care, innovation, and unwavering support, we aim to redefine recovery and set new standards in physiotherapy care.<br>
+        We are committed to empowering our patients to achieve maximum mobility, independence, and overall health through compassionate, professional, and evidence-based practices.<br>
+        Guided by our core values of unwavering support, expert guidance, and patient satisfaction, we strive to expand our reach, build a strong reputation, and establish Infinity Physio and Rehab as a premier brand in the field of rehabilitation.
+      </p>
+    </div>
+  </div>
+</section>`,
         "appointment": `
             <section id="appointment-section">
                 <h2>Book an Appointment</h2>
@@ -241,7 +253,49 @@ function loadContent(section) {
                 </div>
             </div>
         `,
-        "reviews": `<h2>Reviews</h2><p>See what our satisfied patients have to say about their experience with us.</p>`,
+        "reviews": `<section>
+  <h3>Reviews</h3>
+  <div class="review-section" style="text-align:center; margin-bottom:40px;">
+    <p>See what our patients say about Infinity Physio and Rehab!</p>
+    <a href="https://www.google.com/search?q=Infinity+Physio+and+Rehab+reviews" target="_blank" class="google-review-btn">
+      <img src="review.png" alt="Google Reviews" style="width:32px;vertical-align:middle;margin-right:8px;">
+      Read Our Google Reviews
+    </a>
+    <!-- Review Slideshow -->
+    <div class="review-slideshow">
+      <div class="review-slide active">
+        <blockquote>
+          "The therapists are very professional and caring. My recovery was faster than expected!"
+        </blockquote>
+        <cite>- Priya S.</cite>
+      </div>
+      <div class="review-slide">
+        <blockquote>
+          "Infinity Physio and Rehab helped my father regain his mobility. Highly recommended!"
+        </blockquote>
+        <cite>- Ramesh K.</cite>
+      </div>
+      <div class="review-slide">
+        <blockquote>
+          "Clean clinic, friendly staff, and excellent treatment plans. Thank you!"
+        </blockquote>
+        <cite>- Anjali M.</cite>
+      </div>
+      <div class="review-slide">
+        <blockquote>
+          "I loved the home physiotherapy option. Very convenient and effective."
+        </blockquote>
+        <cite>- Suresh D.</cite>
+      </div>
+      <div class="review-slide">
+        <blockquote>
+          "Great experience! The team is knowledgeable and supportive throughout the process."
+        </blockquote>
+        <cite>- Kavitha P.</cite>
+      </div>
+    </div>
+  </div>
+</section>`,
         "why-choose-us": `
             <h2>Why Choose Us?</h2>
             <div class="grid-container">
@@ -708,35 +762,6 @@ const serviceDetails = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Function to open modal with service details
 function openModal(serviceId) {
     const service = serviceDetails[serviceId];
@@ -986,3 +1011,107 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Review slideshow logic
+  const reviewSlides = document.querySelectorAll('.review-slide');
+  let reviewIndex = 0;
+  function showReviewSlide(idx) {
+    reviewSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === idx);
+    });
+  }
+  function nextReviewSlide() {
+    reviewIndex = (reviewIndex + 1) % reviewSlides.length;
+    showReviewSlide(reviewIndex);
+  }
+  if (reviewSlides.length > 0) {
+    showReviewSlide(reviewIndex);
+    setInterval(nextReviewSlide, 3000); // Change interval to 3 seconds
+  }
+});
+
+
+// @media (min-width: 769px) {
+//   .alt-section .alt-content .alt-text h3 {
+//     margin-left: 30px;
+//   }
+//   .alt-section .alt-content .alt-text ul,
+//   .alt-section .alt-content .alt-text p {
+//     margin-left: 30px;
+//   }
+// }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navBar = document.querySelector('.nav-bar');
+
+  if (navToggle && navBar) {
+    navToggle.addEventListener('click', () => {
+      navBar.classList.toggle('open'); // Toggle the open class
+    });
+  } else {
+    console.error("Hamburger menu elements not found!");
+  }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navBar = document.querySelector(".nav-bar");
+
+    hamburger.addEventListener("click", () => {
+        navBar.classList.toggle("active");
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const navBar = document.querySelector('.nav-bar');
+
+  if (!toggle || !navBar) {
+    console.warn('Hamburger or nav-bar not found — selector mismatch?');
+    return;
+  }
+
+  // Accessibility attribute
+  toggle.setAttribute('aria-expanded', 'false');
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navBar.classList.toggle('active');
+    const opened = navBar.classList.contains('active');
+    toggle.setAttribute('aria-expanded', opened.toString());
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navBar.classList.contains('active') && !navBar.contains(e.target) && e.target !== toggle) {
+      navBar.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Optional: close on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navBar.classList.contains('active')) {
+      navBar.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector("#nav ul.links");
+
+  toggle.addEventListener("click", () => {
+    links.classList.toggle("active");
+  });
+});
+
+

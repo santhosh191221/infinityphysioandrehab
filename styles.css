@@ -128,9 +128,9 @@ footer {
     height: auto;
 }
 
-.fade {
+/* .fade {
     animation: fadeEffect 4s infinite;
-}
+} */
 
 @keyframes fadeEffect {
     0% { opacity: 0; }
@@ -603,8 +603,8 @@ footer {
 /* HERO SECTION */
 .hero-section {
   position: relative;
-  height: 100vh; /* Full screen */
   width: 100%;
+  height: 100vh; /* Fill the screen */
   overflow: hidden;
 }
 
@@ -677,52 +677,54 @@ footer {
   background: transparent;
 }
 
-.nav-logo {
-  flex: 1;
-  text-align: center;
+/* Desktop/Laptop: logo left, nav center */
+@media (min-width: 769px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 3;
+  }
+  .nav-logo {
+    flex: 0 0 auto;
+    text-align: left;
+    margin-left: 30px;
+  }
+  .nav-bar {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .nav-social {
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
-.nav-bar {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.nav-bar li {
-  margin: 0 15px;
-}
-
-.nav-bar.open {
-  left: 0; /* Slide into view */
-}
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  position: absolute;
-  left: 15px;
-  top: 10px;
-  z-index: 1002;
-  cursor: pointer;
-}
-
-/* Mobile styles */
+/* Mobile: logo center, hamburger left */
 @media (max-width: 768px) {
   .navbar {
     justify-content: flex-start;
-    background: rgba(0,0,0,0.7);
     position: fixed;
     top: 0;
     left: 0;
     height: 60px;
     width: 100%;
     z-index: 1002;
+    background: rgba(0,0,0,0.7);
   }
   .nav-logo {
     flex: 1;
@@ -736,14 +738,13 @@ footer {
     display: block;
   }
   .nav-bar {
-    flex-direction: column;
     position: fixed;
     top: 60px;
     left: -220px;
     width: 200px;
     background: #00072D;
     height: 100vh;
-    padding-top: 20px;
+    flex-direction: column;
     transition: left 0.3s ease;
     z-index: 1001;
     box-shadow: 2px 0 8px rgba(0,0,0,0.2);
@@ -762,13 +763,18 @@ footer {
   }
 }
 
+/* Hide hamburger on desktop */
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
 /* Ensure main content starts below hero section */
 main#content {
-  margin-top: 100vh; /* Pushes content below the full-screen hero section */
-  padding: 40px 20px;
+  margin-top: 0; /* Remove if you have margin-top: 100vh; */
+  padding-top: 40px; /* Optional: add some padding for spacing */
   background: #fff;
-  min-height: 400px;
-  z-index: 0;
 }
 
 /* Optional: Style for home highlights grid */
@@ -784,6 +790,20 @@ main#content {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+}
+
+/* Why Choose Us grid: 4 columns on desktop, 1 column on mobile */
+.home-highlights {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  margin: 30px 0;
+}
+
+@media (min-width: 992px) {
+  .home-highlights {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 
@@ -896,3 +916,421 @@ main#content {
 .service-item:nth-child(4) { animation-delay: 0.4s; }
 .service-item:nth-child(5) { animation-delay: 0.5s; }
 .service-item:nth-child(6) { animation-delay: 0.6s; }
+/* ...existing code... */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #25D366;
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.whatsapp-btn:hover {
+  background: #128C7E;
+}
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.nav-icon img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: box-shadow 0.2s, transform 0.2s;
+  vertical-align: middle;
+}
+
+.whatsapp-nav img {
+  background: #25D366;
+  padding: 2px;
+}
+
+.instagram-nav img {
+  background: #fff;
+  padding: 2px;
+}
+
+.nav-icon:hover img {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transform: scale(1.1);
+}
+
+/* Desktop/Laptop: social icons right */
+@media (min-width: 769px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 3;
+  }
+  .nav-logo {
+    flex: 0 0 auto;
+    text-align: left;
+    margin-left: 30px;
+  }
+  .nav-bar {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .nav-social {
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Mobile: social icons below logo or menu (optional, keep as is or adjust as needed) */
+@media (max-width: 768px) {
+  .nav-social {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    gap: 10px;
+  }
+}
+
+/* Remove previous black/white gap */
+body::after {
+  display: none;
+}
+
+/* Add a 5px white gap above the footer */
+.page-gap {
+  width: 100%;
+  height: 10px;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.google-review-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: #4285F4;
+  border: 2px solid #4285F4;
+  border-radius: 24px;
+  padding: 8px 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 10px;
+}
+.google-review-btn:hover {
+  background: #4285F4;
+  color: #fff;
+}
+
+/* ...existing code... */
+.review-slideshow {
+  position: relative;
+  max-width: 500px;
+  margin: 30px auto 0 auto;
+  min-height: 120px;
+}
+.review-slide {
+  display: none;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 25px 20px 15px 20px;
+  font-size: 1.1em;
+  color: #333;
+  animation: fadeUp 0.8s ease;
+}
+.review-slide.active {
+  display: block;
+}
+.review-slide blockquote {
+  margin: 0 0 10px 0;
+  font-style: italic;
+  color: #0056b3;
+}
+.review-slide cite {
+  font-size: 0.95em;
+  color: #555;
+  display: block;
+  text-align: right;
+}
+
+
+
+/* Move only Clinic Facilities content to the right on desktop */
+/* @media (min-width: 769px) {
+  .alt-section.clinic-facilities .alt-content .alt-text {
+    margin-left: 60px;
+  }
+} */
+
+@media (min-width: 769px) {
+   .alt-section .alt-content .alt-text h3 {
+     margin-left: 30px;
+   }
+   .alt-section .alt-content .alt-text ul,
+   .alt-section .alt-content .alt-text p {
+     margin-left: 200px;
+   }
+ }
+
+ @media (min-width: 769px) {
+  .alt-section .alt-content .alt-text h3 {
+    margin-left: 150px;
+  }
+  .alt-section .alt-content .alt-text ul,
+  .alt-section .alt-content .alt-text p {
+    margin-left: 200px;
+  }
+}
+
+/* Add this to your styles.css */
+.outline-box {
+  border: 2px solid #222;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 30px rgba(0,0,0,0.60);
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+
+/* .nav-bar a {
+    color: white;
+    text-decoration: none;
+} */
+
+
+.nav-bar a {
+    color: #001F54; /* Dark blue by default */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-bar a:hover {
+    background: white;
+    color: #001F54; /* Dark blue text on white */
+    border-radius: 5px;
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 20px;
+    background: #00072D;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        display: none; /* hidden by default */
+        background: #00072D;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-bar li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-bar li a::after {
+        content: " >";
+        float: right;
+    }
+}
+
+
+
+/* Make navbar appear above the intro video so clicks reach it */
+.navbar {
+  position: fixed; /* keep navbar on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10010; /* > 9999 (intro video) so nav is clickable */
+}
+
+/* Ensure mobile menu visibility when toggled */
+.nav-bar {
+  transition: max-height 0.3s ease;
+}
+.nav-bar.active {
+  display: flex; /* shown when JS toggles the class */
+  max-height: 100vh;
+}
+
+/* Mobile hamburger styles (if you don't already have them) */
+.nav-toggle {
+  display: none; /* visible only on small screens via media query below */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10011; /* even higher to keep it clickable */
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-bar {
+    flex-direction: column;
+    display: none;        /* hidden until .active */
+    width: 100%;
+    background: #00072D;
+    text-align: left;
+    padding-top: 60px;    /* make room for fixed navbar */
+    z-index: 10010;
+  }
+  .nav-bar.active { display: flex; }
+  .nav-bar li { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nav-bar li a::after { content: " >"; float: right; }
+}
+
+
+/* Base Nav */
+#nav {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #00072D;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10010;
+}
+
+/* Logo */
+#nav .nav-logo img {
+  height: 40px;
+}
+
+/* Links */
+#nav ul.links {
+  display: flex;
+  flex-grow: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+#nav ul.links li a {
+  display: block;
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #001F54; /* dark blue */
+  transition: background 0.3s, color 0.3s;
+}
+
+#nav ul.links li a:hover {
+  background: #fff;
+  color: #001F54;
+  border-radius: 5px;
+}
+
+/* Social Icons */
+#nav ul.icons {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#nav ul.icons img {
+  height: 24px;
+}
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 1rem;
+  z-index: 10011;
+}
+
+/* Mobile menu */
+@media screen and (max-width: 980px) {
+  #nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  #nav ul.links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #00072D;
+    margin-top: 0.5rem;
+  }
+
+  #nav ul.links.active {
+    display: flex;
+  }
+
+  #nav ul.links li {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  #nav ul.links li a::after {
+    content: " >";
+    float: right;
+  }
+}
+
+
