@@ -46,35 +46,53 @@
   </a>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    
-    <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+<nav class="navbar">
+  <div class="nav-logo">
+    <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+  </div>
+  <ul class="main-nav-bar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#vision" data-section="vision">Vision</a></li>
+    <li><a href="#appointment" data-section="appointment">Appointment</a></li>
+    <li><a href="#our-services" data-section="our-services">Our Services</a></li>
+    <li><a href="#reviews" data-section="reviews">Reviews</a></li>
+    <li><a href="#why-choose-us" data-section="why-choose-us">Why Choose Us?</a></li>
+  </ul>
+  <div class="nav-social">
+    <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </a>
+    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
+      <img src="pt.jpg" alt="Physiotherapy" />
+    </a>
+  </div>
 
-    <div class="nav-logo">
-      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
-    </div>
+  <!-- <ul class="main-nav-bar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#vision" data-section="vision">Vision</a></li>
+    <li><a href="#appointment" data-section="appointment">Appointment</a></li>
+    <li><a href="#our-services" data-section="our-services">Our Services</a></li>
+    <li><a href="#reviews" data-section="reviews">Reviews</a></li>
+    <li><a href="#why-choose-us" data-section="why-choose-us">Why Choose Us?</a></li>
+  </ul> -->
 
-    <div class="nav-social">
-      <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav" aria-label="WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-      </a>
-      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav" aria-label="Instagram">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-      </a>
-      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav" aria-label="PT">
-        <img src="pt.jpg" alt="Physiotherapy" />
-      </a>
-    </div>
+  <button class="nav-toggle" aria-label="Open menu" onclick="openHamburgerMenu()">☰</button>
 
-    <ul class="nav-bar">
+  <div class="fullscreen-menu">
+    <span class="close-btn" aria-label="Close menu" onclick="closeHamburgerMenu()">&times;</span>
+    <ul class="mobile-nav-bar">
       <li><a href="index.html">Home</a></li>
       <li><a href="#vision" data-section="vision">Vision</a></li>
       <li><a href="#appointment" data-section="appointment">Appointment</a></li>
-      <li><a href="#our-works" data-section="our-works">Our Works</a></li>
+      <li><a href="#our-services" data-section="our-services">Our Services</a></li>
       <li><a href="#reviews" data-section="reviews">Reviews</a></li>
       <li><a href="#why-choose-us" data-section="why-choose-us">Why Choose Us?</a></li>
     </ul>
-  </nav> 
+  </div>
+</nav>
   <!-- <nav class="navbar">
   <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
 
@@ -177,7 +195,7 @@
       </div>
     </section>
     <section>
-  <h3><strong>Regain Strength   Restore Function   Redefine Your Limits</strong></h3>
+  <h3><strong>Regain Strength  * Restore Function *  Redefine Your Limits</strong></h3>
   <p>
     We support you through pain, injury, or post-surgical challenges with comprehensive care.<br>
     With a strong focus on evidence-based practices, we tailor our treatments to meet your unique needs, ensuring faster recovery and long-term wellness.<br>
@@ -350,7 +368,7 @@
       <h3>Reviews</h3>
       <div class="review-section" style="text-align:center; margin-bottom:40px;">
         <p>See what our patients say about Infinity Physio and Rehab!</p>
-        <a href="https://www.google.com/search?q=Infinity+Physio+and+Rehab+reviews" target="_blank" class="google-review-btn">
+        <a href="https://g.page/r/CfolFhQlZVeLEBI/review" target="_blank" class="google-review-btn">
           <img src="review.png" alt="Google Reviews" style="width:32px;vertical-align:middle;margin-right:8px;">
           Read Our Google Reviews
         </a>

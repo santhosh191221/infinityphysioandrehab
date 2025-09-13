@@ -87,13 +87,21 @@ function showSlides() {
 }
 
 // Dynamic content loading
-document.querySelectorAll(".nav-bar a").forEach(link => {
+document.querySelectorAll(".main-nav-bar a, .mobile-nav-bar a")
+  .forEach(link => {
     link.addEventListener("click", (event) => {
-        event.preventDefault();
-        const section = event.target.dataset.section;
-        loadContent(section);
+      event.preventDefault();
+      const section = event.target.dataset.section;
+      loadContent(section);
+      closeHamburgerMenu(); // auto-close hamburger on mobile
     });
-});
+  });
+
+  const main = document.getElementById("content");
+  if (main && content[section]) {
+    main.innerHTML = content[section];
+  }
+
 
 function loadContent(section) {
     const content = {
@@ -101,16 +109,26 @@ function loadContent(section) {
         "vision": `<section class="alt-section vision-section">
   <div class="alt-content reverse">
     <div class="alt-image">
-      <img src="vision.jpg" alt="Our Vision">
+      <img src="images_pages-to-jpg-0004.jpg" alt="Our Vision">
     </div>
     <div class="alt-text">
-      <h3>Our Vision</h3>
-      <p>
-        Our vision at Infinity Physio and Rehab is to be a trusted leader in physiotherapy and rehabilitation, empowering individuals to achieve pain-free movement and optimal health.<br>
-        Through personalized care, innovation, and unwavering support, we aim to redefine recovery and set new standards in physiotherapy care.<br>
-        We are committed to empowering our patients to achieve maximum mobility, independence, and overall health through compassionate, professional, and evidence-based practices.<br>
-        Guided by our core values of unwavering support, expert guidance, and patient satisfaction, we strive to expand our reach, build a strong reputation, and establish Infinity Physio and Rehab as a premier brand in the field of rehabilitation.
-      </p>
+       <h2>Our Vision</h2>
+  <p>
+    At Infinity Physio and Rehab, our vision is to be the most trusted and innovative leader in physiotherapy and rehabilitation, helping people of all ages move freely and live healthier lives.
+  </p>
+  <br>
+  <p>
+    We believe every patient deserves personalized care, advanced treatment options, and unwavering support throughout their recovery journey. Our team is dedicated to redefining rehabilitation by combining compassion, expertise, and the latest evidence-based practices.
+  </p>
+  <br>
+  <p>
+    Our commitment is to empower you to achieve your highest level of mobility, independence, and well-being. We strive to set new standards in physiotherapy, build lasting relationships, and make Infinity Physio and Rehab a name synonymous with excellence and patient satisfaction.
+  </p>
+  <br>
+  <p>
+    Guided by our core values—support, expertise, and integrity—we aim to expand our reach, enhance our reputation, and help more individuals experience transformative healing and lifelong wellness.
+  </p>
+  <br>
     </div>
   </div>
 </section>`,
@@ -131,10 +149,11 @@ function loadContent(section) {
                 <p id="form-status"></p>
             </section>
         `,
-        "our-works": `
+        "our-services": `
             <h2>Our Expert Services Include</h2>
             <div class="service-list">
                 <div class="service-item">
+                    <img src="gen.jpeg" alt="Geriatric Physiotherapy" class="service-img">
                     <h3>Geriatric Physiotherapy & Fall Prevention</h3>
                     <p>Our geriatric care program is designed to help older adults maintain their independence and mobility. We focus on fall prevention, balance training, and exercises to improve strength and flexibility.</p>
                     <a href="#" class="learn-more" data-service="geriatric">Learn more</a>
@@ -142,112 +161,134 @@ function loadContent(section) {
                 </div>
                 <div class="service-item">
                     <h3>Chronic Pain Management</h3>
+                    <img src="gen.jpeg" alt="Chronic Pain Management" class="service-img">
                     <p>We use a multidisciplinary approach to manage chronic pain, including physical therapy, medication management, and lifestyle modification. Our goal is to help patients manage their pain and improve their quality of life.</p>
                     <a href="#" class="learn-more" data-service="chronic-pain">Learn more</a>
 
                 </div>
                 <div class="service-item">
                     <h3>Post-Surgical Rehabilitation</h3>
+                    <img src="gen.jpeg" alt="Post-Surgical Rehabilitation" class="service-img">
                     <p>Our post-surgical rehabilitation program is designed to help patients recover from surgery as quickly and safely as possible. We create personalized rehabilitation plans that address the patient's specific needs and goals.</p>
                     <a href="#" class="learn-more" data-service="post-surgical">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Sports Injury Recovery</h3>
+                    <img src="gen.jpeg" alt="Sports Injury Recovery" class="service-img">
                     <p>We offer comprehensive treatment and rehabilitation for athletic injuries, including acute and chronic conditions. Our goal is to help athletes return to their sport quickly and safely.</p>
                     <a href="#" class="learn-more" data-service="sports-injury">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Neurological Rehabilitation</h3>
+                    <img src="gen.jpeg" alt="Neurological Rehabilitation" class="service-img">
                     <p>Our neurological rehabilitation program is designed to help patients with neurological conditions such as stroke, spinal cord injury, and Parkinson's disease. We focus on improving functional abilities and promoting independence.</p>
                     <a href="#" class="learn-more" data-service="neurological">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Pediatric Physiotherapy</h3>
+                    <img src="gen.jpeg" alt="Pediatric Physiotherapy" class="service-img">
                     <p>We provide developmental and rehabilitative services for children with conditions such as cerebral palsy, developmental delay, and congenital anomalies. Our goal is to help children reach their full potential.</p>
                     <a href="#" class="learn-more" data-service="pediatric">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Women's Health Physiotherapy</h3>
+                    <img src="gen.jpeg" alt="Women's Health Physiotherapy" class="service-img">
                     <p>Our women's health program addresses a range of concerns, including prenatal and postnatal care, pelvic floor dysfunction, and osteoporosis management. We provide personalized care and education to help women manage their health.</p>
                     <a href="#" class="learn-more" data-service="womens-health">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Fitness & Wellness Programs</h3>
+                    <img src="gen.jpeg" alt="Fitness & Wellness Programs" class="service-img">
                     <p>We offer proactive programs to promote healthy lifestyles, injury prevention, and optimal physical function. Our goal is to help individuals achieve their health and wellness goals.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Ergonomic Solutions & Postural Correction</h3>
+                    <img src="gen.jpeg" alt="Ergonomic Solutions & Postural Correction" class="service-img">
                     <p>We provide workplace assessments and interventions to prevent injury, improve productivity, and enhance overall well-being. Our goal is to help individuals work safely and efficiently.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                     <h3>Headache & Migraine Management</h3>
+                    <img src="gen.jpeg" alt="Headache & Migraine Management" class="service-img">
                     <p>We use a multimodal approach to manage headaches and migraines, including manual therapy, exercise, and lifestyle modification. Our goal is to help patients reduce their symptoms and improve their quality of life.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3>Osteoarthritis </h3>
+                <img src="gen.jpeg" alt="Osteoarthritis" class="service-img">
                 <p>A degenerative joint disease that causes cartilage breakdown, leading to joint pain, stiffness, swelling, and reduced mobility. It commonly affects weight-bearing joints such as the knees, hips, and spine in older adults.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3>Rheumatoid Arthritis</h3>
+                <img src="gen.jpeg" alt="Rheumatoid Arthritis" class="service-img">
                 <p>An autoimmune disease that causes chronic inflammation in the joints, leading to pain, swelling, stiffness, and reduced mobility. It commonly affects the hands, feet, and wrists and can progress to joint deformity.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3>Parkinson's Disease</h3>
+                <img src="gen.jpeg" alt="Parkinson's Disease" class="service-img">
                 <p>A progressive neurological disorder that affects movement, balance, and coordination. Common symptoms include tremors, rigidity, bradykinesia, and postural instability, leading to mobility challenges and functional limitations.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3>Stroke Rehabilitation</h3>
+                <img src="gen.jpeg" alt="Stroke Rehabilitation" class="service-img">
                 <p>Stroke occurs when blood flow to the brain is interrupted, causing loss of function in different parts of the body. Rehabilitation focuses on regaining mobility, strength, coordination, and independence through physiotherapy, speech therapy, and cognitive training.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3>Osteoporosis</h3>
+                <img src="gen.jpeg" alt="Osteoporosis" class="service-img">
                 <p>A condition characterized by low bone density and increased risk of fractures, especially in the spine, hips, and wrists. Physiotherapy focuses on exercises to improve bone strength, balance, and posture to reduce fracture risk and maintain independence.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3>Balance Disorders</h3>
+                <img src="gen.jpeg" alt="Balance Disorders" class="service-img">
                 <p>These disorders affect the inner ear and brain, leading to dizziness, vertigo, unsteadiness, and frequent falls. They can result from age-related degeneration, infections, or neurological conditions like stroke and Parkinson’s disease..</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3> Falls Prevention</h3>
+                <img src="gen.jpeg" alt="Falls Prevention" class="service-img">
                 <p>Falls are a leading cause of injuries in the elderly, often resulting from muscle weakness, balance impairments, vision issues, or environmental hazards. Preventive strategies include strength training, balance exercises, home modifications, and assistive devices.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3> Frailty Syndrome</h3>
+                <img src="gen.jpeg" alt="Frailty Syndrome" class="service-img">
                 <p> A state of increased vulnerability due to reduced physiological reserves, leading to weakness, fatigue, slow mobility, and a higher risk of falls, infections, and hospitalizations. It is often associated with poor nutrition, inactivity, and chronic illnesses.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3> Depression & Anxiety in Older Adults</h3>
+                <img src="gen.jpeg" alt="Depression & Anxiety in Older Adults" class="service-img">
                 <p>Mental health disorders that affect emotional well-being, leading to persistent sadness, social withdrawal, sleep disturbances, and cognitive decline. These conditions often arise due to chronic illnesses, loneliness, or life transitions.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3> Dementia Care</h3>
+                <img src="gen.jpeg" alt="Dementia Care" class="service-img">
                 <p>A progressive decline in cognitive function, memory, and reasoning that impairs daily activities and social interactions. Physiotherapy focuses on maintaining physical function, mobility, and independence in individuals with dementia.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3> Postural Hypotension</h3>
+                <img src="gen.jpeg" alt="Postural Hypotension" class="service-img">
                 <p>A condition characterized by a sudden drop in blood pressure when standing up, causing dizziness, fainting, and increased fall risk. It results from autonomic nervous system dysfunction, dehydration, or medication side effects.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3> Sarcopeina</h3>
+                <img src="gen.jpeg" alt="Sarcopeina" class="service-img">
                 <p>Age-related loss of muscle mass, strength, and function that leads to weakness, fatigue, and reduced physical performance. It can result from inactivity, poor nutrition, hormonal changes, and chronic diseases.</p>
                 <a href="#">Learn more</a>
                 </div>
                 <div class="service-item">
                 <h3> Urinary Incontinence</h3>
+                <img src="gen.jpeg" alt="Urinary Incontinence" class="service-img">
                 <p>Loss of bladder control that causes involuntary leakage of urine, affecting daily activities and quality of life. It can result from weak pelvic floor muscles, nerve damage, hormonal changes, or underlying medical conditions.</p>
                 <a href="#">Learn more</a>
                 </div>
@@ -257,7 +298,7 @@ function loadContent(section) {
   <h3>Reviews</h3>
   <div class="review-section" style="text-align:center; margin-bottom:40px;">
     <p>See what our patients say about Infinity Physio and Rehab!</p>
-    <a href="https://www.google.com/search?q=Infinity+Physio+and+Rehab+reviews" target="_blank" class="google-review-btn">
+    <a href="https://g.page/r/CfolFhQlZVeLEBI/review" target="_blank" class="google-review-btn">
       <img src="review.png" alt="Google Reviews" style="width:32px;vertical-align:middle;margin-right:8px;">
       Read Our Google Reviews
     </a>
@@ -387,6 +428,9 @@ function loadContent(section) {
 //             statusElement.style.color = "red";
 //         });
 // }
+
+
+
 
 
 
@@ -1007,48 +1051,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (navToggle && navBar) {
     navToggle.addEventListener('click', () => {
-      navBar.classList.toggle('open');
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Review slideshow logic
-  const reviewSlides = document.querySelectorAll('.review-slide');
-  let reviewIndex = 0;
-  function showReviewSlide(idx) {
-    reviewSlides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === idx);
-    });
-  }
-  function nextReviewSlide() {
-    reviewIndex = (reviewIndex + 1) % reviewSlides.length;
-    showReviewSlide(reviewIndex);
-  }
-  if (reviewSlides.length > 0) {
-    showReviewSlide(reviewIndex);
-    setInterval(nextReviewSlide, 3000); // Change interval to 3 seconds
-  }
-});
-
-
-// @media (min-width: 769px) {
-//   .alt-section .alt-content .alt-text h3 {
-//     margin-left: 30px;
-//   }
-//   .alt-section .alt-content .alt-text ul,
-//   .alt-section .alt-content .alt-text p {
-//     margin-left: 30px;
-//   }
-// }
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navBar = document.querySelector('.nav-bar');
-
-  if (navToggle && navBar) {
-    navToggle.addEventListener('click', () => {
       navBar.classList.toggle('open'); // Toggle the open class
     });
   } else {
@@ -1056,17 +1058,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navBar = document.querySelector(".nav-bar");
+  const hamburger = document.querySelector(".hamburger");
+  const navBar = document.querySelector(".nav-bar");
 
-    hamburger.addEventListener("click", () => {
-        navBar.classList.toggle("active");
-    });
+  hamburger.addEventListener("click", () => {
+      navBar.classList.toggle("active");
+  });
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav-toggle');
@@ -1104,7 +1103,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector("#nav ul.links");
@@ -1113,7 +1111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     links.classList.toggle("active");
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   // Home link loads home content
@@ -1142,46 +1139,73 @@ document.addEventListener("DOMContentLoaded", () => {
   if (toggle && fullscreenMenu && closeBtn) {
     toggle.addEventListener("click", () => {
       fullscreenMenu.classList.add("active");
+      document.body.style.overflow = "hidden";
     });
 
     closeBtn.addEventListener("click", () => {
       fullscreenMenu.classList.remove("active");
+      document.body.style.overflow = "auto";
     });
 
-    // Close menu when clicking a link
+    // Close menu when clicking a nav link
     fullscreenMenu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         fullscreenMenu.classList.remove("active");
+        document.body.style.overflow = "auto";
       });
     });
   }
 });
 
 
+function openHamburgerMenu() {
+  const fullscreenMenu = document.querySelector('.fullscreen-menu');
+  if (fullscreenMenu) {
+    fullscreenMenu.classList.add('active');
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closeHamburgerMenu() {
+  const fullscreenMenu = document.querySelector('.fullscreen-menu');
+  if (fullscreenMenu) {
+    fullscreenMenu.classList.remove('active');
+    document.body.style.overflow = "auto";
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("appointment-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      // Build WhatsApp message
-      const whatsappMessage =
-        `Appointment Request:\n` +
-        `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}\n` +
-        `Message: ${message}`;
-
-      // WhatsApp number (change to your clinic's number)
-      const whatsappNumber = "919600619608";
-      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-      window.open(url, "_blank");
-    });
+  const navToggle = document.querySelector('.nav-toggle');
+  const closeBtn = document.querySelector('.fullscreen-menu .close-btn');
+  if (navToggle) {
+    navToggle.addEventListener("click", openHamburgerMenu);
   }
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeHamburgerMenu);
+  }
+  // Optional: close menu when clicking a nav link
+  document.querySelectorAll('.fullscreen-menu .nav-bar a').forEach(link => {
+    link.addEventListener("click", closeHamburgerMenu);
+  });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Listen for clicks on both desktop and mobile nav links
+  document.querySelectorAll(".main-nav-bar a, .mobile-nav-bar a").forEach(link => {
+    link.addEventListener("click", function (event) {
+      // Only handle links with a data-section attribute
+      const section = this.getAttribute("data-section");
+      if (section) {
+        event.preventDefault();
+        loadContent(section);
+        // Optionally close mobile menu after click
+        const fullscreenMenu = document.querySelector('.fullscreen-menu');
+        if (fullscreenMenu && fullscreenMenu.classList.contains('active')) {
+          fullscreenMenu.classList.remove('active');
+          document.body.style.overflow = "auto";
+        }
+      }
+    });
+  });
+});
+  
