@@ -106,32 +106,63 @@ document.querySelectorAll(".main-nav-bar a, .mobile-nav-bar a")
 function loadContent(section) {
     const content = {
         "about-us": `<h2>About Us</h2><p>Our team of expert physiotherapists is dedicated to helping you achieve optimal health and wellness.</p>`,
-        "vision": `<section class="alt-section vision-section">
-  <div class="alt-content reverse">
-    <div class="alt-image">
-      <img src="images_pages-to-jpg-0004.jpg" alt="Our Vision">
-    </div>
+        "vision": `<section class="alt-section about-section">
+  <div class="alt-content">
     <div class="alt-text">
-       <h2>Our Vision</h2>
-  <p>
-    At Infinity Physio and Rehab, our vision is to be the most trusted and innovative leader in physiotherapy and rehabilitation, helping people of all ages move freely and live healthier lives.
-  </p>
-  <br>
-  <p>
-    We believe every patient deserves personalized care, advanced treatment options, and unwavering support throughout their recovery journey. Our team is dedicated to redefining rehabilitation by combining compassion, expertise, and the latest evidence-based practices.
-  </p>
-  <br>
-  <p>
-    Our commitment is to empower you to achieve your highest level of mobility, independence, and well-being. We strive to set new standards in physiotherapy, build lasting relationships, and make Infinity Physio and Rehab a name synonymous with excellence and patient satisfaction.
-  </p>
-  <br>
-  <p>
-    Guided by our core values—support, expertise, and integrity—we aim to expand our reach, enhance our reputation, and help more individuals experience transformative healing and lifelong wellness.
-  </p>
-  <br>
+      <h2>About Us – Infinity Physio and Rehab</h2>
+      <p>
+        At Infinity Physio and Rehab, we believe physiotherapy is more than treatment—it is a lifelong journey of recovery, prevention, and empowerment. 
+        Born from the passion of two young physiotherapists, our aim is to make high-quality rehabilitation accessible, blending evidence-based care with compassion and innovation.
+      </p>
+
+      <h3>Our Founders</h3>
+      <p>
+        <strong>Dr. Keerthana, PT, MIAP (Reg. No: 69211)</strong> is the Founder of Infinity Physio and Rehab. 
+        A graduate of Meenakshi College of Physiotherapy, she completed her internships at MAHER, Gericare, and Omanthurar Multi-Speciality Hospital, 
+        gaining expertise across orthopaedics, geriatrics, neurology, oncology, and sports rehabilitation. 
+        Currently pursuing her Master’s in Orthopaedics, she is passionate about musculoskeletal and occupational health, 
+        with research focused on musculoskeletal disorders among weavers and factory workers.
+      </p>
+
+      <p>
+        <strong>Dr. Tamilvasan, PT</strong> is the Co-Founder, CEO, and Chief Consultant Physiotherapist. 
+        He completed his training at MAHER, NIPMED, and Omanthurar Multi-Speciality Hospital, with expertise in pediatrics, neurology, oncology, sports, and cardiology rehabilitation. 
+        His research on fear of falling in the elderly reflects his interest in geriatric physiotherapy. 
+        With leadership and dedication, he drives the vision of Infinity Physio and Rehab as a trusted rehabilitation brand.
+      </p>
+
+      <h3>Our Vision</h3>
+      <p>
+        To be a trusted leader in physiotherapy and rehabilitation, empowering individuals to achieve pain-free movement, independence, and long-term wellness, 
+        while redefining recovery standards through innovation, compassion, and professional excellence.
+      </p>
+
+      <h3>Our Mission</h3>
+      <ul>
+        <li>Deliver comprehensive, evidence-based physiotherapy services.</li>
+        <li>Empower patients through awareness, prevention, and recovery.</li>
+        <li>Expand accessibility through clinics, rural camps, and community programs.</li>
+        <li>Build Infinity Physio and Rehab into a premier brand in rehabilitation.</li>
+      </ul>
+
+      <h3>Our Core Values</h3>
+      <ul>
+        <li><strong>Compassion</strong> – treating every patient with empathy and respect.</li>
+        <li><strong>Commitment</strong> – ensuring consistent and high-quality care.</li>
+        <li><strong>Community</strong> – reaching people through camps and awareness programs.</li>
+        <li><strong>Collaboration</strong> – continuous learning and teamwork.</li>
+        <li><strong>Credibility</strong> – ethical, evidence-based, and trusted practice.</li>
+      </ul>
+    <br>
+      </div>
+
+
+    <div class="alt-image">
+      <img src="about-us.jpg" alt="About Infinity Physio and Rehab">
     </div>
   </div>
-</section>`,
+</section>
+`,
         "appointment": `
             <section id="appointment-section">
                 <h2>Book an Appointment</h2>
@@ -149,151 +180,113 @@ function loadContent(section) {
                 <p id="form-status"></p>
             </section>
         `,
-        "our-services": `
+       "our-services": `
             <h2>Our Expert Services Include</h2>
             <div class="service-list">
                 <div class="service-item">
-                    <img src="gen.jpeg" alt="Geriatric Physiotherapy" class="service-img">
                     <h3>Geriatric Physiotherapy & Fall Prevention</h3>
-                    <p>Our geriatric care program is designed to help older adults maintain their independence and mobility. We focus on fall prevention, balance training, and exercises to improve strength and flexibility.</p>
+                    <img src="gen.jpeg" alt="Geriatric Physiotherapy" class="service-img">
+                    <p>
+                        Our geriatric care program is designed to help older adults maintain their independence and mobility.
+                        We focus on fall prevention, balance training, and exercises to improve strength and flexibility.
+                    </p>
                     <a href="#" class="learn-more" data-service="geriatric">Learn more</a>
-
                 </div>
+
                 <div class="service-item">
                     <h3>Chronic Pain Management</h3>
                     <img src="gen.jpeg" alt="Chronic Pain Management" class="service-img">
-                    <p>We use a multidisciplinary approach to manage chronic pain, including physical therapy, medication management, and lifestyle modification. Our goal is to help patients manage their pain and improve their quality of life.</p>
+                    <p>
+                        We use a multidisciplinary approach to manage chronic pain, including physical therapy,
+                        medication management, and lifestyle modification. Our goal is to help patients manage
+                        their pain and improve their quality of life.
+                    </p>
                     <a href="#" class="learn-more" data-service="chronic-pain">Learn more</a>
-
                 </div>
+
                 <div class="service-item">
                     <h3>Post-Surgical Rehabilitation</h3>
                     <img src="gen.jpeg" alt="Post-Surgical Rehabilitation" class="service-img">
-                    <p>Our post-surgical rehabilitation program is designed to help patients recover from surgery as quickly and safely as possible. We create personalized rehabilitation plans that address the patient's specific needs and goals.</p>
+                    <p>
+                        Our post-surgical rehabilitation program is designed to help patients recover from surgery as quickly
+                        and safely as possible. We create personalized rehabilitation plans that address the patient's
+                        specific needs and goals.
+                    </p>
                     <a href="#" class="learn-more" data-service="post-surgical">Learn more</a>
                 </div>
+
                 <div class="service-item">
                     <h3>Sports Injury Recovery</h3>
                     <img src="gen.jpeg" alt="Sports Injury Recovery" class="service-img">
-                    <p>We offer comprehensive treatment and rehabilitation for athletic injuries, including acute and chronic conditions. Our goal is to help athletes return to their sport quickly and safely.</p>
+                    <p>
+                        We offer comprehensive treatment and rehabilitation for athletic injuries, including acute and chronic conditions.
+                        Our goal is to help athletes return to their sport quickly and safely.
+                    </p>
                     <a href="#" class="learn-more" data-service="sports-injury">Learn more</a>
                 </div>
+
                 <div class="service-item">
                     <h3>Neurological Rehabilitation</h3>
                     <img src="gen.jpeg" alt="Neurological Rehabilitation" class="service-img">
-                    <p>Our neurological rehabilitation program is designed to help patients with neurological conditions such as stroke, spinal cord injury, and Parkinson's disease. We focus on improving functional abilities and promoting independence.</p>
+                    <p>
+                        Our neurological rehabilitation program is designed to help patients with neurological conditions such as stroke,
+                        spinal cord injury, and Parkinson's disease. We focus on improving functional abilities and promoting independence.
+                    </p>
                     <a href="#" class="learn-more" data-service="neurological">Learn more</a>
                 </div>
+
                 <div class="service-item">
                     <h3>Pediatric Physiotherapy</h3>
                     <img src="gen.jpeg" alt="Pediatric Physiotherapy" class="service-img">
-                    <p>We provide developmental and rehabilitative services for children with conditions such as cerebral palsy, developmental delay, and congenital anomalies. Our goal is to help children reach their full potential.</p>
+                    <p>
+                        We provide developmental and rehabilitative services for children with conditions such as cerebral palsy,
+                        developmental delay, and congenital anomalies. Our goal is to help children reach their full potential.
+                    </p>
                     <a href="#" class="learn-more" data-service="pediatric">Learn more</a>
                 </div>
+
                 <div class="service-item">
                     <h3>Women's Health Physiotherapy</h3>
                     <img src="gen.jpeg" alt="Women's Health Physiotherapy" class="service-img">
-                    <p>Our women's health program addresses a range of concerns, including prenatal and postnatal care, pelvic floor dysfunction, and osteoporosis management. We provide personalized care and education to help women manage their health.</p>
+                    <p>
+                        Our women's health program addresses a range of concerns, including prenatal and postnatal care,
+                        pelvic floor dysfunction, and osteoporosis management. We provide personalized care and education to help women manage their health.
+                    </p>
                     <a href="#" class="learn-more" data-service="womens-health">Learn more</a>
                 </div>
+
                 <div class="service-item">
                     <h3>Fitness & Wellness Programs</h3>
                     <img src="gen.jpeg" alt="Fitness & Wellness Programs" class="service-img">
-                    <p>We offer proactive programs to promote healthy lifestyles, injury prevention, and optimal physical function. Our goal is to help individuals achieve their health and wellness goals.</p>
-                    <a href="#">Learn more</a>
+                    <p>
+                        We offer proactive programs to promote healthy lifestyles, injury prevention, and optimal physical function.
+                        Our goal is to help individuals achieve their health and wellness goals.
+                    </p>
+                    <a href="#" class="learn-more" data-service="fitness-wellness">Learn more</a>
                 </div>
+
                 <div class="service-item">
                     <h3>Ergonomic Solutions & Postural Correction</h3>
                     <img src="gen.jpeg" alt="Ergonomic Solutions & Postural Correction" class="service-img">
-                    <p>We provide workplace assessments and interventions to prevent injury, improve productivity, and enhance overall well-being. Our goal is to help individuals work safely and efficiently.</p>
-                    <a href="#">Learn more</a>
+                    <p>
+                        We provide workplace assessments and interventions to prevent injury, improve productivity,
+                        and enhance overall well-being. Our goal is to help individuals work safely and efficiently.
+                    </p>
+                    <a href="#" class="learn-more" data-service="ergonomic-solutions">Learn more</a>
                 </div>
+
                 <div class="service-item">
                     <h3>Headache & Migraine Management</h3>
                     <img src="gen.jpeg" alt="Headache & Migraine Management" class="service-img">
-                    <p>We use a multimodal approach to manage headaches and migraines, including manual therapy, exercise, and lifestyle modification. Our goal is to help patients reduce their symptoms and improve their quality of life.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3>Osteoarthritis </h3>
-                <img src="gen.jpeg" alt="Osteoarthritis" class="service-img">
-                <p>A degenerative joint disease that causes cartilage breakdown, leading to joint pain, stiffness, swelling, and reduced mobility. It commonly affects weight-bearing joints such as the knees, hips, and spine in older adults.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3>Rheumatoid Arthritis</h3>
-                <img src="gen.jpeg" alt="Rheumatoid Arthritis" class="service-img">
-                <p>An autoimmune disease that causes chronic inflammation in the joints, leading to pain, swelling, stiffness, and reduced mobility. It commonly affects the hands, feet, and wrists and can progress to joint deformity.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3>Parkinson's Disease</h3>
-                <img src="gen.jpeg" alt="Parkinson's Disease" class="service-img">
-                <p>A progressive neurological disorder that affects movement, balance, and coordination. Common symptoms include tremors, rigidity, bradykinesia, and postural instability, leading to mobility challenges and functional limitations.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3>Stroke Rehabilitation</h3>
-                <img src="gen.jpeg" alt="Stroke Rehabilitation" class="service-img">
-                <p>Stroke occurs when blood flow to the brain is interrupted, causing loss of function in different parts of the body. Rehabilitation focuses on regaining mobility, strength, coordination, and independence through physiotherapy, speech therapy, and cognitive training.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3>Osteoporosis</h3>
-                <img src="gen.jpeg" alt="Osteoporosis" class="service-img">
-                <p>A condition characterized by low bone density and increased risk of fractures, especially in the spine, hips, and wrists. Physiotherapy focuses on exercises to improve bone strength, balance, and posture to reduce fracture risk and maintain independence.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3>Balance Disorders</h3>
-                <img src="gen.jpeg" alt="Balance Disorders" class="service-img">
-                <p>These disorders affect the inner ear and brain, leading to dizziness, vertigo, unsteadiness, and frequent falls. They can result from age-related degeneration, infections, or neurological conditions like stroke and Parkinson’s disease..</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3> Falls Prevention</h3>
-                <img src="gen.jpeg" alt="Falls Prevention" class="service-img">
-                <p>Falls are a leading cause of injuries in the elderly, often resulting from muscle weakness, balance impairments, vision issues, or environmental hazards. Preventive strategies include strength training, balance exercises, home modifications, and assistive devices.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3> Frailty Syndrome</h3>
-                <img src="gen.jpeg" alt="Frailty Syndrome" class="service-img">
-                <p> A state of increased vulnerability due to reduced physiological reserves, leading to weakness, fatigue, slow mobility, and a higher risk of falls, infections, and hospitalizations. It is often associated with poor nutrition, inactivity, and chronic illnesses.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3> Depression & Anxiety in Older Adults</h3>
-                <img src="gen.jpeg" alt="Depression & Anxiety in Older Adults" class="service-img">
-                <p>Mental health disorders that affect emotional well-being, leading to persistent sadness, social withdrawal, sleep disturbances, and cognitive decline. These conditions often arise due to chronic illnesses, loneliness, or life transitions.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3> Dementia Care</h3>
-                <img src="gen.jpeg" alt="Dementia Care" class="service-img">
-                <p>A progressive decline in cognitive function, memory, and reasoning that impairs daily activities and social interactions. Physiotherapy focuses on maintaining physical function, mobility, and independence in individuals with dementia.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3> Postural Hypotension</h3>
-                <img src="gen.jpeg" alt="Postural Hypotension" class="service-img">
-                <p>A condition characterized by a sudden drop in blood pressure when standing up, causing dizziness, fainting, and increased fall risk. It results from autonomic nervous system dysfunction, dehydration, or medication side effects.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3> Sarcopeina</h3>
-                <img src="gen.jpeg" alt="Sarcopeina" class="service-img">
-                <p>Age-related loss of muscle mass, strength, and function that leads to weakness, fatigue, and reduced physical performance. It can result from inactivity, poor nutrition, hormonal changes, and chronic diseases.</p>
-                <a href="#">Learn more</a>
-                </div>
-                <div class="service-item">
-                <h3> Urinary Incontinence</h3>
-                <img src="gen.jpeg" alt="Urinary Incontinence" class="service-img">
-                <p>Loss of bladder control that causes involuntary leakage of urine, affecting daily activities and quality of life. It can result from weak pelvic floor muscles, nerve damage, hormonal changes, or underlying medical conditions.</p>
-                <a href="#">Learn more</a>
+                    <p>
+                        We use a multimodal approach to manage headaches and migraines, including manual therapy,
+                        exercise, and lifestyle modification. Our goal is to help patients reduce their symptoms and improve their quality of life.
+                    </p>
+                    <a href="#" class="learn-more" data-service="headache-migraine">Learn more</a>
                 </div>
             </div>
         `,
+
         "reviews": `<section>
   <h3>Reviews</h3>
   <div class="review-section" style="text-align:center; margin-bottom:40px;">
@@ -339,7 +332,7 @@ function loadContent(section) {
 </section>`,
         "why-choose-us": `
             <h2>Why Choose Us?</h2>
-            <div class="grid-container">
+            <div class="home-highlights">
         <div class="service-item"><h3>Expertise in Geriatric Care</h3> <p>Our team includes physiotherapists with specialized training in geriatric care, ensuring that each treatment plan is customized to meet the unique needs of seniors.</div>
         <div class="service-item"><h3>Holistic Approach</h3> We prioritize not only physical rehabilitation but also mental and emotional well-being, incorporating education, guidance, and support for both patients and their families.</div>
         <div class="service-item"><h3>Tailored Treatment Plans</h3> Each program is designed to address the specific health concerns, physical limitations, and goals of the individual, ensuring a personalized and effective approach to care.</div>
@@ -350,12 +343,26 @@ function loadContent(section) {
         <div class="service-item"><h3>Education and Empowerment</h3> We believe in educating our patients and their families on how to maintain mobility, prevent injuries, and adopt healthy lifestyle changes for long-term well-being.</div>
         </div>
         <p>By focusing on each patient’s individual needs and goals, our geriatric physiotherapy program ensures that older adults can lead healthier, more active, and independent lives. Let us help you or your loved ones navigate the aging process with confidence, mobility, and comfort.</p>
+        <br>
         `
     };
     document.getElementById("content").innerHTML = content[section];
     if (section === "appointment") {
         document.getElementById("appointment-form").addEventListener("submit", handleFormSubmit);
     }
+}
+document.getElementById("content").innerHTML = content[section];
+
+if (section === "our-services") {
+    setTimeout(() => {
+        document.querySelectorAll(".learn-more").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const serviceId = this.getAttribute("data-service");
+                openModal(serviceId); // This function must exist
+            });
+        });
+    }, 100); // Slight delay to ensure DOM content is ready
 }
 // Handle appointment form submission
 // function handleFormSubmit(event) {
@@ -855,7 +862,6 @@ document.addEventListener('click', function(e) {
 
 
 
-
 // function handleFormSubmit(event) {
 //     event.preventDefault(); // Prevent default form submission behavior
 
@@ -1209,3 +1215,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
   
+// Modal functionality
+
+
+// Show modal when Learn More is clicked
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("learn-more")) {
+        e.preventDefault();
+        const serviceKey = e.target.getAttribute("data-service");
+        if (serviceDetails[serviceKey]) {
+            modalContent.innerHTML = `
+                <h2>${serviceDetails[serviceKey].title}</h2>
+                ${serviceDetails[serviceKey].content}
+            `;
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+    }
+});
+
+// Close modal when X is clicked
+closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+});
+
+// Close modal when clicking outside of the content
+window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+});
