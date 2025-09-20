@@ -4,147 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinity Physio and Rehab</title>
+  <link rel="icon" type="image/png" href="logo.jpeg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Modal for Services -->
-  <!-- Service Modal -->
-<div id="serviceModal" class="modal">
-  <div class="modal-content" id="modalContent"></div>
-  <span class="close">&times;</span>
-</div>
-
-    <link rel="icon" type="image/png" href="logo.jpeg">
-
   <!-- HERO SECTION -->
-  <header class="hero-section">
+  <header class="hero-section" id="heroSection">
     <!-- Slideshow Background -->
     <div class="hero-slideshow">
-      <div class="slide fade">
-        <img src="main.jpeg" alt="Slide 1">
+      <div class="slide fade" style="display:block;">
+        <img src="main.jpeg" alt="Main Slide">
       </div>
-      <!-- <div class="slide fade">
-        <img src="image2.jpg" alt="Slide 2">
-      </div>
-      <div class="slide fade">
-        <img src="image3.jpg" alt="Slide 3">
-      </div>
-      <div class="slide fade">
-        <img src="image4.jpg" alt="Slide 4">
-
-      </div> -->
     </div>
+
     <!-- Overlay Content -->
-<div class="hero-overlay">
-  <h1>INFINITY PHYSIO AND REHAB</h1>
-  <p>Your trusted partner in physiotherapy and rehabilitation</p>
+    <div class="hero-overlay">
+      <h1>INFINITY PHYSIO AND REHAB</h1>
+      <p>Your trusted partner in physiotherapy and rehabilitation</p>
 
-  <!-- WhatsApp CTA -->
-  <a href="https://wa.me/919600619608?text=Hello%20Infinity%20Physio%20and%20Rehab,%0AI%20would%20like%20to%20book%20an%20appointment.%0APlease%20share%20available%20slots."
-     target="_blank"
-     class="cta-btn whatsapp-btn">
-     Book Appointment
-  </a>
+      <!-- WhatsApp CTA -->
+      <a href="https://wa.me/919600619608?text=Hello%20Infinity%20Physio%20and%20Rehab,%0AI%20would%20like%20to%20book%20an%20appointment.%0APlease%20share%20available%20slots."
+         target="_blank"
+         class="cta-btn whatsapp-btn">
+         Book Appointment
+      </a>
 
-  <!-- Navbar -->
-<nav class="navbar">
-  <div class="nav-logo">
-    <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
-  </div>
-  <ul class="main-nav-bar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#vision" data-section="vision">Vision</a></li>
-    <li><a href="#appointment" data-section="appointment">Appointment</a></li>
-    <li><a href="#our-services" data-section="our-services">Our Services</a></li>
-    <li><a href="#reviews" data-section="reviews">Reviews</a></li>
-    <li><a href="#why-choose-us" data-section="why-choose-us">Why Choose Us?</a></li>
-  </ul>
-  <div class="nav-social">
-    <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-    </a>
-    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-    </a>
-    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
-      <img src="pt.jpg" alt="Physiotherapy" />
-    </a>
-  </div>
-
-  <!-- <ul class="main-nav-bar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#vision" data-section="vision">Vision</a></li>
-    <li><a href="#appointment" data-section="appointment">Appointment</a></li>
-    <li><a href="#our-services" data-section="our-services">Our Services</a></li>
-    <li><a href="#reviews" data-section="reviews">Reviews</a></li>
-    <li><a href="#why-choose-us" data-section="why-choose-us">Why Choose Us?</a></li>
-  </ul> -->
-
-  <button class="nav-toggle" aria-label="Open menu" onclick="openHamburgerMenu()">☰</button>
-
-  <div class="fullscreen-menu">
-    <span class="close-btn" aria-label="Close menu" onclick="closeHamburgerMenu()">&times;</span>
-    <ul class="mobile-nav-bar">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+        </div>
+        <ul class="main-nav-bar">
       <li><a href="index.html">Home</a></li>
-      <li><a href="#vision" data-section="vision">Vision</a></li>
-      <li><a href="#appointment" data-section="appointment">Appointment</a></li>
-      <li><a href="#our-services" data-section="our-services">Our Services</a></li>
-      <li><a href="#reviews" data-section="reviews">Reviews</a></li>
-      <li><a href="#why-choose-us" data-section="why-choose-us">Why Choose Us?</a></li>
+      <li><a href="vision.html">About Us</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="our-services.html">Our Services</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+      <!-- <li><a href="about-us.html">About Us</a></li> -->
     </ul>
-  </div>
-</nav>
-  <!-- <nav class="navbar">
-  <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+        <div class="nav-social">
+          <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+          </a>
+          <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+          </a>
+          <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
+            <img src="pt.jpg" alt="Physiotherapy" />
+          </a>
+        </div>
 
-  <ul class="nav-bar">
-    <li class="logo-left">
-      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
-    </li>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#" data-section="vision">Vision</a></li>
-    <li><a href="#" data-section="appointment">Appointment</a></li>
-    <li><a href="#" data-section="our-works">Our Works</a></li>
-    <li><a href="#" data-section="reviews">Reviews</a></li>
-    <li><a href="#" data-section="contact-us">Contact Us</a></li>
-    <li><a href="#" data-section="why-choose-us">Why Choose Us?</a></li>
-    <li><a href="#" data-section="about-us">About Us</a></li>
-  </ul>
-</nav>
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" aria-label="Open menu" onclick="openHamburgerMenu()">☰</button>
 
-<div class="fullscreen-menu">
-  <button class="close-btn" aria-label="Close menu">&times;</button>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#" data-section="vision">Vision</a></li>
-    <li><a href="#" data-section="appointment">Appointment</a></li>
-    <li><a href="#" data-section="our-works">Our Works</a></li>
-    <li><a href="#" data-section="reviews">Reviews</a></li>
-    <li><a href="#" data-section="contact-us">Contact Us</a></li>
-    <li><a href="#" data-section="why-choose-us">Why Choose Us?</a></li>
-    <li><a href="#" data-section="about-us">About Us</a></li>
-  </ul>
-  <div class="nav-social">
-    <a href="https://wa.me/919600619608" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-    </a>
-    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-    </a>
-    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank">
-      <img src="pt.jpg" alt="Physiotherapy" />
-    </a>
-  </div>
-</div> -->
-
-
-</div>
-
+        <div class="fullscreen-menu">
+          <span class="close-btn" aria-label="Close menu" onclick="closeHamburgerMenu()">&times;</span>
+          <ul class="mobile-nav-bar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="vision.html">About Us</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="our-services.html">Our Services</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+      <!-- <li><a href="about-us.html">About Us</a></li> -->
+    </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <!-- MAIN CONTENT (below hero section) -->
+  <!-- MAIN CONTENT (Dynamic Sections Loaded Here) -->
   <main id="content">
-    <section>
+       <section>
       <h2>Welcome to Infinity Physio and Rehab</h2>
       <p>
         At Infinity Physio and Rehab, we are dedicated to helping you achieve your best health and mobility. Our clinic offers a wide range of physiotherapy and rehabilitation services for all ages and conditions.
@@ -244,135 +176,6 @@
     </div>
   </div>
 </section>
-    <!-- <section class="alt-section">
-      <div class="alt-content">
-        <div class="alt-text">
-          <h3>Clinic Facilities</h3>
-          <ul>
-            <li>State-of-the-art therapy rooms</li>
-            <li>Advanced exercise equipment</li>
-            <li>Private consultation cabins</li>
-            <li>Wheelchair accessible entrance</li>
-            <li>Comfortable waiting lounge</li>
-          </ul>
-        </div>
-        <div class="alt-image">
-          <img src="images_pages-to-jpg-0005.jpg" alt="Clinic Facilities">
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="alt-section">
-      <div class="alt-content reverse">
-        <div class="alt-text">
-          <h3>Patient Success Stories</h3>
-          <blockquote>
-            "Infinity Physio and Rehab helped me recover from my knee injury faster than I imagined. The team is caring and professional!"<br>
-            <cite>- Satisfied Patient</cite>
-          </blockquote>
-          <blockquote>
-            "My mother regained her mobility after a stroke thanks to their neurological rehab program."<br>
-            <cite>- Family Member</cite>
-          </blockquote>
-        </div>
-        <div class="alt-image">
-          <img src="images_pages-to-jpg-0002.jpg" alt="Patient Success Stories">
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="alt-section">
-      <div class="alt-content reverse">
-        <div class="alt-image">
-          <img src="images_pages-to-jpg-0001.jpg" alt="Meet Our Team">
-        </div>
-        <div class="alt-text">
-          <h3>Meet Our Team</h3>
-          <ul>
-            <li>Dr. Anjali Rao – Chief Physiotherapist, 15+ years experience</li>
-            <li>Dr. Vikram Singh – Sports Injury Specialist</li>
-            <li>Dr. Priya Menon – Pediatric Physiotherapist</li>
-            <li>Dr. Ramesh Kumar – Neurological Rehabilitation Expert</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="alt-section">
-      <div class="alt-content reverse">
-        <div class="alt-text">
-          <h3>Frequently Asked Questions</h3>
-          <dl>
-            <dt>Do I need a doctor’s referral?</dt>
-            <dd>No, you can book an appointment directly with us.</dd>
-            <dt>What should I bring for my first visit?</dt>
-            <dd>Please bring any relevant medical reports and wear comfortable clothing.</dd>
-            <dt>Do you offer home visits?</dt>
-            <dd>Yes, home physiotherapy sessions are available on request.</dd>
-          </dl>
-        </div>
-        <div class="alt-image">
-          <img src="images_pages-to-jpg-0003.jpg" alt="Frequently Asked Questions">
-        </div>
-      </div>
-    </section>
-    <section class="alt-section">
-      <div class="alt-content reverse">
-        <div class="alt-image">
-          <img src="images_pages-to-jpg-0004.jpg" alt="Latest News & Updates">
-        </div>
-        <div class="alt-text">
-          <h3>Latest News & Updates</h3>
-          <ul>
-            <li>New Hydrotherapy pool now open!</li>
-            <li>Free posture screening camp every Saturday</li>
-            <li>Follow us on Instagram for exercise tips and clinic updates</li>
-          </ul>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section>
-      <h3>Featured Services</h3>
-      <div class="home-highlights">
-        <div class="service-item">
-          <h4>Geriatric Physiotherapy & Fall Prevention</h4>
-          <p>Helping older adults maintain independence and mobility.</p>
-          <a href="#" class="learn-more" data-service="geriatric">Learn more</a>
-        </div>
-        <div class="service-item">
-          <h4>Chronic Pain Management</h4>
-          <p>Multidisciplinary approach to manage chronic pain and improve quality of life.</p>
-          <a href="#" class="learn-more" data-service="chronic-pain">Learn more</a>
-        </div>
-        <div class="service-item">
-          <h4>Post-Surgical Rehabilitation</h4>
-          <p>Personalized plans to help patients recover quickly and safely after surgery.</p>
-          <a href="#" class="learn-more" data-service="post-surgical">Learn more</a>
-        </div>
-        <div class="service-item">
-          <h4>Sports Injury Recovery</h4>
-          <p>Comprehensive treatment and rehabilitation for athletic injuries.</p>
-          <a href="#" class="learn-more" data-service="sports-injury">Learn more</a>
-        </div>
-        <div class="service-item">
-          <h4>Neurological Rehabilitation</h4>
-          <p>Helping patients with stroke, spinal cord injury, and neurological conditions.</p>
-          <a href="#" class="learn-more" data-service="neurological">Learn more</a>
-        </div>
-        <div class="service-item">
-          <h4>Pediatric Physiotherapy</h4>
-          <p>Developmental and rehabilitative services for children.</p>
-          <a href="#" class="learn-more" data-service="pediatric">Learn more</a>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h3>Reviews</h3>
-      <div class="review-section" style="text-align:center; margin-bottom:40px;">
-        <p>See what our patients say about Infinity Physio and Rehab!</p>
-        <a href="https://www.google.com/search?q=Infinity+Physio+and+Rehab+reviews" target="_blank" class="google-review-btn">
-          <img src="review.png" alt="Google Reviews" style="width:32px;vertical-align:middle;margin-right:8px;">
-          Read Our Google Reviews
-        </a>
-      </div>
-    </section> -->
         <section>
       <h3>Reviews</h3>
       <div class="review-section" style="text-align:center; margin-bottom:40px;">
@@ -398,138 +201,40 @@
                 </form>
                 <p id="form-status"></p>
             </section>
-    <!-- <section>
-      <h3>Why Choose Us</h3>
-      <div class="home-highlights">
-        <div>
-          <h4>Tailored Treatment Plans</h4>
-          <ul>
-            <li>We provide individualized physiotherapy interventions based on a detailed assessment of your condition and goals.</li>
-            <li>Every plan is customized to suit your specific needs, environment, and recovery pace.</li>
-            <li>This ensures optimal outcomes and long-term functional improvement.</li>
-            <li>You receive care that is as unique as your health journey.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Holistic Approach</h4>
-          <ul>
-            <li>Our treatment framework addresses both physical and psychological aspects of recovery.</li>
-            <li>We aim to enhance mobility, reduce discomfort, and support emotional well-being.</li>
-            <li>Lifestyle modifications, stress reduction, and patient education are integral to our care.</li>
-            <li>We promote overall wellness—not just symptom relief.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Home-Based & Online Consultation Options</h4>
-          <ul>
-            <li>We offer flexible modes of physiotherapy through home visits and secure online consultations.</li>
-            <li>This ensures access to expert care regardless of location, mobility, or schedule constraints.</li>
-            <li>Our approach is ideal for elderly patients, chronic conditions, or those preferring in-home recovery.</li>
-            <li>Seamless care delivery, wherever you are.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Experienced & Licensed Professionals</h4>
-          <ul>
-            <li>Our team consists of certified physiotherapists with extensive clinical expertise across various specialties.</li>
-            <li>We adhere to evidence-based protocols and continuous professional development.</li>
-            <li>Each therapist brings a compassionate, patient-centered approach to care.</li>
-            <li>You are in capable and trusted hands.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Proven Clinical Outcomes</h4>
-          <ul>
-            <li>We track progress methodically and adjust treatment based on measurable improvements.</li>
-            <li>Our outcomes reflect enhanced function, pain reduction, and increased independence.</li>
-            <li>Patients benefit from goal-oriented therapy that delivers consistent results.</li>
-            <li>We prioritize effectiveness in every step of your care.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Convenient & Flexible Scheduling</h4>
-          <ul>
-            <li>Our services are designed to accommodate your routine, including evenings and weekends.</li>
-            <li>This flexibility minimizes disruption to your day-to-day life.</li>
-            <li>We ensure timely access to care, with minimal delays or travel requirements.</li>
-            <li>Your recovery never has to wait.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Safe & Comfortable Environment</h4>
-          <ul>
-            <li>Home-based and virtual care reduces exposure to external health risks and enhances emotional comfort.</li>
-            <li>We also assess your home environment for safety, posture correction, and mobility support.</li>
-            <li>Our methods create a healing space tailored to your daily living.</li>
-            <li>Comfort and safety are built into our service.</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Continuous Support & Guidance</h4>
-          <ul>
-            <li>Our team provides consistent follow-ups, education, and encouragement throughout your treatment.</li>
-            <li>We focus on empowering you with knowledge and techniques for self-management.</li>
-            <li>Recovery doesn’t end with a session—it evolves with support.</li>
-            <li>We are committed to your long-term success.</li>
-          </ul>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section>
-      <h3>Contact Information</h3>
-      <div class="contact-info" style="max-width:500px;margin:auto;text-align:left;">
-        <p><strong>Address:</strong> 123 Main Street, Your City, Your State, 123456</p>
-        <p><strong>Phone:</strong> <a href="tel:+919600619608">+91 96006 19608</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@infinityphysio.com">info@infinityphysio.com</a></p>
-        <p>
-          <strong>WhatsApp:</strong>
-          <a href="https://wa.me/919600619608" target="_blank" class="whatsapp-btn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-            Chat on WhatsApp
-          </a>
-        </p>
-        <p><strong>Hours:</strong> Mon-Sat: 9:00 AM – 7:00 PM<br>Sun: Closed</p>
-        <p><strong>Follow us:</strong>
-          <a href="https://facebook.com/" target="_blank">Facebook</a> |
-          <a href="https://instagram.com/" target="_blank">Instagram</a>
-        </p>
-      </div>
-    </section> -->
-    <div class="page-gap"></div>
   </main>
 
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Infinity Physio and Rehab. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
   <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("appointment-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const message = document.getElementById("message").value.trim();
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("appointment-form");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const message = document.getElementById("message").value.trim();
 
-      // Build WhatsApp message
-      const whatsappMessage =
-        `Appointment Request:\n` +
-        `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}\n` +
-        `Message: ${message}`;
+          // Build WhatsApp message
+          const whatsappMessage =
+            `Appointment Request:\n` +
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Phone: ${phone}\n` +
+            `Message: ${message}`;
 
-      // WhatsApp number (change to your clinic's number)
-      const whatsappNumber = "919600619608";
-      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-      window.open(url, "_blank");
+          const whatsappNumber = "919600619608";
+          const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+          window.open(url, "_blank");
+        });
+      }
     });
-  }
-});
-</script>
+  </script>
 </body>
 </html>

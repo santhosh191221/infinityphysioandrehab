@@ -912,7 +912,6 @@ footer {
   border: none;
   color: white;
   cursor: pointer;
-  z-index: 10001;
 }
 
 /* Ensure main content starts below hero section */
@@ -2789,7 +2788,7 @@ body::after {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10010; /* > 9999 (intro video) so nav is clickable */
+   z-index: 10010; /* > 9999 (intro video) so nav is clickable */
 }
 
 /* Ensure mobile menu visibility when toggled */
