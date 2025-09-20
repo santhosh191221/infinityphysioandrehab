@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reviews – Infinity Physio and Rehab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .review-section { text-align:center; margin-bottom:40px; }
+    .review-slideshow { max-width: 600px; margin: 0 auto; position: relative; }
+    .review-slide { display: none; padding: 20px; }
+    .review-slide.active { display: block; }
+    .google-review-btn { display:inline-block; margin:16px 0; padding:10px 18px; background:#fff; border-radius:6px; border:1px solid #eee; text-decoration:none; color:#222; font-weight:500; }
+    .google-review-btn img { width:32px; vertical-align:middle; margin-right:8px; }
+    .review-controls { margin-top: 10px; }
+    .review-controls button { margin: 0 5px; padding: 4px 10px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar (copy from your other pages) -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+    </div>
+    <ul class="main-nav-bar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="vision.html">About Us</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="our-services.html">Our Services</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+      <!-- <li><a href="about-us.html">About Us</a></li> -->
+    </ul>
+            <div class="nav-social">
+          <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+          </a>
+          <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+          </a>
+          <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
+            <img src="pt.jpg" alt="Physiotherapy" />
+          </a>
+        </div>
+  </nav>
+
+  <main>
+    <section>
+        <br>
+        <br>
+        <br>
+        <br>
+      <h2>Reviews</h2>
+      <div class="review-section">
+        <p>See what our patients say about Infinity Physio and Rehab!</p>
+        <a href="https://g.page/r/CfolFhQlZVeLEBI/review" target="_blank" class="google-review-btn">
+          <img src="review.png" alt="Google Reviews">
+          Read Our Google Reviews
+        </a>
+        <div class="review-slideshow">
+          <div class="review-slide active">
+            <blockquote>
+              "The therapists are very professional and caring. My recovery was faster than expected!"
+            </blockquote>
+            <cite>- Priya S.</cite>
+          </div>
+          <div class="review-slide">
+            <blockquote>
+              "Infinity Physio and Rehab helped my father regain his mobility. Highly recommended!"
+            </blockquote>
+            <cite>- Ramesh K.</cite>
+          </div>
+          <div class="review-slide">
+            <blockquote>
+              "Clean clinic, friendly staff, and excellent treatment plans. Thank you!"
+            </blockquote>
+            <cite>- Anjali M.</cite>
+          </div>
+          <div class="review-slide">
+            <blockquote>
+              "I loved the home physiotherapy option. Very convenient and effective."
+            </blockquote>
+            <cite>- Suresh D.</cite>
+          </div>
+          <div class="review-slide">
+            <blockquote>
+              "Great experience! The team is knowledgeable and supportive throughout the process."
+            </blockquote>
+            <cite>- Kavitha P.</cite>
+          </div>
+        </div>
+        <div class="review-controls">
+          <button onclick="plusReview(-1)">&#8592; Prev</button>
+          <button onclick="plusReview(1)">Next &#8594;</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Infinity Physio and Rehab. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple review slideshow
+    let reviewIndex = 0;
+    const slides = document.getElementsByClassName("review-slide");
+    function showReview(n) {
+      for (let i = 0; i < slides.length; i++) slides[i].classList.remove("active");
+      slides[n].classList.add("active");
+    }
+    function plusReview(n) {
+      reviewIndex += n;
+      if (reviewIndex < 0) reviewIndex = slides.length - 1;
+      if (reviewIndex >= slides.length) reviewIndex = 0;
+      showReview(reviewIndex);
+    }
+    // Auto-advance every 5 seconds
+    setInterval(() => { plusReview(1); }, 5000);
+    // Initialize
+    showReview(reviewIndex);
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment – Infinity Physio and Rehab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+    </div>
+    <ul class="main-nav-bar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="vision.html">About Us</a></li>
+      <li><a href="appointment.html" class="active">Appointment</a></li>
+      <li><a href="our-services.html">Our Services</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+      <!-- <li><a href="about-us.html">About Us</a></li> -->
+    </ul>
+    <div class="nav-social">
+      <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </a>
+      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      </a>
+      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
+        <img src="pt.jpg" alt="Physiotherapy" />
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="appointment-section">
+        <br>
+        <br>
+        <br>
+        <br>
+      <h2>Book an Appointment</h2>
+      <form id="appointment-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <label for="message">Write Your Messages (about condition and inquiries):</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Book an Appointment</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Infinity Physio and Rehab. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple form submission feedback (customize as needed)
+    document.getElementById("appointment-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("form-status").textContent = "Thank you! Your appointment request has been received.";
+      document.getElementById("form-status").style.color = "green";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
