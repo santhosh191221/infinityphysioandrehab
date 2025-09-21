@@ -5,6 +5,45 @@
   <title>Vision – Infinity Physio and Rehab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-flex {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+    .about-flex.reverse {
+      flex-direction: row-reverse;
+    }
+    .about-text, .about-image {
+      flex: 1 1 0;
+    }
+    .about-image img {
+      width: 100%;
+      max-width: 440px; /* was 340px */
+      border-radius: 10px;
+      box-shadow: 0 2px 12px #eee;
+      display: block;
+      margin: 0 auto;
+    }
+    @media (max-width: 800px) {
+      .about-flex, .about-flex.reverse {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .about-image img {
+        max-width: 100%;
+      }
+    }
+    /* Remove default ul bullets for mission/values if any remain */
+    .about-text ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .about-text ul li {
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -37,48 +76,68 @@
   <main>
     <section class="alt-section about-section">
       <div class="alt-content">
-        <div class="alt-text">
-            <br>
-            <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- About Us Intro -->
+        <div class="about-text" style="margin-bottom:32px;">
+                  <br>
+        <br>
+        <br>
+
           <h2>About Us – Infinity Physio and Rehab</h2>
           <p>
             At Infinity Physio and Rehab, we believe physiotherapy is more than treatment—it is a lifelong journey of recovery, prevention, and empowerment. Born from the passion of two young physiotherapists, our aim is to make high-quality rehabilitation accessible, blending evidence-based care with compassion and innovation.
           </p>
-
-          <h3>Our Founders</h3>
-          <p>
-            <strong>Dr. Keerthana, PT, MIAP (Reg. No: 69211)</strong> is the Founder of Infinity Physio and Rehab. A graduate of Meenakshi College of Physiotherapy, she completed her internships at MAHER, Gericare, and Tamilnadu Government Multi-Speciality Hospital (Omanthurar), gaining expertise across orthopaedics, geriatrics, neurology, oncology, and sports rehabilitation. Currently pursuing her Master’s in Orthopaedics, she is passionate about musculoskeletal and occupational health, with research focused on musculoskeletal disorders among weavers and factory workers.
-          </p>
-          <p>
-            <strong>Dr. Tamilvasan, PT</strong> is the Co-Founder, CEO, and Chief Consultant Physiotherapist. He completed his training at MAHER, NIPMED, and Tamilnadu Government Multi-Speciality Hospital (Omanthurar), with expertise in pediatrics, neurology, oncology, sports, and cardiology rehabilitation. His research on fear of falling in the elderly reflects his interest and specialised in geriatric physiotherapy. With leadership and dedication, he drives the vision of Infinity Physio and Rehab as a trusted rehabilitation brand.
-          </p>
-
-          <h3>Our Vision</h3>
-          <p>
-            To be a trusted leader in physiotherapy and rehabilitation, empowering individuals to achieve pain-free movement, independence, and long-term wellness, while redefining recovery standards through innovation, compassion, and professional excellence.
-          </p>
-
-          <h3>Our Mission</h3>
-          <ul>
-            <li>Deliver comprehensive, evidence-based physiotherapy services.</li>
-            <li>Empower patients through awareness, prevention, and recovery.</li>
-            <li>Expand accessibility through clinics, rural camps, and community programs.</li>
-            <li>Build Infinity Physio and Rehab into a premier brand in rehabilitation.</li>
-          </ul>
-
-          <h3>Our Core Values</h3>
-          <ul>
-            <li><strong>Compassion</strong> – treating every patient with empathy and respect.</li>
-            <li><strong>Commitment</strong> – ensuring consistent and high-quality care.</li>
-            <li><strong>Community</strong> – reaching people through camps and awareness programs.</li>
-            <li><strong>Collaboration</strong> – continuous learning and teamwork.</li>
-            <li><strong>Credibility</strong> – ethical, evidence-based, and trusted practice.</li>
-          </ul>
         </div>
-        <br>
-        <div class="alt-image">
-          <img src="vision.jpeg" alt="About Infinity Physio and Rehab">
+
+        <!-- Founders Section with Image -->
+        <div class="about-flex">
+          <div class="about-text">
+            <h3>Our Founders</h3>
+            <p>
+              <strong>Dr. Keerthana, PT, MIAP (Reg. No: 69211)</strong> is the Founder of Infinity Physio and Rehab. A graduate of Meenakshi College of Physiotherapy, she completed her internships at MAHER, Gericare, and <b>Tamilnadu Government Multi-Super-Speciality Hospital (Omanthurar)</b>, gaining expertise across orthopaedics, geriatrics, neurology, oncology, and sports rehabilitation. Currently pursuing her Master’s in Orthopaedics, she is <b>passionate about musculoskeletal and occupational health</b>, with research focused on musculoskeletal disorders among weavers and factory workers.
+            </p>
+            <p>
+              <strong>Dr. Tamilvasan, PT</strong> is the Co-Founder, CEO, and Chief Consultant Physiotherapist. He completed his training at MAHER, NIPMED, and <b>Tamilnadu Government Multi-Super-Speciality Hospital (Omanthurar)</b>, with expertise in pediatrics, neurology, oncology, sports, and cardiology rehabilitation. His research on fear of falling in the elderly reflects his interest and <b>specialised in geriatric physiotherapy</b>. With leadership and dedication, he drives the vision of Infinity Physio and Rehab as a trusted rehabilitation brand.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="vision.jpeg" alt="Founders of Infinity Physio and Rehab">
+          </div>
         </div>
+
+        <!-- Vision Section with Image -->
+        <div class="about-flex reverse">
+          <div class="about-text">
+            <h3>Our Vision</h3>
+            <p>
+              To be a trusted leader in physiotherapy and rehabilitation, empowering individuals to achieve pain-free movement, independence, and long-term wellness, while redefining recovery standards through innovation, compassion, and professional excellence.
+            </p>
+
+            <h3>Our Mission</h3>
+            <p>
+              Deliver comprehensive, evidence-based physiotherapy services.<br>
+              Empower patients through awareness, prevention, and recovery.<br>
+              Expand accessibility through clinics, rural camps, and community programs.<br>
+              Build Infinity Physio and Rehab into a premier brand in rehabilitation.
+            </p>
+
+            <h3>Our Core Values</h3>
+            <p>
+              <strong>Compassion</strong> – treating every patient with empathy and respect.<br>
+              <strong>Commitment</strong> – ensuring consistent and high-quality care.<br>
+              <strong>Community</strong> – reaching people through camps and awareness programs.<br>
+              <strong>Collaboration</strong> – continuous learning and teamwork.<br>
+              <strong>Credibility</strong> – ethical, evidence-based, and trusted practice.
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="abot2.jpeg" alt="Vision of Infinity Physio and Rehab" style="max-width:440px;">
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
