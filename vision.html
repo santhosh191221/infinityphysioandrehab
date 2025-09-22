@@ -43,6 +43,35 @@
     .about-text ul li {
       margin-bottom: 8px;
     }
+    .fullscreen-menu {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 60px);
+      background: #131a35; /* Dark blue */
+      z-index: 9999;
+      display: none;
+      padding-top: 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .fullscreen-menu .close-btn {
+      color: #fff !important;
+      font-weight: bold;
+    }
+    .mobile-nav-bar li {
+      margin: 24px 0;
+    }
+    .mobile-nav-bar a {
+      font-size: 1.3em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (min-width: 900px) {
+      .nav-toggle, .fullscreen-menu { display: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -70,6 +99,22 @@
       <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
         <img src="pt.jpg" alt="Physiotherapy" />
       </a>
+    </div>
+    <!-- Mobile Menu Toggle -->
+    <button class="nav-toggle" aria-label="Open menu" onclick="openHamburgerMenu()" style="background:none;border:none;font-size:2em;cursor:pointer;display:inline-block;margin-left:16px;">
+      ☰
+    </button>
+    <div class="fullscreen-menu">
+      <span class="close-btn" aria-label="Close menu" onclick="closeHamburgerMenu()" style="font-size:2em;cursor:pointer;position:absolute;top:20px;right:32px;color:#fff;">&times;</span>
+      <ul class="mobile-nav-bar" style="list-style:none;padding:60px 0 0 0;text-align:center;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="vision.html" class="active">About Us</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="our-services.html">Our Services</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+        <!-- <li><a href="about-us.html">About Us</a></li> -->
+      </ul>
     </div>
   </nav>
 
@@ -145,5 +190,19 @@
   <footer>
     <p>&copy; 2025 Infinity Physio and Rehab. All rights reserved.</p>
   </footer>
+
+  <!-- Add this JS before </body> if not already present -->
+  <script>
+  function openHamburgerMenu() {
+    document.querySelector('.fullscreen-menu').style.display = 'block';
+  }
+  function closeHamburgerMenu() {
+    document.querySelector('.fullscreen-menu').style.display = 'none';
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var menu = document.querySelector('.fullscreen-menu');
+    if (menu) menu.style.display = 'none';
+  });
+  </script>
 </body>
 </html>

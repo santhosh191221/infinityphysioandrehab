@@ -52,15 +52,70 @@
   z-index: 10000;
 }
 
+.fullscreen-menu {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background: #131a35; /* Dark blue */
+  z-index: 9999;
+  display: none;
+  padding-top: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.fullscreen-menu .close-btn {
+  color: #fff !important;
+  font-weight: bold;
+}
+.mobile-nav-bar li {
+  margin: 24px 0;
+}
+.mobile-nav-bar a {
+  font-size: 1.3em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (min-width: 900px) {
+  .nav-toggle, .fullscreen-menu { display: none !important; }
+}
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="nav-logo">
-      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
-    </div>
-    <ul class="main-nav-bar">
+  <div class="nav-logo">
+    <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+  </div>
+  <ul class="main-nav-bar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="vision.html">About Us</a></li>
+    <li><a href="appointment.html">Appointment</a></li>
+    <li><a href="our-services.html" class="active">Our Services</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+    <!-- <li><a href="about-us.html">About Us</a></li> -->
+  </ul>
+  <div class="nav-social">
+    <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </a>
+    <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
+      <img src="pt.jpg" alt="Physiotherapy" />
+    </a>
+  </div>
+  <!-- Mobile Menu Toggle -->
+  <button class="nav-toggle" aria-label="Open menu" onclick="openHamburgerMenu()" style="background:none;border:none;font-size:2em;cursor:pointer;display:inline-block;margin-left:16px;">
+    ☰
+  </button>
+  <div class="fullscreen-menu">
+    <span class="close-btn" aria-label="Close menu" onclick="closeHamburgerMenu()" style="font-size:2em;cursor:pointer;position:absolute;top:20px;right:32px;color:#fff;">&times;</span>
+    <ul class="mobile-nav-bar" style="list-style:none;padding:60px 0 0 0;text-align:center;">
       <li><a href="index.html">Home</a></li>
       <li><a href="vision.html">About Us</a></li>
       <li><a href="appointment.html">Appointment</a></li>
@@ -69,18 +124,8 @@
       <li><a href="why-choose-us.html">Why Choose Us?</a></li>
       <!-- <li><a href="about-us.html">About Us</a></li> -->
     </ul>
-    <div class="nav-social">
-      <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-      </a>
-      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-      </a>
-      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
-        <img src="pt.jpg" alt="Physiotherapy" />
-      </a>
-    </div>
-  </nav>
+  </div>
+</nav>
 
   <main>
     <section>
@@ -175,7 +220,7 @@
         </div>
         <div class="service-item">
           <h3>Headache & Migraine Management</h3>
-          <img src="headache.jpeg" alt="Headache & Migraine Management" class="service-img">
+          <img src="head.jpeg" alt="Headache & Migraine Management" class="service-img">
           <p>
             We use a multimodal approach to manage headaches and migraines, including manual therapy,
             exercise, and lifestyle modification. Our goal is to help patients reduce their symptoms and improve their quality of life.
@@ -281,7 +326,6 @@ const serviceDetails = {
             </ul>
         `
     },
-    // Add other services here following the same structure
     "post-surgical": {
         title: "Post-Surgical Rehabilitation",
         content: `
@@ -382,7 +426,6 @@ const serviceDetails = {
             </ul>
         `
     },
-    // ... (keep other services) ...
     "neurological": {
         title: "Neurological Rehabilitation",
         content: `
@@ -576,7 +619,18 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === this) this.style.display = 'none';
     };
 });
-</script>
+
+function openHamburgerMenu() {
+  document.querySelector('.fullscreen-menu').style.display = 'block';
+}
+function closeHamburgerMenu() {
+  document.querySelector('.fullscreen-menu').style.display = 'none';
+}
+document.addEventListener("DOMContentLoaded", function () {
+  var menu = document.querySelector('.fullscreen-menu');
+  if (menu) menu.style.display = 'none';
+});
+  </script>
 
   <footer>
     <p>&copy; 2025 Infinity Physio and Rehab. All rights reserved.</p>
