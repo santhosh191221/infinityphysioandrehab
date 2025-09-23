@@ -61,7 +61,7 @@
         <div class="fullscreen-menu">
           <span class="close-btn" aria-label="Close menu" onclick="closeHamburgerMenu()">&times;</span>
           <ul class="mobile-nav-bar">
-      <li><a href="index.html">Home</a></li>
+<li><a href="index.html" class="active">Home</a></li>
       <li><a href="vision.html">About Us</a></li>
       <li><a href="appointment.html">Appointment</a></li>
       <li><a href="our-services.html">Our Services</a></li>
@@ -383,6 +383,16 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
     from { opacity: 0; }
     to { opacity: 1; }
   }
+  /* Adjust mobile navigation menu spacing */
+.fullscreen-menu .mobile-nav-bar {
+  margin-top: 60px; /* Move the list down */
+  padding-top: 20px; /* Adds extra space at the top */
+}
+
+.fullscreen-menu .mobile-nav-bar li {
+  margin-bottom: 20px; /* Adds space between each menu item */
+}
+
 </style>
 <script>
   // FAQ expand/collapse
@@ -434,5 +444,19 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
       }
     });
   </script>
+  <!-- Add this script just before </body> to enable hamburger menu functionality -->
+<script>
+  function openHamburgerMenu() {
+    document.querySelector('.fullscreen-menu').style.display = 'block';
+  }
+  function closeHamburgerMenu() {
+    document.querySelector('.fullscreen-menu').style.display = 'none';
+  }
+  // Hide menu by default on load
+  document.addEventListener("DOMContentLoaded", function () {
+    var menu = document.querySelector('.fullscreen-menu');
+    if (menu) menu.style.display = 'none';
+  });
+</script>
 </body>
 </html>
