@@ -237,12 +237,13 @@
   </main>
 
   <!-- Add this modal markup just before the closing </body> tag if not already present -->
-<div id="serviceModal" class="modal" style="display:none; position:fixed; z-index:10000; left:0; top:0; width:100vw; height:100vh; overflow:auto; background:rgba(0,0,0,0.5);">
-  <div id="modalContent" style="background:#fff; margin:160px auto 40px auto; padding:32px 24px; border-radius:10px; max-width:600px; position:relative;">
+<div id="serviceModal" class="modal" style="display:none; position:absolute; z-index:10010; left:0; top:0; width:100vw; height:230vh; overflow:auto; background:rgba(0,0,0,0.5);">
+  <div id="modalContent" style="background:#fff; margin:0 auto 40px auto; padding:32px 24px; border-radius:10px; max-width:600px; position:relative; top:80px;">
     <span class="close" style="position:absolute; top:16px; right:24px; font-size:2em; font-weight:bold; color:#0a2472; cursor:pointer;">&times;</span>
     <div id="serviceModalContent"></div>
   </div>
 </div>
+
 
 <script>
 // Place this script at the end of your body (after the modal markup)
@@ -619,6 +620,15 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === this) this.style.display = 'none';
     };
 });
+
+const navbar = document.querySelector("nav"); // Replace 'nav' with your navbar selector
+const modalContent = document.getElementById("modalContent");
+
+if (navbar) {
+  const navbarHeight = navbar.offsetHeight;
+  modalContent.style.top = navbarHeight + "px";
+}
+
 
 function openHamburgerMenu() {
   document.querySelector('.fullscreen-menu').style.display = 'block';
