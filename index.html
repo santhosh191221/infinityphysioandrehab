@@ -6,75 +6,144 @@
   <title>Infinity Physio and Rehab</title>
   <link rel="icon" type="image/png" href="logo.jpeg">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* === Navbar Styles === */
+    .navbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; position: relative; }
+    .nav-logo { display: flex; align-items: center; }
+    .main-nav-bar { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; transition: left 0.3s; }
+    .main-nav-bar li { margin: 0; }
+    .main-nav-bar a.active { color: #1a6f5a; font-weight: bold; }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      margin-left: 16px;
+      z-index: 200;
+      /* Color is handled by styles.css, but can be overridden if needed */
+    }
+    .nav-social { display: flex; gap: 10px; }
+    .main-nav-bar .close-btn { display: none; } /* Hide close button on desktop */
+
+    @media (max-width: 700px) {
+      .nav-toggle {
+        display: block;
+        margin-left: 8px; /* Adjust this value to change position */
+      }
+      .nav-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-30%);
+      }
+      .main-nav-bar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 70vw;
+        height: 100vh;
+        background: #131a35;
+        box-shadow: 2px 0 12px #ddd;
+        padding-top: 60px;
+        gap: 0;
+        transition: left 0.3s ease-in-out;
+        z-index: 150;
+      }
+      .main-nav-bar.active {
+        left: 0;
+      }
+      .main-nav-bar li {
+        padding: 18px 24px;
+        border-bottom: 1px solid #4a4e60;
+      }
+      .nav-social {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 12px 16px;
+        z-index: 201;
+      }
+      .navbar {
+        position: relative;
+      }
+      .main-nav-bar .close-btn {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 300;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+      }
+    }
+    
+    /* FAQ Styles */
+    .faq-list { margin-top: 18px; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; font-size: 1.08em; font-weight: 600; padding: 16px 0 12px 0; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between; transition: background 0.2s; }
+    .faq-question:hover { background: #f3f3e7; }
+    .faq-answer { display: none; padding: 0 0 16px 0; font-size: 1em; color: #222; animation: fadeIn 0.3s; text-align: left; }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-item .arrow { font-size: 1.2em; margin-left: 10px; transition: transform 0.2s; }
+    .faq-item.active .arrow { transform: rotate(90deg); }
+    .faq-stars .faq-star { color: #FFD700; font-size: 1.1em; margin-right: 6px; vertical-align: middle; }
+    .faq-stars { display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 10px; }
+    .faq-stars div { width: 100%; justify-content: flex-start; text-align: left; max-width: 500px; display: flex; align-items: flex-start; margin-bottom: 6px; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
 </head>
 <body>
-  <!-- HERO SECTION -->
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+    </div>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <ul class="main-nav-bar">
+      <button class="close-btn" aria-label="Close menu">&times;</button>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="vision.html">About Us</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="our-services.html">Our Services</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="why-choose-us.html">Why Choose Us</a></li>
+    </ul>
+    <div class="nav-social">
+      <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </a>
+      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      </a>
+      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
+        <img src="pt.jpg" alt="Physiotherapy" />
+      </a>
+    </div>
+  </nav>
+
   <header class="hero-section" id="heroSection">
-    <!-- Slideshow Background -->
     <div class="hero-slideshow">
       <div class="slide fade" style="display:block;">
         <img src="main.jpeg" alt="Main Slide">
       </div>
     </div>
-
-    <!-- Overlay Content -->
     <div class="hero-overlay">
       <h1>INFINITY PHYSIO AND REHAB</h1>
       <p>Your trusted partner in physiotherapy and rehabilitation</p>
-
-      <!-- WhatsApp CTA -->
       <a href="https://wa.me/919600619608?text=Hello%20Infinity%20Physio%20and%20Rehab,%0AI%20would%20like%20to%20book%20an%20appointment.%0APlease%20share%20available%20slots."
          target="_blank"
          class="cta-btn whatsapp-btn">
          Book Appointment
       </a>
-
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="nav-logo">
-          <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
-        </div>
-        <ul class="main-nav-bar">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vision.html">About Us</a></li>
-      <li><a href="appointment.html">Appointment</a></li>
-      <li><a href="our-services.html">Our Services</a></li>
-      <li><a href="reviews.html" class="active">Reviews</a></li>
-      <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-      <!-- <li><a href="about-us.html">About Us</a></li> -->
-    </ul>
-        <div class="nav-social">
-          <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-          </a>
-          <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-          </a>
-          <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
-            <img src="pt.jpg" alt="Physiotherapy" />
-          </a>
-        </div>
-
-        <!-- Mobile Menu Toggle -->
-        <button class="nav-toggle" aria-label="Open menu" onclick="openHamburgerMenu()">☰</button>
-
-        <div class="fullscreen-menu">
-          <span class="close-btn" aria-label="Close menu" onclick="closeHamburgerMenu()">&times;</span>
-          <ul class="mobile-nav-bar">
-<li><a href="index.html" class="active">Home</a></li>
-      <li><a href="vision.html">About Us</a></li>
-      <li><a href="appointment.html">Appointment</a></li>
-      <li><a href="our-services.html">Our Services</a></li>
-      <li><a href="reviews.html" class="active">Reviews</a></li>
-      <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-      <!-- <li><a href="about-us.html">About Us</a></li> -->
-    </ul>
-        </div>
-      </nav>
     </div>
   </header>
 
-  <!-- MAIN CONTENT (Dynamic Sections Loaded Here) -->
   <main id="content">
        <section>
       <h2>Welcome to Infinity Physio and Rehab</h2>
@@ -86,7 +155,6 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
     </p>
          <div class="home-highlights">
         <div class="highlight-card">
-          <!-- <h3>Electrotherapy</h3> -->
           <img src="elec.jpeg" alt="Electrotherapy" style="width:100%;max-width:200px;border-radius:8px;margin-bottom:16px;">
           <h3>Electrotherapy</h3>
           <ul>
@@ -97,7 +165,6 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
     </ul>
         </div>
         <div class="highlight-card">
-          <!-- <h3>Personalised exercise</h3> -->
           <img src="exec.jpeg" alt="Personalised exercise" style="width:100%;max-width:200px;border-radius:8px;margin-bottom:16px;">
           <h3>Personalized Exercise</h3>
     <ul>
@@ -108,8 +175,7 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
     </ul>
         </div>
         <div class="highlight-card">
-          <!-- <h3>Hands on care</h3> -->
-          <img src="Hands.jpeg" alt="Electrotherapy" style="width:100%;max-width:200px;border-radius:8px;margin-bottom:16px;">
+          <img src="Hands.jpeg" alt="Hands-On Therapy" style="width:100%;max-width:200px;border-radius:8px;margin-bottom:16px;">
           <h3>Hands-On Therapy</h3>
           <ul>
       <li>Direct relief—Manual techniques reduce pain and stiffness.</li>
@@ -119,23 +185,19 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
     </ul>
         </div>
         <div class="highlight-card">
-          <!-- <h3>Patient Education</h3> -->
-          <img src="edu.jpeg" alt="Electrotherapy" style="width:100%;max-width:200px;border-radius:8px;margin-bottom:16px;">
+          <img src="edu.jpeg" alt="Patient Education" style="width:100%;max-width:200px;border-radius:8px;margin-bottom:16px;">
             <h3>Patient Education</h3>
     <ul>
       <li>Clear explanations—Simple details about your condition and care.</li>
       <li>Self-management—Teaches strategies for pain, posture, and daily life.</li>
       <li>Visual learning—Uses images and demos for easy understanding.</li>
-      <li>Empowers choice—Helps you make informed decisions about your health.</li>s
+      <li>Empowers choice—Helps you make informed decisions about your health.</li>
     </ul>
-          <!-- <p>
-            Visit us at our clinic or book an appointment online. We are located in the heart of the city, easily accessible by public transport.
-          </p> -->
         </div>
       </div>
     </section>
     <section>
-  <h3><strong>Regain Strength  * Restore Function *  Redefine Your Limits</strong></h3>
+  <h3><strong>Regain Strength  * Restore Function * Redefine Your Limits</strong></h3>
   <p>
     We support you through pain, injury, or post-surgical challenges with comprehensive care.<br>
     With a strong focus on evidence-based practices, we tailor our treatments to meet your unique needs, ensuring faster recovery and long-term wellness.<br>
@@ -155,7 +217,7 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
       </ul>
     </div>
     <div class="alt-image">
-      <img src="oline.jpeg" alt="Clinic Facilities">
+      <img src="oline.jpeg" alt="Online Consultation">
     </div>
   </div>
 </section>
@@ -171,7 +233,7 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
       </ul>
     </div>
     <div class="alt-image">
-      <img src="home.jpeg" alt="Patient Success Stories">
+      <img src="home.jpeg" alt="Home Care Physiotherapy">
     </div>
   </div>
 </section>
@@ -200,7 +262,6 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
                 </form>
                 <p id="form-status"></p>
             </section>
-  <!-- FAQ SECTION -->
   <section id="faq-section" style="max-width:900px;margin:40px auto 60px auto;padding:24px;background:#fafbfc;border-radius:10px;">
   <h2>Frequently Asked Questions</h2>
   <div class="faq-list">
@@ -317,109 +378,27 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
     </div>
   </div>
 </section>
-<style>
-  .faq-list {
-    margin-top: 18px;
-  }
-  .faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    text-align: left;
-    font-size: 1.08em;
-    font-weight: 600;
-    padding: 16px 0 12px 0;
-    cursor: pointer;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: background 0.2s;
-  }
-  .faq-question:hover {
-    background: #f3f3e7;
-  }
-  .faq-answer {
-    display: none;
-    padding: 0 0 16px 0;
-    font-size: 1em;
-    color: #222;
-    animation: fadeIn 0.3s;
-    text-align: left; /* Ensure left alignment for answers */
-  }
-  .faq-item.active .faq-answer {
-    display: block;
-  }
-  .faq-item .arrow {
-    font-size: 1.2em;
-    margin-left: 10px;
-    transition: transform 0.2s;
-  }
-  .faq-item.active .arrow {
-    transform: rotate(90deg);
-  }
-  .faq-stars .faq-star {
-    color: #FFD700;
-    font-size: 1.1em;
-    margin-right: 6px;
-    vertical-align: middle;
-  }
-  .faq-stars {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Left align the stars and text */
-    margin-bottom: 10px;
-  }
-  .faq-stars div {
-    width: 100%;
-    justify-content: flex-start;
-    text-align: left;
-    max-width: 500px;
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 6px;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  /* Adjust mobile navigation menu spacing */
-.fullscreen-menu .mobile-nav-bar {
-  margin-top: 60px; /* Move the list down */
-  padding-top: 20px; /* Adds extra space at the top */
-}
-
-.fullscreen-menu .mobile-nav-bar li {
-  margin-bottom: 20px; /* Adds space between each menu item */
-}
-
-</style>
-<script>
-  // FAQ expand/collapse
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('.faq-question').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        const item = btn.closest('.faq-item');
-        item.classList.toggle('active');
-        // Optionally close others:
-        document.querySelectorAll('.faq-item').forEach(function(other) {
-          if (other !== item) other.classList.remove('active');
-        });
-      });
-    });
-  });
-</script>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Infinity Physio and Rehab. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      
+      // FAQ expand/collapse
+      document.querySelectorAll('.faq-question').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const item = btn.closest('.faq-item');
+          item.classList.toggle('active');
+          document.querySelectorAll('.faq-item').forEach(function(other) {
+            if (other !== item) other.classList.remove('active');
+          });
+        });
+      });
+
+      // Form submission to WhatsApp
       const form = document.getElementById("appointment-form");
       if (form) {
         form.addEventListener("submit", function (e) {
@@ -428,35 +407,50 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
           const email = document.getElementById("email").value.trim();
           const phone = document.getElementById("phone").value.trim();
           const message = document.getElementById("message").value.trim();
-
-          // Build WhatsApp message
           const whatsappMessage =
             `Appointment Request:\n` +
             `Name: ${name}\n` +
             `Email: ${email}\n` +
             `Phone: ${phone}\n` +
             `Message: ${message}`;
-
           const whatsappNumber = "919600619608";
           const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
           window.open(url, "_blank");
         });
       }
+
+      // Hamburger menu toggle logic
+      const navToggle = document.querySelector('.nav-toggle');
+      const navBar = document.querySelector('.main-nav-bar');
+      const closeBtn = document.querySelector('.close-btn');
+
+      function closeMobileMenu() {
+        navBar.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      navToggle.addEventListener('click', function () {
+        const expanded = navBar.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', expanded);
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMobileMenu);
+      }
+
+      navBar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      document.addEventListener('click', function (event) {
+        const isClickInsideNav = navBar.contains(event.target);
+        const isClickOnToggle = navToggle.contains(event.target);
+        
+        if (navBar.classList.contains('active') && !isClickInsideNav && !isClickOnToggle) {
+          closeMobileMenu();
+        }
+      });
     });
   </script>
-  <!-- Add this script just before </body> to enable hamburger menu functionality -->
-<script>
-  function openHamburgerMenu() {
-    document.querySelector('.fullscreen-menu').style.display = 'block';
-  }
-  function closeHamburgerMenu() {
-    document.querySelector('.fullscreen-menu').style.display = 'none';
-  }
-  // Hide menu by default on load
-  document.addEventListener("DOMContentLoaded", function () {
-    var menu = document.querySelector('.fullscreen-menu');
-    if (menu) menu.style.display = 'none';
-  });
-</script>
 </body>
 </html>

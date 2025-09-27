@@ -14,7 +14,7 @@
     display:inline-block;
     margin:16px 0;
     padding:10px 18px;
-    background:#0a2472;      /* Dark blue */
+    background:#0a2472;
     border-radius:6px;
     border:1px solid #0a2472;
     text-decoration:none;
@@ -31,7 +31,7 @@
   .review-controls button {
     margin: 0 5px;
     padding: 4px 10px;
-    background: #0a2472;      /* Dark blue */
+    background: #0a2472;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -40,36 +40,113 @@
     transition: background 0.2s;
   }
   .review-controls button:hover {
-    background: #143fa3;      /* Slightly lighter blue on hover */
+    background: #143fa3;
+  }
+
+  /* === Navbar Styles === */
+  .navbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; position: relative; }
+  .nav-logo { display: flex; align-items: center; }
+  .main-nav-bar { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; transition: left 0.3s; }
+  .main-nav-bar li { margin: 0; }
+  .main-nav-bar a.active { color: #1a6f5a; font-weight: bold; }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    margin-left: 16px;
+    z-index: 200;
+  }
+  .nav-social { display: flex; gap: 10px; }
+  .main-nav-bar .close-btn { display: none; } /* Hide close button on desktop */
+
+  @media (max-width: 700px) {
+    .nav-toggle {
+      display: block;
+      margin-left: 8px; /* Adjust this value to change position */
+    }
+    /* Center the logo in mobile view */
+    .nav-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-30%);
+    }
+    .main-nav-bar {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: -100vw;
+      width: 70vw;
+      height: 100vh;
+      background: #131a35;
+      box-shadow: 2px 0 12px #ddd;
+      padding-top: 60px;
+      gap: 0;
+      transition: left 0.3s ease-in-out;
+      z-index: 150;
+    }
+    .main-nav-bar.active {
+      left: 0;
+    }
+    .main-nav-bar li {
+      padding: 18px 24px;
+      border-bottom: 1px solid #4a4e60;
+    }
+    .nav-social {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 12px 16px;
+      z-index: 201;
+    }
+    .navbar {
+      position: relative;
+    }
+    .main-nav-bar .close-btn {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 300;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+    }
   }
   </style>
 </head>
 <body>
-  <!-- Navbar (copy from your other pages) -->
   <nav class="navbar">
     <div class="nav-logo">
       <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
     </div>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
     <ul class="main-nav-bar">
+      <button class="close-btn" aria-label="Close menu">&times;</button>
       <li><a href="index.html">Home</a></li>
       <li><a href="vision.html">About Us</a></li>
       <li><a href="appointment.html">Appointment</a></li>
       <li><a href="our-services.html">Our Services</a></li>
       <li><a href="reviews.html" class="active">Reviews</a></li>
-      <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-      <!-- <li><a href="about-us.html">About Us</a></li> -->
+      <li><a href="why-choose-us.html">Why Choose Us</a></li>
     </ul>
-            <div class="nav-social">
-          <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-          </a>
-          <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-          </a>
-          <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
-            <img src="pt.jpg" alt="Physiotherapy" />
-          </a>
-        </div>
+    <div class="nav-social">
+      <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </a>
+      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon instagram-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      </a>
+      <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
+        <img src="pt.jpg" alt="Physiotherapy" />
+      </a>
+    </div>
   </nav>
 
   <main>
@@ -135,6 +212,46 @@
     setInterval(() => { plusReview(1); }, 5000);
     // Initialize
     showReview(reviewIndex);
+  </script>
+  <script>
+    // Hamburger menu toggle for mobile
+    document.addEventListener("DOMContentLoaded", function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navBar = document.querySelector('.main-nav-bar');
+      const closeBtn = document.querySelector('.close-btn');
+
+      // Function to close the menu
+      function closeMobileMenu() {
+        navBar.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      // 1. Open/close menu with the hamburger toggle
+      navToggle.addEventListener('click', function () {
+        const expanded = navBar.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', expanded);
+      });
+
+      // 2. Close menu with the new 'X' button
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMobileMenu);
+      }
+
+      // 3. Close menu when a nav link is clicked
+      navBar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      // 4. Close menu when clicking outside of it
+      document.addEventListener('click', function (event) {
+        const isClickInsideNav = navBar.contains(event.target);
+        const isClickOnToggle = navToggle.contains(event.target);
+        
+        if (navBar.classList.contains('active') && !isClickInsideNav && !isClickOnToggle) {
+          closeMobileMenu();
+        }
+      });
+    });
   </script>
 </body>
 </html>

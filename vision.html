@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* Page-specific styles */
     .about-flex {
       display: flex;
       gap: 32px;
@@ -20,12 +21,38 @@
     }
     .about-image img {
       width: 100%;
-      max-width: 440px; /* was 340px */
+      max-width: 440px;
       border-radius: 10px;
       box-shadow: 0 2px 12px #eee;
       display: block;
       margin: 0 auto;
     }
+    .about-text ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .about-text ul li {
+      margin-bottom: 8px;
+    }
+    
+    /* === Navbar Styles === */
+    .navbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; position: relative; }
+    .nav-logo { display: flex; align-items: center; }
+    .main-nav-bar { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; transition: left 0.3s; }
+    .main-nav-bar li { margin: 0; }
+    .main-nav-bar a.active { color: #1a6f5a; font-weight: bold; }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      margin-left: 16px;
+      z-index: 200;
+    }
+    .nav-social { display: flex; gap: 10px; }
+    .main-nav-bar .close-btn { display: none; } /* Hide close button on desktop */
+
     @media (max-width: 800px) {
       .about-flex, .about-flex.reverse {
         flex-direction: column;
@@ -35,59 +62,80 @@
         max-width: 100%;
       }
     }
-    /* Remove default ul bullets for mission/values if any remain */
-    .about-text ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .about-text ul li {
-      margin-bottom: 8px;
-    }
-    .fullscreen-menu {
-      position: fixed;
-      top: 60px;
-      left: 0;
-      width: 100vw;
-      height: calc(100vh - 60px);
-      background: #131a35; /* Dark blue */
-      z-index: 9999;
-      display: none;
-      padding-top: 32px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    }
-    .fullscreen-menu .close-btn {
-      color: #fff !important;
-      font-weight: bold;
-    }
-    .mobile-nav-bar li {
-      margin: 24px 0;
-    }
-    .mobile-nav-bar a {
-      font-size: 1.3em;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
 
-    @media (min-width: 900px) {
-      .nav-toggle, .fullscreen-menu { display: none !important; }
+    @media (max-width: 700px) {
+      .nav-toggle {
+        display: block;
+        margin-left: 8px; /* Adjust this value to change position */
+      }
+      .nav-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-30%);
+      }
+      .main-nav-bar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 70vw;
+        height: 100vh;
+        background: #131a35;
+        box-shadow: 2px 0 12px #ddd;
+        padding-top: 60px;
+        gap: 0;
+        transition: left 0.3s ease-in-out;
+        z-index: 150;
+      }
+      .main-nav-bar.active {
+        left: 0;
+      }
+      .main-nav-bar li {
+        padding: 18px 24px;
+        border-bottom: 1px solid #4a4e60;
+      }
+      .nav-social {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 12px 16px;
+        z-index: 201;
+      }
+      .navbar {
+        position: relative;
+      }
+      .main-nav-bar .close-btn {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 300;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-logo">
       <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
     </div>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
     <ul class="main-nav-bar">
+      <button class="close-btn" aria-label="Close menu">&times;</button>
       <li><a href="index.html">Home</a></li>
       <li><a href="vision.html" class="active">About Us</a></li>
       <li><a href="appointment.html">Appointment</a></li>
       <li><a href="our-services.html">Our Services</a></li>
       <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-      <!-- <li><a href="about-us.html">About Us</a></li> -->
+      <li><a href="why-choose-us.html">Why Choose Us</a></li>
     </ul>
     <div class="nav-social">
       <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
@@ -100,22 +148,6 @@
         <img src="pt.jpg" alt="Physiotherapy" />
       </a>
     </div>
-    <!-- Mobile Menu Toggle -->
-    <button class="nav-toggle" aria-label="Open menu" onclick="openHamburgerMenu()" style="background:none;border:none;font-size:2em;cursor:pointer;display:inline-block;margin-left:16px;">
-      ☰
-    </button>
-    <div class="fullscreen-menu">
-      <span class="close-btn" aria-label="Close menu" onclick="closeHamburgerMenu()" style="font-size:2em;cursor:pointer;position:absolute;top:20px;right:32px;color:#fff;">&times;</span>
-      <ul class="mobile-nav-bar" style="list-style:none;padding:60px 0 0 0;text-align:center;">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="vision.html" class="active">About Us</a></li>
-        <li><a href="appointment.html">Appointment</a></li>
-        <li><a href="our-services.html">Our Services</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-        <!-- <li><a href="about-us.html">About Us</a></li> -->
-      </ul>
-    </div>
   </nav>
 
   <main>
@@ -124,20 +156,16 @@
         <br>
         <br>
         <br>
-
-        <!-- About Us Intro -->
+        <br>
+        <br>
+        <br>
         <div class="about-text" style="margin-bottom:32px;">
-                  <br>
-        <br>
-        <br>
-
           <h2>About Us – Infinity Physio and Rehab</h2>
           <p>
             At Infinity Physio and Rehab, we believe physiotherapy is more than treatment—it is a lifelong journey of recovery, prevention, and empowerment. Born from the passion of two young physiotherapists, our aim is to make high-quality rehabilitation accessible, blending evidence-based care with compassion and innovation.
           </p>
         </div>
 
-        <!-- Founders Section with Image -->
         <div class="about-flex">
           <div class="about-text">
             <h3>Our Founders</h3>
@@ -153,7 +181,6 @@
           </div>
         </div>
 
-        <!-- Vision Section with Image -->
         <div class="about-flex reverse">
           <div class="about-text">
             <h3>Our Vision</h3>
@@ -191,18 +218,45 @@
     <p>&copy; 2025 Infinity Physio and Rehab. All rights reserved.</p>
   </footer>
 
-  <!-- Add this JS before </body> if not already present -->
   <script>
-  function openHamburgerMenu() {
-    document.querySelector('.fullscreen-menu').style.display = 'block';
-  }
-  function closeHamburgerMenu() {
-    document.querySelector('.fullscreen-menu').style.display = 'none';
-  }
-  document.addEventListener("DOMContentLoaded", function () {
-    var menu = document.querySelector('.fullscreen-menu');
-    if (menu) menu.style.display = 'none';
-  });
+    document.addEventListener("DOMContentLoaded", function () {
+      // --- Hamburger menu toggle logic ---
+      const navToggle = document.querySelector('.nav-toggle');
+      const navBar = document.querySelector('.main-nav-bar');
+      const closeBtn = document.querySelector('.close-btn');
+
+      // Function to close the menu
+      function closeMobileMenu() {
+        navBar.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      // 1. Open/close menu with the hamburger toggle
+      navToggle.addEventListener('click', function () {
+        const expanded = navBar.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', expanded);
+      });
+
+      // 2. Close menu with the new 'X' button
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMobileMenu);
+      }
+
+      // 3. Close menu when a nav link is clicked
+      navBar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      // 4. Close menu when clicking outside of it
+      document.addEventListener('click', function (event) {
+        const isClickInsideNav = navBar.contains(event.target);
+        const isClickOnToggle = navToggle.contains(event.target);
+        
+        if (navBar.classList.contains('active') && !isClickInsideNav && !isClickOnToggle) {
+          closeMobileMenu();
+        }
+      });
+    });
   </script>
 </body>
 </html>

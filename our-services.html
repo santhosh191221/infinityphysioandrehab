@@ -30,27 +30,27 @@
 }
 
 /* Modal background overlay */
-#serviceModal {
+/* #serviceModal {
   position: fixed;
-  top: 0; /* Full-screen background */
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 9999;
   display: none;
-}
+} */
 
 /* Modal content starts BELOW the navbar */
-#modalContent {
+/* #modalContent {
   position: relative;
-  margin: 120px auto 40px auto; /* Push content below navbar (adjust 120px as needed) */
+  margin: 120px auto 40px auto; 
   background: #fff;
   padding: 32px 24px;
   border-radius: 10px;
   max-width: 600px;
   z-index: 10000;
-}
+} */
 
 .fullscreen-menu {
   position: fixed;
@@ -81,6 +81,48 @@
 @media (min-width: 900px) {
   .nav-toggle, .fullscreen-menu { display: none !important; }
 }
+
+
+/* --- Modal Background Overlay: Ensures a full-screen dark background --- */
+#serviceModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay for focus */
+  z-index: 99999; /* High z-index to be on top of everything */
+  display: none; /* Hidden by default */
+  overflow-y: auto; /* Allows scrolling within the modal if content is long */
+}
+
+/* --- Modal Content: Ensures it's centered and starts below the navbar --- */
+#modalContent {
+  position: relative;
+  /* **KEY FIX:** Adjust margin-top to be slightly more than your navbar height (which looks to be around 80px). 
+    120px gives space between the navbar and the top of the modal box.
+  */
+  margin: 120px auto 40px auto; 
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%; /* Make it responsive */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100000;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #0a2472;
+  cursor: pointer;
+}
+
+
   </style>
 </head>
 <body>

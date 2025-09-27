@@ -848,19 +848,15 @@ footer {
 /* Fullscreen menu overlay */
 .fullscreen-menu {
   position: fixed;
-  top: 0;
+  top: 60px; /* Pushes the menu a bit below the top, adjust as needed */
   left: 0;
-  width: 100vw;      /* Fill the entire viewport width */
-  height: 100vh;     /* Fill the entire viewport height */
-  background: #131a35;
-  color: white;
+  width: 100vw;
+  height: calc(100vh - 60px); /* Adjusts height to account for top offset */
+  background: #fff;
+  z-index: 9999;
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end; /* Align menu items to the right */
-  z-index: 10000;
-  margin: 0;
-  padding: 0;
+  padding-top: 32px; /* Extra space for content */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
 .fullscreen-menu.active {
@@ -889,6 +885,10 @@ footer {
   font-size: 1.2rem;
   text-decoration: none;
   padding: 12px 0;
+  display: block;
+  width: 100%;
+  background: transparent;
+  transition
   display: block;
   width: 100%;
   background: transparent;
@@ -1345,7 +1345,7 @@ body::after {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10010; /* > 9999 (intro video) so nav is clickable */
+  z-index: 10000; /* > 9999 (intro video) so nav is clickable */
 }
 
 /* Ensure mobile menu visibility when toggled */
@@ -1378,7 +1378,7 @@ body::after {
     background: #00072D;
     text-align: left;
     padding-top: 60px;    /* make room for fixed navbar */
-    z-index: 10010;
+    z-index: 10000;
   }
   .nav-bar.active { display: flex; }
   .nav-bar li { border-bottom: 1px solid rgba(255,255,255,0.08); }
@@ -1593,10 +1593,10 @@ body::after {
 /* Fullscreen menu overlay (mobile only) */
 .fullscreen-menu {
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
-  width: 100%;
-  height: 100%;
+   width: 100vw;
+  height: calc(100vh - 60px);
   background: #131a35;
   color: white;
   display: none;
@@ -2291,10 +2291,10 @@ body::after {
 /* Fullscreen menu overlay */
 .fullscreen-menu {
   position: fixed;
-  top: 0;
+  top: 60px; /* Pushes the menu a bit below the top, adjust as needed */
   left: 0;
-  width: 100vw;      /* Fill the entire viewport width */
-  height: 100vh;     /* Fill the entire viewport height */
+  width: 100vw;
+  height: calc(100vh - 60px);    /* Fill the entire viewport height */
   background: #131a35;
   color: white;
   display: none;
@@ -3036,10 +3036,10 @@ body::after {
 /* Fullscreen menu overlay (mobile only) */
 .fullscreen-menu {
   position: fixed;
-  top: 0;
+   top: 60px; /* Pushes the menu a bit below the top, adjust as needed */
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: calc(100vh - 60px);
   background: #131a35;
   color: white;
   display: none;
@@ -3129,3 +3129,4 @@ body::after {
     margin-top: 0; /* Remove extra top margin for desktop */
   }
 }
+
