@@ -1704,6 +1704,9 @@ body::after {
   text-align: center;
   box-shadow: 0 2px 8px rgba(19,26,53,0.07);
   position: relative;
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
 }
 .service-img {
   width: 70px;
@@ -1716,7 +1719,7 @@ body::after {
 }
 .learn-more {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: auto; /* Push button to the bottom */
   background: #d6b999;
   color: #131a35;
   font-weight: bold;
