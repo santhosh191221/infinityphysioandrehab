@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinity Physio and Rehab</title>
-  <link rel="icon" type="image/png" href="logo.jpeg">
+  <link rel="icon" type="image/png" href="logo1.jpeg">
   <link rel="stylesheet" href="styles.css">
   <style>
     /* === Navbar Styles === */
@@ -12,7 +12,7 @@
     .nav-logo { display: flex; align-items: center; }
     .main-nav-bar { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; transition: left 0.3s; }
     .main-nav-bar li { margin: 0; }
-    .main-nav-bar a.active { color: #1a426f; font-weight: bold; }
+    .main-nav-bar a.active { color: #1a6f5a; font-weight: bold; }
     .nav-toggle {
       display: none;
       background: none;
@@ -100,9 +100,17 @@
 </head>
 <body>
 
+  <!-- Intro Video -->
+  <video id="introVideo" autoplay muted playsinline>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Intro Image for Mobile -->
+  <img id="introImage" src="introimg.jpeg" alt="Welcome to Infinity Physio and Rehab">
   <nav class="navbar">
     <div class="nav-logo">
-      <a href="index.html"><img src="logo.jpeg" alt="Logo" class="logo"></a>
+      <a href="index.html"><img src="logo1.jpeg" alt="Logo" class="logo"></a>
     </div>
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
     <ul class="main-nav-bar">
@@ -123,6 +131,9 @@
       </a>
       <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
         <img src="pt.jpg" alt="Physiotherapy" />
+      </a>
+      <a href="https://www.linkedin.com/in/infinity-physio-and-rehab-398389384/" target="_blank" class="nav-icon linkedin-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn" />
       </a>
     </div>
   </nav>
@@ -386,7 +397,30 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      
+
+      // --- Intro splash screen logic ---
+      const introVideo = document.getElementById('introVideo');
+      const introImage = document.getElementById('introImage');
+      const isMobile = window.innerWidth <= 768;
+
+      if (isMobile) {
+        if (introVideo) introVideo.style.display = 'none'; // Hide video on mobile
+        if (introImage) {
+          setTimeout(() => {
+            introImage.style.opacity = '0';
+            setTimeout(() => { introImage.style.display = 'none'; }, 1000); // Hide after fade
+          }, 3000); // 3 seconds for image
+        }
+      } else {
+        if (introImage) introImage.style.display = 'none'; // Hide image on desktop
+        if (introVideo) {
+          setTimeout(() => {
+            introVideo.style.opacity = '0';
+            setTimeout(() => { introVideo.style.display = 'none'; }, 1000); // Hide after fade
+          }, 3000); // 5 seconds for video
+        }
+      }
+
       // FAQ expand/collapse
       document.querySelectorAll('.faq-question').forEach(function(btn) {
         btn.addEventListener('click', function() {

@@ -1,4 +1,8 @@
-body {
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -238,12 +242,11 @@ footer {
 
 /* ...existing code... */
 .logo {
-    height: 40px; /*Adjust the height as needed */
-    margin-right: 15px;
-  width: 80px;
-  height: auto;
-  max-height: 80px;
-} /* Adjust the margin as needed */
+  height: 60px; /* Set a consistent height */
+  width: auto; /* Allow width to scale automatically */
+  margin-right: 15px;
+  vertical-align: middle; /* Improves alignment */
+}
 
 /* ...existing code... */
 
@@ -2569,6 +2572,11 @@ main#content {
   padding: 2px;
 }
 
+.linkedin-nav img {
+  background: #0077B5; /* LinkedIn blue */
+  padding: 2px;
+}
+
 .nav-icon:hover img {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   transform: scale(1.1);
@@ -3130,5 +3138,25 @@ body::after {
     height: 100vh;
     object-fit: cover;
     margin-top: 0; /* Remove extra top margin for desktop */
+  }
+}
+
+/* Styles for Intro Video and Image */
+#introVideo, #introImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 99999; /* Highest z-index to be on top */
+  background-color: black;
+  transition: opacity 1s ease-out; /* Add transition for fade-out effect */
+}
+
+/* Hide intro image on desktop by default */
+@media (min-width: 769px) {
+  #introImage {
+    display: none;
   }
 }
