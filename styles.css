@@ -219,7 +219,7 @@ footer {
     padding: 10px 20px;
     font-size: 1em;
     color: white;
-    background-color: #0056b3;
+    background-color: #131a35;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -227,7 +227,7 @@ footer {
 }
 
 #appointment-form button:hover {
-    background-color: #003f7f;
+    background-color: #0a2472;
 }
 
 #form-status {
@@ -1560,8 +1560,8 @@ body::after {
 /* Make Book Appointment button match navbar style */
 /* Style Book Appointment button with #d6b999 background and matching hover */
 .cta-btn.whatsapp-btn {
-  background: #d6b999;
-  color: #131a35;
+  background: #131a35;
+  color: #fff;
   font-weight: bold;
   padding: 12px 28px;
   border: none;
@@ -1574,8 +1574,8 @@ body::after {
 
 .cta-btn.whatsapp-btn:hover,
 .cta-btn.whatsapp-btn:focus {
-  background: #131a35;
-  color: #d6b999;
+  background: #d6b999; /* Swapped hover colors */
+  color: #131a35;
   text-decoration: none;
 }
 
@@ -3129,4 +3129,3 @@ body::after {
     margin-top: 0; /* Remove extra top margin for desktop */
   }
 }
-

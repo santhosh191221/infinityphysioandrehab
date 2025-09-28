@@ -11,7 +11,7 @@
       max-width: 600px;
       margin: 40px auto;
       padding: 24px;
-      background: #fafbfc;
+      
       border-radius: 10px;
     }
     #appointment-form {
@@ -22,13 +22,13 @@
     #appointment-form input,
     #appointment-form textarea {
       padding: 12px;
-      border: 1px solid #ddd;
+      border: 1px solid ;
       border-radius: 6px;
       font-size: 1em;
     }
     #appointment-form button {
       padding: 12px;
-      background: #1a6f5a;
+      background: #131a35; /* Updated color */
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -37,7 +37,7 @@
       transition: background 0.2s;
     }
     #appointment-form button:hover {
-      background: #155a48;
+      background: #0a2472; /* Darker shade for hover */
     }
 
     /* CTA Buttons Container */
@@ -180,9 +180,6 @@
   <main>
     <section id="appointment-section">
         <br>
-        <br>
-        <br>
-        <br>
       <h2>Book an Appointment</h2>
       <p style="font-size:1.1em; margin-bottom:18px;">
         Prefer to call? <a href="tel:+919600619608" style="color:#1a6f5a;font-weight:bold;">Call +91 96006 19608</a> to book your appointment instantly.<br>
@@ -223,10 +220,28 @@
       if (appointmentForm) {
         appointmentForm.addEventListener("submit", function(e) {
           e.preventDefault();
-          const formStatus = document.getElementById("form-status");
-          formStatus.textContent = "Thank you! Your appointment request has been received.";
-          formStatus.style.color = "green";
-          this.reset();
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          // Construct the WhatsApp message
+          const whatsappMessage =
+            `Appointment Request:\n\n` +
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Phone: ${phone}\n` +
+            `Message: ${message}`;
+
+          // Your WhatsApp number
+          const whatsappNumber = "919600619608";
+          const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+          // Open WhatsApp in a new tab
+          window.open(url, "_blank");
+
+          // Optional: Show a status message
+          document.getElementById("form-status").textContent = "Redirecting to WhatsApp...";
         });
       }
 

@@ -650,12 +650,14 @@ document.addEventListener("DOMContentLoaded", function () {
             if (serviceDetails[key]) {
                 contentDiv.innerHTML = serviceDetails[key].content;
                 modal.style.display = 'block';
+                document.body.classList.add('modal-open');
             }
         });
     });
     // Close modal logic
     document.querySelector('#serviceModal .close').onclick = function() {
         document.getElementById('serviceModal').style.display = 'none';
+        document.body.classList.remove('modal-open');
     };
     // Close modal when clicking outside content
     document.getElementById('serviceModal').onclick = function(e) {
