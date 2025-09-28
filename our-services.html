@@ -6,52 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Add this style in your <style> tag or styles.css to start the popup after the navbar */
-    /* #modalContent { */
-      /* Adjust the top margin to match your navbar height (e.g., 80px if navbar is 80px tall) */
-      /* margin: 80px auto 40px auto !important; */
-      /* Ensure modal content is below navbar */
-#modalContent {
-  margin: 100px auto 40px auto !important; /* 100px = height of navbar */
-  position: relative;
-  z-index: 10001; /* Ensure it's above the background overlay */
-}
-
-/* Optional: Prevent navbar overlap by keeping modal background below navbar */
-.modal {
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  z-index: 9999;
-  padding-top: 80px; /* pushes the modal background below the navbar */
-}
-
-/* Modal background overlay */
-/* #serviceModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  display: none;
-} */
-
-/* Modal content starts BELOW the navbar */
-/* #modalContent {
-  position: relative;
-  margin: 120px auto 40px auto; 
-  background: #fff;
-  padding: 32px 24px;
-  border-radius: 10px;
-  max-width: 600px;
-  z-index: 10000;
-} */
-
 .fullscreen-menu {
   position: fixed;
   top: 60px;
@@ -99,9 +53,6 @@
 /* --- Modal Content: Ensures it's centered and starts below the navbar --- */
 #modalContent {
   position: relative;
-  /* **KEY FIX:** Adjust margin-top to be slightly more than your navbar height (which looks to be around 80px). 
-    120px gives space between the navbar and the top of the modal box.
-  */
   margin: 120px auto 40px auto; 
   background: #fff;
   padding: 32px 24px;
@@ -111,7 +62,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   z-index: 100000;
 }
-
+.modal-open { overflow: hidden; }
 .close {
   position: absolute;
   top: 16px;
@@ -121,7 +72,6 @@
   color: #0a2472;
   cursor: pointer;
 }
-
 
   </style>
 </head>
@@ -213,7 +163,7 @@
             We offer comprehensive treatment and rehabilitation for athletic injuries, including acute and chronic conditions.
             Our goal is to help athletes return to their sport quickly and safely.
           </p>
-          <a href="#" class="learn-more" data-service="sports">Learn more</a>
+          <a href="#" class="learn-more" data-service="sports-injury">Learn more</a>
         </div>
         <div class="service-item">
           <h3>Neurological Rehabilitation</h3>
@@ -240,7 +190,7 @@
             Our women's health program addresses a range of concerns, including prenatal and postnatal care,
             pelvic floor dysfunction, and osteoporosis management. We provide personalized care and education to help women manage their health.
           </p>
-          <a href="#" class="learn-more" data-service="women">Learn more</a>
+          <a href="#" class="learn-more" data-service="womens-health">Learn more</a>
         </div>
         <div class="service-item">
           <h3>Fitness & Wellness Programs</h3>
@@ -249,7 +199,7 @@
             We offer proactive programs to promote healthy lifestyles, injury prevention, and optimal physical function.
             Our goal is to help individuals achieve their health and wellness goals.
           </p>
-          <a href="#" class="learn-more" data-service="fitness">Learn more</a>
+          <a href="#" class="learn-more" data-service="fitness-wellness">Learn more</a>
         </div>
         <div class="service-item">
           <h3>Ergonomic Solutions & Postural Correction</h3>
@@ -258,7 +208,7 @@
             We provide workplace assessments and interventions to prevent injury, improve productivity,
             and enhance overall well-being. Our goal is to help individuals work safely and efficiently.
           </p>
-          <a href="#" class="learn-more" data-service="ergonomic">Learn more</a>
+          <a href="#" class="learn-more" data-service="ergonomic-solutions">Learn more</a>
         </div>
         <div class="service-item">
           <h3>Headache & Migraine Management</h3>
@@ -267,7 +217,7 @@
             We use a multimodal approach to manage headaches and migraines, including manual therapy,
             exercise, and lifestyle modification. Our goal is to help patients reduce their symptoms and improve their quality of life.
           </p>
-          <a href="#" class="learn-more" data-service="headache">Learn more</a>
+          <a href="#" class="learn-more" data-service="headache-migraine">Learn more</a>
         </div>
          
       </div>
@@ -279,8 +229,8 @@
   </main>
 
   <!-- Add this modal markup just before the closing </body> tag if not already present -->
-<div id="serviceModal" class="modal" style="display:none; position:absolute; z-index:10010; left:0; top:0; width:100vw; height:230vh; overflow:auto; background:rgba(0,0,0,0.5);">
-  <div id="modalContent" style="background:#fff; margin:0 auto 40px auto; padding:32px 24px; border-radius:10px; max-width:600px; position:relative; top:80px;">
+<div id="serviceModal">
+  <div id="modalContent">
     <span class="close" style="position:absolute; top:16px; right:24px; font-size:2em; font-weight:bold; color:#0a2472; cursor:pointer;">&times;</span>
     <div id="serviceModalContent"></div>
   </div>
@@ -637,6 +587,48 @@ const serviceDetails = {
             </ul>
         `
     },
+    "fitness-wellness": {
+        title: "Fitness & Wellness Programs",
+        content: `
+            <h2>Fitness & Wellness Programs</h2>
+            <h3>Introduction</h3>
+            <p>Our fitness and wellness programs are designed to promote healthy lifestyles, prevent injuries, and optimize physical function. We offer proactive solutions to help individuals achieve their health and wellness goals, regardless of their current fitness level.</p>
+            <h3>Core Benefits</h3>
+            <ul>
+                <li><strong>Personalized Fitness Plans:</strong> Custom exercise routines tailored to your goals, whether it's weight loss, muscle gain, or improved endurance.</li>
+                <li><strong>Injury Prevention:</strong> Strength and flexibility training to reduce the risk of common injuries.</li>
+                <li><strong>Wellness Coaching:</strong> Guidance on nutrition, stress management, and lifestyle habits to support overall well-being.</li>
+            </ul>
+        `
+    },
+    "ergonomic-solutions": {
+        title: "Ergonomic Solutions & Postural Correction",
+        content: `
+            <h2>Ergonomic Solutions & Postural Correction</h2>
+            <h3>Introduction</h3>
+            <p>We provide workplace assessments and interventions to prevent injury, improve productivity, and enhance overall well-being. Our goal is to help individuals work safely and efficiently by creating an ergonomic environment and correcting postural imbalances.</p>
+            <h3>Core Benefits</h3>
+            <ul>
+                <li><strong>Workplace Assessment:</strong> Analysis of your workstation setup to identify and mitigate ergonomic risks.</li>
+                <li><strong>Postural Correction:</strong> Exercises and guidance to correct poor posture and reduce strain on your neck, back, and shoulders.</li>
+                <li><strong>Injury Prevention:</strong> Proactive strategies to prevent common work-related musculoskeletal disorders.</li>
+            </ul>
+        `
+    },
+    "headache-migraine": {
+        title: "Headache & Migraine Management",
+        content: `
+            <h2>Headache & Migraine Management</h2>
+            <h3>Introduction</h3>
+            <p>We use a multimodal approach to manage headaches and migraines, including manual therapy, exercise, and lifestyle modification. Our goal is to help patients reduce their symptoms and improve their quality of life by addressing the root causes of their pain.</p>
+            <h3>Core Benefits</h3>
+            <ul>
+                <li><strong>Manual Therapy:</strong> Hands-on techniques to relieve tension in the neck and upper back muscles.</li>
+                <li><strong>Targeted Exercises:</strong> Strengthening and stretching exercises to improve posture and reduce headache frequency.</li>
+                <li><strong>Lifestyle Guidance:</strong> Advice on triggers, stress management, and other factors that can contribute to headaches and migraines.</li>
+            </ul>
+        `
+    },
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -661,18 +653,12 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     // Close modal when clicking outside content
     document.getElementById('serviceModal').onclick = function(e) {
-        if (e.target === this) this.style.display = 'none';
+        if (e.target === this) {
+          this.style.display = 'none';
+          document.body.classList.remove('modal-open');
+        }
     };
 });
-
-const navbar = document.querySelector("nav"); // Replace 'nav' with your navbar selector
-const modalContent = document.getElementById("modalContent");
-
-if (navbar) {
-  const navbarHeight = navbar.offsetHeight;
-  modalContent.style.top = navbarHeight + "px";
-}
-
 
 function openHamburgerMenu() {
   document.querySelector('.fullscreen-menu').style.display = 'block';
