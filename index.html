@@ -115,6 +115,30 @@
     .faq-stars { display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 10px; }
     .faq-stars div { width: 100%; justify-content: flex-start; text-align: left; max-width: 500px; display: flex; align-items: flex-start; margin-bottom: 6px; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* Birthday Popup Trigger Button */
+    .birthday-trigger-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #d6b999; /* Gold color */
+      color: #131a35;
+      border: none;
+      border-radius: 50%;
+      font-size: 2em;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s ease;
+    }
+    .birthday-trigger-btn:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
@@ -126,7 +150,9 @@
   </video>
 
   <!-- Intro Image for Mobile -->
-  <img id="introImage" src="introimg.jpeg" alt="Welcome to Infinity Physio and Rehab">
+  <video id="introImage" autoplay muted playsinline>
+    <source src="mobile_intro.mp4" type="video/mp4">
+  </video>
   <nav class="navbar">
     <div class="nav-logo">
       <a href="index.html"><img src="logo1.jpeg" alt="Logo" class="logo"></a>
@@ -414,6 +440,11 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
   <footer>
     <p>&copy; 2025 Infinity Physio and Rehab. All rights reserved.</p>
   </footer>
+      <!-- Birthday Popup Trigger Button -->
+    <button id="birthdayPopupButton" class="birthday-trigger-btn">
+      🎉
+    </button>
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -504,6 +535,17 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
           closeMobileMenu();
         }
       });
+            const birthdayTriggerBtn = document.getElementById('birthdayPopupButton');
+      if (birthdayTriggerBtn) {
+        birthdayTriggerBtn.addEventListener('click', () => {
+          showBirthdayPopup();
+        });
+      }
+
+      function showBirthdayPopup() {
+        alert("Happy Birthday! 🎉 Wishing you a day filled with joy and a year filled with success and happiness. - Infinity Physio and Rehab");
+      }
+
     });
   </script>
 </body>
