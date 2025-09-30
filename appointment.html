@@ -94,6 +94,8 @@
         display: block;
         margin-left: 8px; /* Adjust this value to change position */
         background: #000;
+        padding: 4px 12px;
+    font-size: 1.8rem;
       }
       /* Center the logo in mobile view */
       .nav-logo {
@@ -114,7 +116,7 @@
         padding-top: 60px;
         gap: 0;
         transition: left 0.3s ease-in-out;
-        z-index: 150;
+        z-index: 201;
       }
       .main-nav-bar.active {
         left: 0;
@@ -132,13 +134,14 @@
         z-index: 201;
       }
       .navbar {
-        position: relative;
+        position: fixed;
+        z-index: 201;
       }
       .main-nav-bar .close-btn {
         display: block;
         position: absolute;
-        top: 15px;
-        right: 25px;
+        top: 75px;
+        right: 35px;
         background: none;
         border: none;
         color: #fff;

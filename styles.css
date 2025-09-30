@@ -848,9 +848,9 @@ footer {
   background: #000; /* Changed to black */
   color: #d6b999; /* Changed to gold/tan color */
   border: none;
-  font-size: 2.2rem;
+  font-size: 1.8rem; /* Reduced font size */
   border-radius: 8px;
-  padding: 6px 14px;
+  padding: 4px 12px; /* Reduced padding */
   cursor: pointer;
 }
 
