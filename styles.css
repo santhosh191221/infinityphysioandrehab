@@ -574,9 +574,10 @@ footer {
 }
 
 #modalContent li:before {
-    content: "🌸";
+    content: "⭐"; /* Changed to a star */
     position: absolute;
     left: 0;
+    color: #FFD700; /* Added golden color */
 }
 
 /* Responsive adjustments */
@@ -842,7 +843,7 @@ footer {
 .nav-toggle {
   display: block;
   position: fixed;
-  top: 18px;
+  top: 12px; /* Moved up slightly */
   left: 18px;
   z-index: 2001;
   background: #000; /* Changed to black */
@@ -1569,7 +1570,7 @@ body::after {
 /* Make Book Appointment button match navbar style */
 /* Style Book Appointment button with #d6b999 background and matching hover */
 .cta-btn.whatsapp-btn {
-  background: #0063ba;
+  background: #d6b999;
   color: #fff;
   font-weight: bold;
   padding: 12px 28px;
@@ -2020,9 +2021,10 @@ body::after {
 }
 
 #modalContent li:before {
-    content: "🌸";
+    content: "⭐"; /* Changed to a star */
     position: absolute;
     left: 0;
+    color: #FFD700; /* Added golden color */
 }
 
 /* Responsive adjustments */
@@ -2533,7 +2535,7 @@ main#content {
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
-  background: #0063ba;
+  background: #d6b999;
   color: #fff !important;
   padding: 8px 16px;
   border-radius: 24px;
@@ -2544,7 +2546,7 @@ main#content {
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 .whatsapp-btn:hover {
-  background: #128C7E;
+  background: #131a35;
 }
 .whatsapp-icon {
   width: 24px;
@@ -2650,20 +2652,19 @@ body::after {
 }
 
 .google-review-btn {
-  display: inline-flex;
-  align-items: center;
-  background: #fff;
-  color: #4285F4;
-  border: 2px solid #4285F4;
-  border-radius: 24px;
-  padding: 8px 18px;
-  font-weight: bold;
+  display:inline-block;
+  margin:16px 0;
+  padding:10px 18px;
+  background:#0a2472;
+  border-radius:6px;
+  border:1px solid #0a2472;
   text-decoration: none;
+  color:#fff;
+  font-weight:500;
   transition: background 0.2s, color 0.2s;
-  margin-top: 10px;
 }
 .google-review-btn:hover {
-  background: #4285F4;
+  background:#143fa3;
   color: #fff;
 }
 

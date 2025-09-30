@@ -19,6 +19,7 @@
     }
     .about-text, .about-image {
       flex: 1 1 0;
+      text-align: center;
     }
     .about-image img {
       width: 100%;
@@ -69,13 +70,18 @@
         display: block;
         margin-left: 8px; /* Adjust this value to change position */
         background: #000;
-        padding: 4px 12px;
-    font-size: 1.8rem;
+        top: 12px;
+        padding: 3px 10px; /* Reduced padding */
+    font-size: 1.6rem; /* Reduced font size */
       }
       .nav-logo {
         position: absolute;
         left: 50%;
         transform: translateX(-30%);
+      }
+      .nav-logo .logo {
+        height: 45px;
+        width: 45px;
       }
       .main-nav-bar {
         display: flex;
@@ -128,6 +134,9 @@
   </style>
 </head>
 <body>
+  <main>
+    <div style="padding: 0 34px;"> <!-- Add padding wrapper -->
+
   <nav class="navbar">
     <div class="nav-logo">
       <a href="index.html"><img src="logo1.jpeg" alt="Logo" class="logo"></a>
@@ -158,7 +167,6 @@
     </div>
   </nav>
 
-  <main>
     <section class="alt-section about-section">
       <div class="alt-content">
         <div class="about-text" style="margin-bottom:32px;">
@@ -200,13 +208,13 @@
             </p>
 
             <h3>Our Core Values</h3>
-            <p>
-              <strong>Compassion</strong> – treating every patient with empathy and respect.<br>
-              <strong>Commitment</strong> – ensuring consistent and high-quality care.<br>
-              <strong>Community</strong> – reaching people through camps and awareness programs.<br>
-              <strong>Collaboration</strong> – continuous learning and teamwork.<br>
-              <strong>Credibility</strong> – ethical, evidence-based, and trusted practice.
-            </p>
+            <ul style="text-align: left; padding-left: 250px;">
+              <li><strong>Compassion</strong> – treating every patient with empathy and respect.</li>
+              <li><strong>Commitment</strong> – ensuring consistent and high-quality care.</li>
+              <li><strong>Community</strong> – reaching people through camps and awareness programs.</li>
+              <li><strong>Collaboration</strong> – continuous learning and teamwork.</li>
+              <li><strong>Credibility</strong> – ethical, evidence-based, and trusted practice.</li>
+            </ul>
           </div>
           <div class="about-image">
             <img src="abot2.jpeg" alt="Vision of Infinity Physio and Rehab" style="max-width:440px;">
@@ -215,6 +223,7 @@
 
       </div>
     </section>
+    </div> <!-- Close padding wrapper -->
   </main>
 
   <footer>
