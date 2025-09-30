@@ -116,6 +116,42 @@
     .faq-stars div { width: 100%; justify-content: flex-start; text-align: left; max-width: 500px; display: flex; align-items: flex-start; margin-bottom: 6px; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+    /* Birthday Popup Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 100000;
+      display: none; /* Hidden by default */
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background: #fff;
+      padding: 24px 32px;
+      border-radius: 12px;
+      max-width: 550px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      animation: fadeIn 0.5s ease;
+    }
+    .popup-content h3 { color: #131a35; margin-top: 0; }
+    .popup-content p { text-align: left; font-size: 1em; line-height: 1.6; }
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      color: #555;
+      cursor: pointer;
+    }
+
     /* Birthday Popup Trigger Button */
     .birthday-trigger-btn {
       position: fixed;
@@ -440,6 +476,18 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
   <footer>
     <p>&copy; 2025 Infinity Physio and Rehab. All rights reserved.</p>
   </footer>
+
+  <!-- Birthday Popup -->
+  <div id="birthdayPopup" class="modal-overlay">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <h3>Happy 1st Birthday, our little Kutty Vandhu @ Praghadhesh!</h3>
+      <p>Today, we celebrate your very first birthday, our tiny lucky charm who has filled our lives with endless joy, love, and laughter. Every little smile, every tiny step, and every curious glance has brought so much happiness to everyone around you.</p>
+      <p>Praghadhesh, one day when you grow up and read this, always remember—<em>your Attan loves you more than anything in the world.</em> You are his pride, his joy, and the most precious part of his journey. May your life always be filled with good health, happiness, and boundless love.</p>
+      <p>And today is extra special for all of us—we are thrilled to share the launch of our dream website with you! Welcome to Infinity Physio and Rehab – now online! We can’t wait to connect, inspire, and support all of you on your journey to better health and wellbeing.</p>
+    </div>
+  </div>
+
       <!-- Birthday Popup Trigger Button -->
     <button id="birthdayPopupButton" class="birthday-trigger-btn">
       🎉
@@ -452,6 +500,7 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
       // --- Intro splash screen logic ---
       const introVideo = document.getElementById('introVideo');
       const introImage = document.getElementById('introImage');
+      const birthdayPopup = document.getElementById('birthdayPopup');
       const isMobile = window.innerWidth <= 768;
 
       if (isMobile) {
@@ -541,9 +590,21 @@ At Infinity Physio and Rehab, we are dedicated to helping you achieve your best 
           showBirthdayPopup();
         });
       }
-
+      
       function showBirthdayPopup() {
-        alert("Happy Birthday! 🎉 Wishing you a day filled with joy and a year filled with success and happiness. - Infinity Physio and Rehab");
+        if (birthdayPopup) {
+          birthdayPopup.style.display = 'flex';
+          document.body.classList.add('modal-open');
+        }
+      }
+
+      // Birthday popup close logic
+      const popupCloseBtn = document.querySelector('.popup-close');
+      if (popupCloseBtn) {
+        popupCloseBtn.addEventListener('click', () => {
+          if (birthdayPopup) birthdayPopup.style.display = 'none';
+          document.body.classList.remove('modal-open');
+        });
       }
 
     });
