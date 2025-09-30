@@ -944,6 +944,21 @@ main#content {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally within the card */
+  justify-content: flex-start; /* Align content to the top of the card */
+  min-height: 380px; /* Set a consistent minimum height for all cards */
+}
+
+.home-highlights div h3 {
+  margin-top: 0; /* Remove default top margin for consistent heading start */
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.home-highlights div ul {
+  flex-grow: 1; /* Allow the list to take up available space, pushing other content down */
+  text-align: left; /* Ensure list items align left within their space */
 }
 
 /* Why Choose Us grid: 4 columns on desktop, 1 column on mobile */
@@ -1714,9 +1729,11 @@ body::after {
   text-align: center;
   box-shadow: 0 2px 8px rgba(19,26,53,0.07);
   position: relative;
-  display: flex; /* Add flex display */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribute content vertically */
+  min-height: 320px; /* Set a minimum height for all cards */
 }
 .service-img {
   width: 70px;
@@ -1729,7 +1746,7 @@ body::after {
 }
 .learn-more {
   display: inline-block;
-  margin-top: auto; /* Push button to the bottom */
+  margin-top: 16px; /* Use a fixed margin instead of auto */
   background: #d6b999;
   color: #131a35;
   font-weight: bold;
@@ -2392,7 +2409,6 @@ main#content {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.07);
 }
-
 /* Why Choose Us grid: 4 columns on desktop, 1 column on mobile */
 .home-highlights {
   display: grid;
@@ -2652,20 +2668,21 @@ body::after {
 }
 
 .google-review-btn {
-  display:inline-block;
-  margin:16px 0;
-  padding:10px 18px;
-  background:#0a2472;
-  border-radius:6px;
-  border:1px solid #0a2472;
+  display: inline-flex;
+  align-items: center;
+  margin: 16px 0;
+  padding: 10px 18px;
+  background: #143fa3; /* Gold background */
+  color: #fff; /* Dark blue text */
+  border-radius: 6px;
+  border: none;
   text-decoration: none;
-  color:#fff;
-  font-weight:500;
+  font-weight: bold;
   transition: background 0.2s, color 0.2s;
 }
 .google-review-btn:hover {
-  background:#143fa3;
-  color: #fff;
+  background: #131a35; /* Dark blue on hover */
+  color: #d6b999; /* Gold text on hover */
 }
 
 /* ...existing code... */
