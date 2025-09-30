@@ -220,18 +220,22 @@ footer {
 }
 
 #appointment-form button {
-    padding: 10px 20px;
-    font-size: 1em;
-    color: white;
-    background-color: #131a35;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background: #131a35;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
 }
 
 #appointment-form button:hover {
-    background-color: #0a2472;
+  background: #d6b999;
+  color: #131a35;
 }
 
 #form-status {
@@ -243,7 +247,9 @@ footer {
 /* ...existing code... */
 .logo {
   height: 60px; /* Set a consistent height */
-  width: auto; /* Allow width to scale automatically */
+  width: 60px; /* Set width equal to height for a circle */
+  border-radius: 50%; /* Make the image a circle */
+  object-fit: cover; /* Ensure the image fills the circle without distortion */
   margin-right: 15px;
   vertical-align: middle; /* Improves alignment */
 }
@@ -637,7 +643,7 @@ footer {
 .hero-overlay h1 {
   font-size: 3rem;
   margin-bottom: 10px;
-    color: #131a35;
+    color: #0063ba;
   font-weight: bold;
 }
 
@@ -839,8 +845,8 @@ footer {
   top: 18px;
   left: 18px;
   z-index: 2001;
-  background: #131a35;
-  color: #fff;
+  background: #000; /* Changed to black */
+  color: #d6b999; /* Changed to gold/tan color */
   border: none;
   font-size: 2.2rem;
   border-radius: 8px;
@@ -1081,7 +1087,7 @@ main#content {
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
-  background: #25D366;
+  background: #0063ba;
   color: #fff !important;
   padding: 8px 16px;
   border-radius: 24px;
@@ -1563,7 +1569,7 @@ body::after {
 /* Make Book Appointment button match navbar style */
 /* Style Book Appointment button with #d6b999 background and matching hover */
 .cta-btn.whatsapp-btn {
-  background: #131a35;
+  background: #0063ba;
   color: #fff;
   font-weight: bold;
   padding: 12px 28px;
@@ -2527,7 +2533,7 @@ main#content {
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
-  background: #25D366;
+  background: #0063ba;
   color: #fff !important;
   padding: 8px 16px;
   border-radius: 24px;
