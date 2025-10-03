@@ -82,9 +82,7 @@
     }
     /* Center the logo in mobile view */
     .nav-logo {
-      position: absolute;
-      left: 59%;
-      transform: translateX(-30%);
+      display: none; /* Hide the main logo on mobile */
     }
     .nav-logo .logo {
       height: 40px;
@@ -119,6 +117,13 @@
       padding: 12px 16px;
       z-index: 201;
     }
+    .infinity-nav-icon {
+      display: inline-block; /* Show on mobile */
+    }
+    .infinity-nav-icon img {
+      width: 40px;
+      height: 38px;
+    }
     .navbar {
       position: fixed;
       z-index: 201;
@@ -141,7 +146,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" style="padding: 0 34px;">
     <div class="nav-logo">
       <a href="index.html"><img src="logo1.jpeg" alt="Logo" class="logo"></a>
     </div>
@@ -155,7 +160,13 @@
       <li><a href="reviews.html" class="active">Reviews</a></li>
       <li><a href="why-choose-us.html">Why Choose Us</a></li>
     </ul>
+    <!-- <div class="nav-logo-mobile">
+      <a href="index.html"><img src="logo1.jpeg" alt="Logo" class="logo"></a>
+    </div> -->
     <div class="nav-social">
+            <a href="index.html" class="nav-icon infinity-nav-icon">
+        <img src="logo1.jpeg" alt="Infinity Logo" />
+      </a>
       <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
       </a>
@@ -168,12 +179,12 @@
       <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
         <img src="pt.jpg" alt="Physiotherapy" />
       </a>
+
     </div>
   </nav>
 
-  <main>
+  <main style="padding: 0 34px;">
     <section>
-        <br>
         <br>
         <br>
         <br>

@@ -60,7 +60,8 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    font-size: 0.9em; /* Reduced font size */
+    font-size: 0.9em;
+    z-index: 1000; /* Reduced font size */
     /* overflow-y: auto; Added vertical scrollbar */
     /* max-height: 100px; Adjust the max height as needed */
 }
@@ -1032,10 +1033,10 @@ main#content {
   .alt-content, .alt-content.reverse {
     flex-direction: column !important;
     gap: 20px;
-    text-align: center;
+    text-align: left;
   }
   .alt-text {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -1049,6 +1050,7 @@ main#content {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
+  text-align: left;
 }
 
 .alt-text ul,
@@ -1146,6 +1148,11 @@ main#content {
 .instagram-nav img {
   background: #fff;
   padding: 2px;
+}
+
+/* Hide the mobile-only infinity icon on desktop */
+.infinity-nav-icon {
+  display: none;
 }
 
 .nav-icon:hover img {
@@ -2593,6 +2600,11 @@ main#content {
 
 .instagram-nav img {
   background: #fff;
+  padding: 2px;
+}
+
+.facebook-nav img {
+  background: #1877F2; /* Facebook blue */
   padding: 2px;
 }
 

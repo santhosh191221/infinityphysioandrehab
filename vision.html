@@ -94,9 +94,7 @@
     font-size: 1.6rem; /* Reduced font size */
       }
       .nav-logo {
-        position: absolute;
-        left: 59%;
-        transform: translateX(-30%);
+        display: none; /* Hide the main logo on mobile */
       }
       .nav-logo .logo {
         height: 40px;
@@ -130,6 +128,13 @@
         right: 0;
         padding: 12px 16px;
         z-index: 201;
+      }
+      .infinity-nav-icon {
+        display: inline-block; /* Show on mobile */
+      }
+      .infinity-nav-icon img {
+        width: 40px;
+        height: 38px;
       }
       .navbar {
         position: fixed;
@@ -170,7 +175,13 @@
       <li><a href="reviews.html">Reviews</a></li>
       <li><a href="why-choose-us.html">Why Choose Us</a></li>
     </ul>
+    <!-- <div class="nav-logo-mobile">
+      <a href="index.html"><img src="logo1.jpeg" alt="Logo" class="logo"></a>
+    </div> -->
     <div class="nav-social">
+      <a href="index.html" class="nav-icon infinity-nav-icon">
+        <img src="logo1.jpeg" alt="Infinity Logo" />
+      </a>
       <a href="https://wa.me/919600619608" target="_blank" class="nav-icon whatsapp-nav">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
       </a>
@@ -183,6 +194,7 @@
       <a href="https://instagram.com/infinity_physio_and_rehab/" target="_blank" class="nav-icon pt-nav">
         <img src="pt.jpg" alt="Physiotherapy" />
       </a>
+      
     </div>
   </nav>
 
@@ -194,8 +206,6 @@
           <p>
             At Infinity Physio and Rehab, we believe physiotherapy is more than treatment—it is a lifelong journey of recovery, prevention, and empowerment. Born from the passion of two young physiotherapists, our aim is to make high-quality rehabilitation accessible, blending evidence-based care with compassion and innovation.
           </p>
-        </div>
-
         <div class="about-flex">
           <div class="about-text">
             <h3>Our Founders</h3>
@@ -210,7 +220,6 @@
             <img src="vision.jpeg" alt="Founders of Infinity Physio and Rehab">
           </div>
         </div>
-
         <div class="about-flex reverse">
           <div class="about-text">
             <h3>Our Vision</h3>
@@ -239,7 +248,7 @@
             <img src="abot2.jpeg" alt="Vision of Infinity Physio and Rehab" style="max-width:440px;">
           </div>
         </div>
-
+      </div>
       </div>
     </section>
     </div> <!-- Close padding wrapper -->
